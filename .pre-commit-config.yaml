@@ -1,0 +1,32 @@
+# Local hooks run through `uv run`, so they use the exact tool versions in uv.lock
+# (same as `make lint` and CI). mypy needs the project's deps for the pydantic plugin.
+repos:
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff (lint)
+        entry: uv run ruff check --fix
+        language: system
+        types_or: [python, pyi]
+        require_serial: true
+
+      - id: ruff-format
+        name: ruff (format)
+        entry: uv run ruff format
+        language: system
+        types_or: [python, pyi]
+        require_serial: true
+
+      - id: mypy
+        name: mypy (app)
+        entry: uv run mypy app
+        language: system
+        types: [python]
+        pass_filenames: false
+
+      - id: detect-secrets
+        name: detect-secrets
+        entry: uv run detect-secrets-hook
+        language: system
+        # uv.lock is full of sha256 hashes that look like high-entropy secrets.
+        exclude: ^uv\.lock$

@@ -1,0 +1,3 @@
+# Normalise line endings so Makefile and shell scripts work on Windows and Linux.
+* text=auto eol=lf
+*.docx binary

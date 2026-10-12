@@ -1,0 +1,48 @@
+# Secrets
+.env
+.env.*
+!.env.example
+kaggle.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Data and experiment tracking (re-created by `make data` / training)
+data/
+mlruns/
+mlartifacts/
+
+# Model weights (published as GitHub Release assets instead)
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.ckpt
+
+# Images (dataset licences forbid committing them)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.bmp
+# ...except the README's own figures (calibration plot, demo GIF, diagram)
+!docs/images/*
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
