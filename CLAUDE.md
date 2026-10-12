@@ -281,11 +281,11 @@ Create these Makefile targets during setup, and keep them working:
 
 ```bash
 make setup        # install deps, pre-commit hooks
-make data         # python pipeline/build_dataset.py
+make data         # python -m pipeline.build_dataset
 make train        # python training/train.py --config training/configs/<cfg>.yaml
 make evaluate     # python training/evaluate.py (Stanford + external test, ECE, confusion)
 make calibrate    # python training/calibrate.py
-make lint         # ruff check . && ruff format --check . && mypy app
+make lint         # ruff check . && ruff format --check . && mypy app pipeline
 make test         # pytest -m "not slow" --cov=app
 make test-all     # pytest (includes model regression test)
 make eval-llm     # python eval/grounding_check.py and parsing eval (real LLM calls)

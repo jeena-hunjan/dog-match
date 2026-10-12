@@ -18,8 +18,8 @@ repos:
         require_serial: true
 
       - id: mypy
-        name: mypy (app)
-        entry: uv run mypy app
+        name: mypy (app, pipeline)
+        entry: uv run mypy app pipeline
         language: system
         types: [python]
         pass_filenames: false

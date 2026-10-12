@@ -13,7 +13,7 @@ setup:
 	uv run pre-commit install
 
 data:
-	@echo "data: not implemented yet (pipeline/build_dataset.py)"
+	uv run python -m pipeline.build_dataset
 
 train:
 	@echo "train: not implemented yet (training/train.py --config $(CONFIG))"
@@ -27,7 +27,7 @@ calibrate:
 lint:
 	uv run ruff check .
 	uv run ruff format --check .
-	uv run mypy app
+	uv run mypy app pipeline
 
 test:
 	uv run pytest -m "not slow" --cov=app
