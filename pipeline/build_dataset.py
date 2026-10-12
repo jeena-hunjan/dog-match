@@ -3,8 +3,7 @@
 Re-runnable: downloads are cached in data/raw/ and only fetched again with --force.
 Steps: download sources, map breed names across sources (data/interim/), validate the
 curated country restrictions, write image split manifests (data/splits/), load breeds,
-traits, sizes and restrictions into Postgres (DATABASE_URL).
-The data card step is added next.
+traits, sizes and restrictions into Postgres (DATABASE_URL), regenerate data_card.md.
 
 --skip-images skips the ~1.6 GB image downloads and the split manifests.
 --no-db skips the Postgres load.
@@ -29,7 +28,8 @@ from pipeline.breed_data import (
     trait_records,
 )
 from pipeline.breed_mapping import Aliases, Breed, load_and_build, write_outputs
-from pipeline.download import download, write_manifest
+from pipeline.data_card import CardInputs, render
+from pipeline.download import MANIFEST_NAME, download, write_manifest
 from pipeline.restrictions import Restriction, check_breeds, load_restrictions
 from pipeline.sources import BREED_SOURCES, IMAGE_SOURCES
 from pipeline.splits import build_splits, missing_images, write_splits
@@ -39,6 +39,7 @@ log = logging.getLogger("pipeline")
 DEFAULT_RAW_DIR = Path("data/raw")
 DEFAULT_INTERIM_DIR = Path("data/interim")
 DEFAULT_SPLITS_DIR = Path("data/splits")
+DEFAULT_DATA_CARD = Path("data_card.md")
 
 
 def _use_system_certificates() -> None:
@@ -67,6 +68,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--raw-dir", type=Path, default=DEFAULT_RAW_DIR)
     parser.add_argument("--interim-dir", type=Path, default=DEFAULT_INTERIM_DIR)
     parser.add_argument("--splits-dir", type=Path, default=DEFAULT_SPLITS_DIR)
+    parser.add_argument("--data-card", type=Path, default=DEFAULT_DATA_CARD)
     parser.add_argument("--force", action="store_true", help="re-download cached files")
     parser.add_argument("--skip-images", action="store_true", help="no image downloads or splits")
     parser.add_argument("--no-db", action="store_true", help="do not load Postgres")
@@ -125,6 +127,32 @@ def main(argv: list[str] | None = None) -> None:
         log.info("--no-db: Postgres not loaded")
     else:
         _load_postgres(records, traits, restrictions)
+
+    manifest = json.loads((args.raw_dir / MANIFEST_NAME).read_text(encoding="utf-8"))
+    card = CardInputs(
+        manifest=manifest,
+        mapping=mapping,
+        records=records,
+        traits=traits,
+        dropped_traits=dropped,
+        manual_sizes=sorted(load_manual_sizes()),
+        size_problems=gaps,
+        restrictions=restrictions,
+        splits=_read_splits(args.splits_dir),
+    )
+    args.data_card.write_text(render(card), encoding="utf-8", newline="\n")
+    log.info("data card written to %s", args.data_card)
+
+
+def _read_splits(splits_dir: Path) -> dict[str, list[dict[str, str]]]:
+    """Rows of the committed split manifests (used even with --skip-images)."""
+    splits = {}
+    for name in ("stanford_train", "stanford_val", "stanford_test", "oxford"):
+        path = splits_dir / f"{name}.csv"
+        if path.exists():
+            with path.open(newline="", encoding="utf-8") as f:
+                splits[name] = list(csv.DictReader(f))
+    return splits
 
 
 def _build_splits(args: argparse.Namespace, breeds: Sequence[Breed]) -> None:
