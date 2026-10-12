@@ -2,13 +2,7 @@
 
 import pytest
 
-from pipeline.breed_names import (
-    akc_display_name,
-    clean,
-    match_key,
-    stanford_alias_key,
-    stanford_name,
-)
+from pipeline.breed_names import clean, match_key, stanford_alias_key, stanford_name
 
 
 def test_clean_handles_nbsp_curly_quotes_and_spacing() -> None:
@@ -40,25 +34,3 @@ def test_stanford_label_helpers() -> None:
     assert stanford_name(label) == "Japanese spaniel"
     assert stanford_alias_key(label) == "Japanese_spaniel"
     assert stanford_alias_key("Japanese_spaniel") == "Japanese_spaniel"
-
-
-@pytest.mark.parametrize(
-    ("raw", "expected"),
-    [
-        ("Retrievers\xa0(Labrador)", "Labrador Retriever"),
-        ("Fox Terriers (Wire)", "Wire Fox Terrier"),
-        ("Setters (Irish Red and White)", "Irish Red and White Setter"),
-        ("French Bulldogs", "French Bulldog"),
-        ("Brittanys", "Brittany"),
-        ("Collies", "Collie"),
-        ("Shih Tzu", "Shih Tzu"),
-        ("Chinese Crested", "Chinese Crested"),
-        ("Great Pyrenees", "Great Pyrenees"),
-        ("Maltese", "Maltese"),
-        ("Kuvaszok", "Kuvasz"),
-    ],
-)
-def test_akc_display_name(raw: str, expected: str) -> None:
-    overrides = {"Kuvaszok": "Kuvasz"}
-    keep = {"Maltese", "Pyrenees"}
-    assert akc_display_name(raw, overrides, keep) == expected

@@ -9,7 +9,7 @@ import json
 import shutil
 import tarfile
 import time
-from collections.abc import Iterable, Iterator, Mapping
+from collections.abc import Collection, Iterable, Iterator, Mapping
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
@@ -145,12 +145,19 @@ def download(
     )
 
 
-def write_manifest(raw_dir: Path, results: Iterable[DownloadResult]) -> Path:
-    """Merge results into the manifest, keeping the original download time of cached files."""
+def write_manifest(
+    raw_dir: Path, results: Iterable[DownloadResult], known: Collection[str] | None = None
+) -> Path:
+    """Merge results into the manifest, keeping the original download time of cached files.
+
+    Entries whose source name is not in `known` (sources that were removed) are dropped.
+    """
     path = raw_dir / MANIFEST_NAME
     manifest: dict[str, Any] = {}
     if path.exists():
         manifest = json.loads(path.read_text(encoding="utf-8"))
+    if known is not None:
+        manifest = {name: entry for name, entry in manifest.items() if name in known}
     now = datetime.now(UTC).isoformat(timespec="seconds")
     for r in results:
         previous = manifest.get(r.source.name, {})

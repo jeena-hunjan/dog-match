@@ -1,9 +1,10 @@
 """Build the Dog Match dataset end to end: `make data` (python -m pipeline.build_dataset).
 
 Re-runnable: downloads are cached in data/raw/ and only fetched again with --force.
-Steps: download sources, map breed names across sources (data/interim/), validate the
-curated country restrictions, write image split manifests (data/splits/), load breeds,
-traits, sizes and restrictions into Postgres (DATABASE_URL), regenerate data_card.md.
+Steps: download sources, build the breed list from pipeline/breeds.yaml and match
+TheDogAPI to it (data/interim/), validate the curated country restrictions and notes,
+write image split manifests (data/splits/), load breeds, sizes and restrictions into
+Postgres (DATABASE_URL), regenerate data_card.md. Trait ratings are added in a later step.
 
 --skip-images skips the ~1.6 GB image downloads and the split manifests.
 --no-db skips the Postgres load.
@@ -25,12 +26,16 @@ from pipeline.breed_data import (
     breed_records,
     load_manual_sizes,
     size_problems,
-    trait_records,
 )
 from pipeline.breed_mapping import Aliases, Breed, load_and_build, write_outputs
 from pipeline.data_card import CardInputs, render
 from pipeline.download import MANIFEST_NAME, download, write_manifest
-from pipeline.restrictions import Restriction, check_breeds, load_restrictions
+from pipeline.restrictions import (
+    Restriction,
+    check_breeds,
+    load_country_notes,
+    load_restrictions,
+)
 from pipeline.sources import BREED_SOURCES, IMAGE_SOURCES
 from pipeline.splits import build_splits, missing_images, write_splits
 
@@ -90,14 +95,14 @@ def main(argv: list[str] | None = None) -> None:
     for r in results:
         status = "cached" if r.cached else "downloaded"
         log.info("%-24s %-10s %9d bytes  %s", r.source.name, status, r.size_bytes, r.path)
-    log.info("manifest written to %s", write_manifest(args.raw_dir, results))
+    known_sources = {s.name for s in BREED_SOURCES + IMAGE_SOURCES}
+    log.info("manifest written to %s", write_manifest(args.raw_dir, results, known_sources))
 
     mapping = load_and_build(args.raw_dir, Aliases.load())
     breeds_csv, report = write_outputs(mapping, args.interim_dir)
     log.info(
-        "%d breeds (%d with a photo class, %d with TheDogAPI sizes) -> %s; report: %s",
+        "%d breeds (%d with TheDogAPI sizes) -> %s; report: %s",
         len(mapping.breeds),
-        len(mapping.photo_breeds),
         sum(b.dog_api_id is not None for b in mapping.breeds),
         breeds_csv,
         report,
@@ -105,23 +110,25 @@ def main(argv: list[str] | None = None) -> None:
 
     restrictions = load_restrictions()
     check_breeds(restrictions, [b.name for b in mapping.breeds])
-    countries = sorted({r.country for r in restrictions})
-    log.info("%d country restrictions valid (%s)", len(restrictions), ", ".join(countries))
+    countries = {r.country for r in restrictions}
+    notes = load_country_notes()
+    log.info(
+        "%d country restrictions and %d country notes valid (%s)",
+        len(restrictions),
+        len(notes),
+        ", ".join(sorted(countries | {n.country for n in notes})),
+    )
 
     if args.skip_images:
         log.info("--skip-images: image splits not rebuilt")
     else:
         _build_splits(args, mapping.breeds)
 
-    with (args.raw_dir / "akc" / "breed_traits.csv").open(newline="", encoding="utf-8") as f:
-        akc_rows = list(csv.DictReader(f))
     dog_api = json.loads((args.raw_dir / "dog_api" / "breeds.json").read_text(encoding="utf-8"))
     records = breed_records(mapping.breeds, dog_api, load_manual_sizes())
-    traits, dropped = trait_records(akc_rows, mapping.breeds)
+    traits: list[TraitRecord] = []  # breed ratings are loaded in a later step
     gaps = size_problems(records)
     log.info("%d size gaps (listed in the data card), e.g. %s", len(gaps), gaps[:1])
-    if dropped:
-        log.warning("dropped %d trait scores outside 1-5: %s ...", len(dropped), dropped[0])
 
     if args.no_db:
         log.info("--no-db: Postgres not loaded")
@@ -134,10 +141,10 @@ def main(argv: list[str] | None = None) -> None:
         mapping=mapping,
         records=records,
         traits=traits,
-        dropped_traits=dropped,
         manual_sizes=sorted(load_manual_sizes()),
         size_problems=gaps,
         restrictions=restrictions,
+        country_notes=notes,
         splits=_read_splits(args.splits_dir),
     )
     args.data_card.write_text(render(card), encoding="utf-8", newline="\n")

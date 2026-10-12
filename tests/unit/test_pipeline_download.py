@@ -12,7 +12,7 @@ import pytest
 from pipeline.download import MissingApiKeyError, download, extract_dir, write_manifest
 from pipeline.sources import BREED_SOURCES, Source
 
-CSV = Source(name="csv", url="https://example.test/a.csv", filename="akc/a.csv")
+CSV = Source(name="csv", url="https://example.test/a.csv", filename="src/a.csv")
 KEYED = Source(name="keyed", url="https://example.test/b.json", filename="b.json", api_key_env="K")
 TAR = Source(name="tar", url="https://example.test/c.tar", filename="s/c.tar", extract=True)
 
@@ -155,7 +155,7 @@ def test_manifest_keeps_first_download_time_for_cached_files(tmp_path: Path) -> 
 
     entry = json.loads((tmp_path / "manifest.json").read_text())["csv"]
     assert entry["downloaded_at"] == "2020-01-01T00:00:00+00:00"
-    assert entry == entry | {"path": "akc/a.csv", "url": CSV.url, "sha256": first.sha256}
+    assert entry == entry | {"path": "src/a.csv", "url": CSV.url, "sha256": first.sha256}
 
 
 def test_breed_sources_have_unique_names_and_paths() -> None:

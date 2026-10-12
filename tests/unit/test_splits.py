@@ -24,21 +24,15 @@ from pipeline.splits import (
 )
 
 BREEDS = [
-    Breed("Pug", "Pugs", "n02110958-pug", 1, "Pug"),
-    Breed("Beagle", "Beagles", "n02088364-beagle", 2, "Beagle"),
-    Breed("Havanese", "Havanese", None, 3, "Havanese"),  # no photo class
-    Breed("German Shorthaired Pointer", "Pointers (German Shorthaired)", "n02100236-x", 4, None),
+    Breed("Pug", "Pug", "n02110958-pug", 1, "Pug"),
+    Breed("Beagle", "Beagle", "n02088364-beagle", 2, "Beagle"),
+    Breed("German Shorthaired Pointer", "German Shorthaired Pointer", "n02100236-x", 4, None),
 ]
 ALIASES = Aliases(
-    akc_singular={},
-    singular_words=frozenset(),
-    akc_varieties={},
     stanford_excluded=frozenset(),
-    stanford_only={},
-    stanford_to_breed={},
     breed_to_dog_api={},
     oxford_to_breed={"german_shorthaired": "German Shorthaired Pointer"},
-    oxford_unmapped=frozenset({"american_bulldog"}),
+    oxford_unmapped=frozenset({"american_bulldog", "havanese"}),
 )
 
 
@@ -126,8 +120,8 @@ def test_oxford_rows_map_dogs_and_keep_cats(tmp_path: Path) -> None:
     assert got == [
         ("pug_1.jpg", 2, "Pug", "dog"),
         ("german_shorthaired_3.jpg", 1, "German Shorthaired Pointer", "dog"),
-        ("havanese_2.jpg", None, "Havanese", "dog"),  # known breed, no photo class
-        ("american_bulldog_5.jpg", None, None, "dog"),  # listed in oxford_unmapped
+        ("havanese_2.jpg", None, None, "dog"),  # listed in oxford_unmapped
+        ("american_bulldog_5.jpg", None, None, "dog"),
         ("Bengal_4.jpg", None, None, "cat"),
     ]
 

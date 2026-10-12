@@ -6,7 +6,7 @@ index,stanford_label,breed
 4,n02086240-Shih-Tzu,Shih Tzu
 5,n02086646-Blenheim_spaniel,Cavalier King Charles Spaniel
 6,n02086910-papillon,Papillon
-7,n02087046-toy_terrier,Toy Terrier
+7,n02087046-toy_terrier,English Toy Terrier (Black & Tan)
 8,n02087394-Rhodesian_ridgeback,Rhodesian Ridgeback
 9,n02088094-Afghan_hound,Afghan Hound
 10,n02088238-basset,Basset Hound
@@ -49,12 +49,12 @@ index,stanford_label,breed
 47,n02097209-standard_schnauzer,Standard Schnauzer
 48,n02097298-Scotch_terrier,Scottish Terrier
 49,n02097474-Tibetan_terrier,Tibetan Terrier
-50,n02097658-silky_terrier,Silky Terrier
-51,n02098105-soft-coated_wheaten_terrier,Soft Coated Wheaten Terrier
+50,n02097658-silky_terrier,Australian Silky Terrier
+51,n02098105-soft-coated_wheaten_terrier,Soft-coated Wheaten Terrier
 52,n02098286-West_Highland_white_terrier,West Highland White Terrier
 53,n02098413-Lhasa,Lhasa Apso
-54,n02099267-flat-coated_retriever,Flat-Coated Retriever
-55,n02099429-curly-coated_retriever,Curly-Coated Retriever
+54,n02099267-flat-coated_retriever,Flat-coated Retriever
+55,n02099429-curly-coated_retriever,Curly-coated Retriever
 56,n02099601-golden_retriever,Golden Retriever
 57,n02099712-Labrador_retriever,Labrador Retriever
 58,n02099849-Chesapeake_Bay_retriever,Chesapeake Bay Retriever
@@ -72,19 +72,19 @@ index,stanford_label,breed
 70,n02102973-Irish_water_spaniel,Irish Water Spaniel
 71,n02104029-kuvasz,Kuvasz
 72,n02104365-schipperke,Schipperke
-73,n02105056-groenendael,Belgian Sheepdog
+73,n02105056-groenendael,Groenendael
 74,n02105162-malinois,Belgian Malinois
 75,n02105251-briard,Briard
 76,n02105412-kelpie,Australian Kelpie
 77,n02105505-komondor,Komondor
 78,n02105641-Old_English_sheepdog,Old English Sheepdog
 79,n02105855-Shetland_sheepdog,Shetland Sheepdog
-80,n02106030-collie,Collie
+80,n02106030-collie,Rough Collie
 81,n02106166-Border_collie,Border Collie
 82,n02106382-Bouvier_des_Flandres,Bouvier des Flandres
 83,n02106550-Rottweiler,Rottweiler
-84,n02106662-German_shepherd,German Shepherd Dog
-85,n02107142-Doberman,Doberman Pinscher
+84,n02106662-German_shepherd,German Shepherd
+85,n02107142-Doberman,Dobermann
 86,n02107312-miniature_pinscher,Miniature Pinscher
 87,n02107574-Greater_Swiss_Mountain_dog,Greater Swiss Mountain Dog
 88,n02107683-Bernese_mountain_dog,Bernese Mountain Dog
@@ -96,7 +96,7 @@ index,stanford_label,breed
 94,n02108915-French_bulldog,French Bulldog
 95,n02109047-Great_Dane,Great Dane
 96,n02109525-Saint_Bernard,St. Bernard
-97,n02109961-Eskimo_dog,Eskimo Dog
+97,n02109961-Eskimo_dog,Canadian Eskimo Dog
 98,n02110063-malamute,Alaskan Malamute
 99,n02110185-Siberian_husky,Siberian Husky
 100,n02110627-affenpinscher,Affenpinscher
@@ -104,15 +104,15 @@ index,stanford_label,breed
 102,n02110958-pug,Pug
 103,n02111129-Leonberg,Leonberger
 104,n02111277-Newfoundland,Newfoundland
-105,n02111500-Great_Pyrenees,Great Pyrenees
+105,n02111500-Great_Pyrenees,Pyrenean Mountain Dog
 106,n02111889-Samoyed,Samoyed
 107,n02112018-Pomeranian,Pomeranian
 108,n02112137-chow,Chow Chow
 109,n02112350-keeshond,Keeshond
-110,n02112706-Brabancon_griffon,Brussels Griffon
+110,n02112706-Brabancon_griffon,Griffon Bruxellois
 111,n02113023-Pembroke,Pembroke Welsh Corgi
 112,n02113186-Cardigan,Cardigan Welsh Corgi
 113,n02113624-toy_poodle,Toy Poodle
 114,n02113712-miniature_poodle,Miniature Poodle
 115,n02113799-standard_poodle,Standard Poodle
-116,n02113978-Mexican_hairless,Xoloitzcuintli
+116,n02113978-Mexican_hairless,Xoloitzcuintle

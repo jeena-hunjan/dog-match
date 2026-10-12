@@ -1,113 +1,28 @@
-# Breed-name knowledge used by pipeline/breed_mapping.py.
+# Name aliases used by pipeline/breed_mapping.py and pipeline/splits.py.
 #
-# Names are compared after normalisation (lowercase, no accents or punctuation, "_" and "-"
-# as spaces, "St." as "Saint"), then fuzzy-matched. Only list what that cannot resolve.
-# The canonical breed list is the AKC list (singular names), plus the Stanford breeds below
-# that AKC does not recognise.
-
-# AKC plural names whose singular is not "drop the final s" (keyed by AKC name).
-akc_singular:
-  Bichons Frises: Bichon Frise
-  Bouviers des Flandres: Bouvier des Flandres
-  Cirnechi dell'Etna: Cirneco dell'Etna
-  Dogues de Bordeaux: Dogue de Bordeaux
-  Keeshonden: Keeshond
-  Komondorok: Komondor
-  Kuvaszok: Kuvasz
-  Lagotti Romagnoli: Lagotto Romagnolo
-  Petits Bassets Griffons Vendeens: Petit Basset Griffon Vendeen
-  Pulik: Puli
-  Pumik: Pumi
-  Siberian Huskies: Siberian Husky
-  Spinoni Italiani: Spinone Italiano
-
-# Last words that end in "s" but are already singular.
-singular_words_ending_in_s: [Havanese, Malinois, Maltese, Pekingese, Pyrenees]
-
-# AKC rates Poodles as one breed, but Stanford Dogs and TheDogAPI split them by size.
-# Each variety becomes its own breed and inherits the AKC traits.
-akc_varieties:
-  Poodle: [Toy Poodle, Miniature Poodle, Standard Poodle]
+# The breed list itself is pipeline/breeds.yaml. Names from other sources are compared
+# after normalisation (lowercase, no accents or punctuation, "_" and "-" as spaces,
+# "St." as "Saint"), then fuzzy-matched. Only list what that cannot resolve.
 
 # Wild canids: not pets, never recommended (CLAUDE.md section 6).
 stanford_excluded: [dingo, dhole, African_hunting_dog]
 
-# Stanford Dogs breeds that AKC does not recognise. They become breeds with a photo
-# class but no AKC trait ratings.
-stanford_only:
-  Appenzeller: Appenzeller Sennenhund
-  Eskimo_dog: Eskimo Dog # ImageNet "Eskimo dog, husky": a sled dog, not the American Eskimo Dog
-  kelpie: Australian Kelpie
-  toy_terrier: Toy Terrier # ImageNet "toy terrier"; no single AKC breed
-
-# Stanford Dogs label (without the synset id) -> canonical breed name.
-stanford_to_breed:
-  Airedale: Airedale Terrier
-  basset: Basset Hound
-  Blenheim_spaniel: Cavalier King Charles Spaniel # Blenheim is a Cavalier colour
-  bluetick: Bluetick Coonhound
-  Boston_bull: Boston Terrier
-  Brabancon_griffon: Brussels Griffon
-  Brittany_spaniel: Brittany
-  bull_mastiff: Bullmastiff
-  cairn: Cairn Terrier
-  Cardigan: Cardigan Welsh Corgi
-  chow: Chow Chow
-  clumber: Clumber Spaniel
-  # WordNet defines this synset as the English cocker spaniel; AKC's "Cocker Spaniel" is
-  # the American breed.
-  cocker_spaniel: English Cocker Spaniel
-  Dandie_Dinmont: Dandie Dinmont Terrier
-  Doberman: Doberman Pinscher
-  English_springer: English Springer Spaniel
-  EntleBucher: Entlebucher Mountain Dog
-  German_shepherd: German Shepherd Dog
-  German_short-haired_pointer: German Shorthaired Pointer
-  groenendael: Belgian Sheepdog
-  Japanese_spaniel: Japanese Chin
-  Leonberg: Leonberger
-  Lhasa: Lhasa Apso
-  malamute: Alaskan Malamute
-  malinois: Belgian Malinois
-  Maltese_dog: Maltese
-  Mexican_hairless: Xoloitzcuintli
-  Pekinese: Pekingese
-  Pembroke: Pembroke Welsh Corgi
-  redbone: Redbone Coonhound
-  Scotch_terrier: Scottish Terrier
-  Staffordshire_bullterrier: Staffordshire Bull Terrier
-  Walker_hound: Treeing Walker Coonhound
-  wire-haired_fox_terrier: Wire Fox Terrier
-
 # Oxford-IIIT Pet dog breed (image-name prefix, e.g. "german_shorthaired_12") ->
-# canonical breed name. Oxford is only used as an external test set.
+# breed name. Oxford is only used as an external test set.
 oxford_to_breed:
   german_shorthaired: German Shorthaired Pointer
-  wheaten_terrier: Soft Coated Wheaten Terrier
+  great_pyrenees: Pyrenean Mountain Dog
+  wheaten_terrier: Soft-coated Wheaten Terrier
 
-# Oxford dog breeds with no canonical breed (not AKC breeds). Their images are kept as
+# Oxford dog breeds that are not in our breed list. Their images are kept as
 # "dog, but not one of our classes" for abstention checks.
-oxford_unmapped: [american_bulldog, american_pit_bull_terrier]
+oxford_unmapped: [american_bulldog, american_pit_bull_terrier, havanese, shiba_inu]
 
-# Canonical breed name -> TheDogAPI name (TheDogAPI mostly uses FCI/UK names).
-# Portuguese Podengo Pequeno is left out on purpose: TheDogAPI's "Portuguese Podengo"
-# record has medium-size measurements (16-20 kg), so its size is filled by hand instead.
+# Breed name -> TheDogAPI name (TheDogAPI mostly uses FCI/UK names).
 breed_to_dog_api:
-  Anatolian Shepherd Dog: Kangal Shepherd Dog # FCI merged the two standards in 2018
-  Belgian Sheepdog: Belgian Shepherd
-  Brussels Griffon: Griffon Bruxellois
-  Cocker Spaniel: American Cocker Spaniel # AKC's Cocker Spaniel is the American breed
-  Collie: Rough Collie # AKC's Collie covers rough and smooth; same size standard
-  English Toy Spaniel: King Charles Spaniel
-  Eskimo Dog: Canadian Eskimo Dog
-  German Shepherd Dog: German Shepherd
-  Great Pyrenees: Pyrenean Mountain Dog
-  Mastiff: English Mastiff
+  Dobermann: Doberman Pinscher
+  Groenendael: Belgian Shepherd # TheDogAPI's "Belgian Shepherd" record is the Groenendael
   Miniature Poodle: Poodle (Miniature)
-  Nederlandse Kooikerhondje: Kooikerhondje
-  Pyrenean Shepherd: Pyrenean Sheepdog
-  Russell Terrier: Jack Russell Terrier
-  Silky Terrier: Australian Silky Terrier
   Standard Poodle: Poodle
   Toy Poodle: Poodle (Toy)
-  Toy Terrier: English Toy Terrier (Black & Tan)
+  Xoloitzcuintle: Xoloitzcuintli

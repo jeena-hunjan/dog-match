@@ -9,14 +9,12 @@ from dataclasses import dataclass
 from datetime import date
 from typing import Any
 
-from pipeline.breed_data import TRAIT_COLUMNS, BreedRecord, TraitRecord
+from pipeline.breed_data import BreedRecord, TraitRecord
 from pipeline.breed_mapping import BreedMapping
-from pipeline.restrictions import Restriction
+from pipeline.restrictions import CountryNote, Restriction
 
 # Licence / terms notes shown next to each source in the card.
 SOURCE_NOTES: dict[str, str] = {
-    "akc_breed_traits": "AKC breed ratings, compiled by TidyTuesday (2022-02-01)",
-    "akc_trait_descriptions": "AKC trait descriptions, compiled by TidyTuesday",
     "dog_api_breeds": "TheDogAPI terms of use; free API key",
     "stanford_lists": "Stanford Dogs official split; non-commercial research use",
     "stanford_images": "Stanford Dogs (ImageNet subset); non-commercial research use",
@@ -31,10 +29,10 @@ class CardInputs:
     mapping: BreedMapping
     records: Sequence[BreedRecord]
     traits: Sequence[TraitRecord]
-    dropped_traits: Sequence[str]
     manual_sizes: Sequence[str]  # breed names with a manual size fill
     size_problems: Sequence[str]
     restrictions: Sequence[Restriction]
+    country_notes: Sequence[CountryNote]
     splits: Mapping[str, Sequence[Mapping[str, str]]]  # rows of data/splits/*.csv
 
 
@@ -106,14 +104,19 @@ def _splits(splits: Mapping[str, Sequence[Mapping[str, str]]]) -> list[str]:
 def render(inputs: CardInputs) -> str:
     m = inputs.mapping
     breeds = m.breeds
-    with_traits = {t.breed for t in inputs.traits}
-    no_traits = sorted(b.name for b in breeds if b.name not in with_traits)
-    by_country: dict[str, Counter[str]] = {}
+    rated = {t.breed for t in inputs.traits}
+    countries = sorted(
+        {r.country for r in inputs.restrictions} | {n.country for n in inputs.country_notes}
+    )
+    by_country: dict[str, Counter[str]] = {c: Counter() for c in countries}
     checked: dict[str, date] = {}
+    dated: list[tuple[str, date]] = [(r.country, r.last_checked) for r in inputs.restrictions]
+    dated += [(n.country, n.last_checked) for n in inputs.country_notes]
+    for country, day in dated:
+        checked[country] = max(checked.get(country, day), day)
     for r in inputs.restrictions:
-        by_country.setdefault(r.country, Counter())[r.status] += 1
-        checked[r.country] = max(checked.get(r.country, r.last_checked), r.last_checked)
-    stanford_methods = Counter(x.method for x in m.stanford_matches)
+        by_country[r.country][r.status] += 1
+    noted = {n.country for n in inputs.country_notes}
     dog_api_methods = Counter(x.method for x in m.dog_api_matches)
 
     lines = [
@@ -129,56 +132,44 @@ def render(inputs: CardInputs) -> str:
         "",
         *_sources(inputs.manifest),
         "",
-        "Country restrictions are hand-curated in `pipeline/country_restrictions.csv`, each row",
-        "with a source URL and last-checked date. Manual size fills are in",
-        "`pipeline/manual_sizes.csv`.",
+        "Country restrictions and notes are hand-curated in `pipeline/country_restrictions.csv`",
+        "and `pipeline/country_notes.csv`, each row with a source URL and last-checked date.",
+        "Manual size fills are in `pipeline/manual_sizes.csv`.",
         "",
         "## Breeds",
         "",
         *_table(
             ["", "Count"],
             [
-                ("Canonical breeds", len(breeds)),
-                ("With AKC trait ratings", len(with_traits)),
-                ("With a photo class (Stanford Dogs)", len(m.photo_breeds)),
-                ("Photo class but no AKC ratings", sum(b.akc_name is None for b in breeds)),
+                ("Breeds (Stanford Dogs photo classes)", len(breeds)),
+                ("Wikipedia articles", len({b.wikipedia_title for b in breeds})),
+                ("With trait ratings", len(rated)),
                 ("With size data", sum(r.weight_max_kg is not None for r in inputs.records)),
             ],
         ),
         "",
-        "The canonical list is the 195 AKC breeds as singular names, with Poodles split into",
-        "Toy, Miniature and Standard (they share the AKC Poodle ratings but differ in size),",
-        "plus the Stanford breeds AKC does not recognise.",
-        "",
-        f"Breeds without trait ratings (cannot be scored): {', '.join(no_traits)}.",
+        "The breed list is `pipeline/breeds.yaml`: the 120 Stanford Dogs classes minus the wild",
+        "canids, each with a display name and its English Wikipedia article. Poodles (Toy,",
+        "Miniature, Standard) and the Belgian Shepherd varieties share one article each.",
         "",
         "## Name matching",
         "",
-        "Names are matched with `pipeline/aliases.yaml`, then an exact normalised key, then",
-        "rapidfuzz (token sort ratio >= 92), one-to-one. Unknown aliases fail the run.",
+        "TheDogAPI names are matched with `pipeline/aliases.yaml`, then an exact normalised key,",
+        "then rapidfuzz (token sort ratio >= 92), one-to-one. Unknown aliases fail the run.",
         "",
-        f"- Stanford label -> breed: {stanford_methods['alias']} alias, "
-        f"{stanford_methods['exact']} exact, {stanford_methods['fuzzy']} fuzzy.",
         f"- Breed -> TheDogAPI: {dog_api_methods['alias']} alias, {dog_api_methods['exact']} "
         f"exact, {dog_api_methods['fuzzy']} fuzzy, {dog_api_methods['none']} unmatched.",
         f"- Excluded Stanford classes (wild canids): {', '.join(m.stanford_excluded)}.",
         "",
-        "## Traits",
-        "",
-        f"{len(TRAIT_COLUMNS)} AKC ratings on a 1-5 scale: "
-        + ", ".join(f"`{t}`" for t in TRAIT_COLUMNS.values())
-        + ". They are breed averages and partly subjective, so the app presents them as"
-        " tendencies.",
+        "## Trait ratings",
         "",
     ]
-    if inputs.dropped_traits:
-        dropped_breeds = sorted({d.split(":")[0] for d in inputs.dropped_traits})
-        lines += [
-            f"Dropped {len(inputs.dropped_traits)} scores outside 1-5 (source errors) for: "
-            f"{', '.join(dropped_breeds)}.",
-            "",
-        ]
+    if inputs.traits:
+        lines.append(f"{len(inputs.traits)} ratings for {len(rated)} breeds.")
+    else:
+        lines.append("Not loaded yet.")
     lines += [
+        "",
         "## Sizes",
         "",
         "Weight, height and life span ranges come from TheDogAPI (metric), with manual fills"
@@ -193,16 +184,22 @@ def render(inputs: CardInputs) -> str:
         "## Country restrictions",
         "",
         *_table(
-            ["Country", "Banned", "Restricted", "Last checked"],
+            ["Country", "Banned", "Restricted", "Country note", "Last checked"],
             [
-                (c, by_country[c]["banned"], by_country[c]["restricted"], checked[c])
-                for c in sorted(by_country)
+                (
+                    c,
+                    by_country[c]["banned"],
+                    by_country[c]["restricted"],
+                    "yes" if c in noted else "no",
+                    checked[c],
+                )
+                for c in countries
             ],
         ),
         "",
-        "Only breeds in the canonical list can have rows. Laws that name other types",
-        "(e.g. Pit Bull Terrier, XL Bully) are described in the CSV notes, and the app always",
-        "tells users to check local law.",
+        "Only breeds in the breed list can have restriction rows. Laws that name other breeds",
+        "or types (e.g. the UK's Pit Bull Terrier and XL Bully bans) are in the country notes,",
+        "and the app always tells users to check local law.",
         "",
         "## Images",
         "",
@@ -212,8 +209,8 @@ def render(inputs: CardInputs) -> str:
         "",
         "- Stanford Dogs is a subset of ImageNet, which the pretrained backbones were trained"
         " on, so Stanford test accuracy is inflated. Oxford-IIIT is the honest number.",
-        "- AKC ratings are breed averages and partly subjective.",
-        "- Only the photo breeds can be identified from a photo; the rest can only be recommended.",
+        "- Only the 117 Stanford breeds are covered; popular breeds such as the Havanese and"
+        " Shiba Inu are missing.",
         "- Breed laws change; restrictions cover five countries and carry a last-checked date.",
     ]
     return "\n".join(lines) + "\n"

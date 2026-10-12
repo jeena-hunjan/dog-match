@@ -10,95 +10,73 @@ under their dataset licences; this repo stores file names and labels only.
 
 | Source | URL | Size | SHA-256 (prefix) | Licence / notes |
 |---|---|---|---|---|
-| `akc_breed_traits` | [link](https://raw.githubusercontent.com/rfordatascience/tidytuesday/993a0a85770cb68c443807c6d69a956c89f4b707/data/2022/2022-02-01/breed_traits.csv) | 11.9 kB | `f7094ea40e20` | AKC breed ratings, compiled by TidyTuesday (2022-02-01) |
-| `akc_trait_descriptions` | [link](https://raw.githubusercontent.com/rfordatascience/tidytuesday/993a0a85770cb68c443807c6d69a956c89f4b707/data/2022/2022-02-01/trait_description.csv) | 4.7 kB | `8efb2270c239` | AKC trait descriptions, compiled by TidyTuesday |
 | `dog_api_breeds` | [link](https://api.thedogapi.com/v1/breeds) | 685.3 kB | `2c974b9f3bd1` | TheDogAPI terms of use; free API key |
 | `oxford_annotations` | [link](https://www.robots.ox.ac.uk/~vgg/data/pets/data/annotations.tar.gz) | 19.2 MB | `52425fb6de5c` | Oxford-IIIT Pet; CC BY-SA 4.0 |
 | `oxford_images` | [link](https://www.robots.ox.ac.uk/~vgg/data/pets/data/images.tar.gz) | 791.9 MB | `67195c5e1c01` | Oxford-IIIT Pet; CC BY-SA 4.0 |
 | `stanford_images` | [link](http://vision.stanford.edu/aditya86/ImageNetDogs/images.tar) | 793.6 MB | `a443fc2f9a85` | Stanford Dogs (ImageNet subset); non-commercial research use |
 | `stanford_lists` | [link](http://vision.stanford.edu/aditya86/ImageNetDogs/lists.tar) | 481.3 kB | `34b47cacd9a9` | Stanford Dogs official split; non-commercial research use |
 
-Country restrictions are hand-curated in `pipeline/country_restrictions.csv`, each row
-with a source URL and last-checked date. Manual size fills are in
-`pipeline/manual_sizes.csv`.
+Country restrictions and notes are hand-curated in `pipeline/country_restrictions.csv`
+and `pipeline/country_notes.csv`, each row with a source URL and last-checked date.
+Manual size fills are in `pipeline/manual_sizes.csv`.
 
 ## Breeds
 
 |  | Count |
 |---|---|
-| Canonical breeds | 201 |
-| With AKC trait ratings | 196 |
-| With a photo class (Stanford Dogs) | 117 |
-| Photo class but no AKC ratings | 4 |
-| With size data | 201 |
+| Breeds (Stanford Dogs photo classes) | 117 |
+| Wikipedia articles | 114 |
+| With trait ratings | 0 |
+| With size data | 117 |
 
-The canonical list is the 195 AKC breeds as singular names, with Poodles split into
-Toy, Miniature and Standard (they share the AKC Poodle ratings but differ in size),
-plus the Stanford breeds AKC does not recognise.
-
-Breeds without trait ratings (cannot be scored): Appenzeller Sennenhund, Australian Kelpie, Eskimo Dog, Plott Hound, Toy Terrier.
+The breed list is `pipeline/breeds.yaml`: the 120 Stanford Dogs classes minus the wild
+canids, each with a display name and its English Wikipedia article. Poodles (Toy,
+Miniature, Standard) and the Belgian Shepherd varieties share one article each.
 
 ## Name matching
 
-Names are matched with `pipeline/aliases.yaml`, then an exact normalised key, then
-rapidfuzz (token sort ratio >= 92), one-to-one. Unknown aliases fail the run.
+TheDogAPI names are matched with `pipeline/aliases.yaml`, then an exact normalised key,
+then rapidfuzz (token sort ratio >= 92), one-to-one. Unknown aliases fail the run.
 
-- Stanford label -> breed: 38 alias, 79 exact, 0 fuzzy.
-- Breed -> TheDogAPI: 18 alias, 182 exact, 0 fuzzy, 1 unmatched.
+- Breed -> TheDogAPI: 6 alias, 111 exact, 0 fuzzy, 0 unmatched.
 - Excluded Stanford classes (wild canids): n02115641-dingo, n02115913-dhole, n02116738-African_hunting_dog.
 
-## Traits
+## Trait ratings
 
-14 AKC ratings on a 1-5 scale: `affectionate_with_family`, `good_with_young_children`, `good_with_other_dogs`, `shedding_level`, `coat_grooming_frequency`, `drooling_level`, `openness_to_strangers`, `playfulness_level`, `watchdog_protective_nature`, `adaptability_level`, `trainability_level`, `energy_level`, `barking_level`, `mental_stimulation_needs`. They are breed averages and partly subjective, so the app presents them as tendencies.
-
-Dropped 14 scores outside 1-5 (source errors) for: Plott Hound.
+Not loaded yet.
 
 ## Sizes
 
-Weight, height and life span ranges come from TheDogAPI (metric), with manual fills for: Portuguese Podengo Pequeno.
+Weight, height and life span ranges come from TheDogAPI (metric), with manual fills for: none.
 
 Gaps (life span is display-only; weight and height drive the size filters):
 
-- Havanese: lifespan missing
-- Pug: lifespan missing
 - Chihuahua: lifespan missing
-- Belgian Malinois: lifespan missing
-- Shiba Inu: lifespan missing
-- West Highland White Terrier: lifespan missing
-- Bichon Frise: lifespan missing
 - Papillon: lifespan missing
 - Italian Greyhound: lifespan missing
-- Cairn Terrier: lifespan missing
-- Chinese Crested: lifespan missing
-- Coton de Tulear: lifespan missing
-- Basenji: lifespan missing
-- Lagotto Romagnolo: lifespan missing
-- Standard Schnauzer: lifespan missing
-- Silky Terrier: lifespan missing
-- Toy Fox Terrier: lifespan missing
-- American Eskimo Dog: lifespan missing
 - Irish Terrier: lifespan missing
-- American Hairless Terrier: lifespan missing
-- Xoloitzcuintli: lifespan missing
-- Manchester Terrier: lifespan missing
-- Portuguese Podengo Pequeno: lifespan missing
-- Lowchen: lifespan missing
-- Bergamasco Sheepdog: lifespan missing
-- Pyrenean Shepherd: lifespan missing
+- Cairn Terrier: lifespan missing
+- Standard Schnauzer: lifespan missing
+- Australian Silky Terrier: lifespan missing
+- West Highland White Terrier: lifespan missing
+- Belgian Malinois: lifespan missing
+- Basenji: lifespan missing
+- Pug: lifespan missing
+- Xoloitzcuintle: lifespan missing
 
 ## Country restrictions
 
-| Country | Banned | Restricted | Last checked |
-|---|---|---|---|
-| DE | 0 | 3 | 2026-10-12 |
-| DK | 4 | 0 | 2026-10-12 |
-| FR | 1 | 2 | 2026-10-12 |
-| GB | 1 | 0 | 2026-10-12 |
-| IE | 0 | 8 | 2026-10-12 |
+| Country | Banned | Restricted | Country note | Last checked |
+|---|---|---|---|---|
+| DE | 0 | 2 | yes | 2026-10-12 |
+| DK | 1 | 0 | yes | 2026-10-12 |
+| FR | 0 | 2 | yes | 2026-10-12 |
+| GB | 0 | 0 | yes | 2026-10-12 |
+| IE | 0 | 6 | yes | 2026-10-12 |
 
-Only breeds in the canonical list can have rows. Laws that name other types
-(e.g. Pit Bull Terrier, XL Bully) are described in the CSV notes, and the app always
-tells users to check local law.
+Only breeds in the breed list can have restriction rows. Laws that name other breeds
+or types (e.g. the UK's Pit Bull Terrier and XL Bully bans) are in the country notes,
+and the app always tells users to check local law.
 
 ## Images
 
@@ -123,6 +101,5 @@ Other dogs: american_bulldog, american_pit_bull_terrier, havanese, shiba_inu.
 ## Known limitations
 
 - Stanford Dogs is a subset of ImageNet, which the pretrained backbones were trained on, so Stanford test accuracy is inflated. Oxford-IIIT is the honest number.
-- AKC ratings are breed averages and partly subjective.
-- Only the photo breeds can be identified from a photo; the rest can only be recommended.
+- Only the 117 Stanford breeds are covered; popular breeds such as the Havanese and Shiba Inu are missing.
 - Breed laws change; restrictions cover five countries and carry a last-checked date.

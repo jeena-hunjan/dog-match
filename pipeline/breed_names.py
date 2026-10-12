@@ -2,16 +2,13 @@
 
 - `clean`: tidy a raw name for display (Unicode, spaces, quotes).
 - `match_key`: an aggressive normal form used only for comparing names.
-- `akc_display_name`: AKC plurals ("Retrievers (Labrador)") to "Labrador Retriever".
 - `stanford_name`: Stanford folder names ("n02099712-Labrador_retriever") to plain names.
 """
 
 import re
 import unicodedata
-from collections.abc import Collection, Mapping
 
 _SYNSET_PREFIX = re.compile(r"^n\d{8}-")
-_INVERTED = re.compile(r"(?P<group>.+?) \((?P<kind>.+)\)")
 _QUOTES = str.maketrans({"\u2018": "'", "\u2019": "'", "\u201c": '"', "\u201d": '"'})
 
 
@@ -38,28 +35,3 @@ def stanford_name(label: str) -> str:
 def stanford_alias_key(label: str) -> str:
     """'n02085782-Japanese_spaniel' -> 'Japanese_spaniel', the form used in aliases.yaml."""
     return _SYNSET_PREFIX.sub("", label)
-
-
-def _singular_last_word(name: str, keep_words: Collection[str]) -> str:
-    *head, last = name.split(" ")
-    if last.endswith("s") and not last.endswith("ss") and last not in keep_words:
-        last = last[:-1]
-    return " ".join([*head, last])
-
-
-def akc_display_name(
-    raw: str, overrides: Mapping[str, str], keep_words: Collection[str] = ()
-) -> str:
-    """Singular display name for an AKC breed.
-
-    `overrides` handles irregular plurals (Kuvaszok -> Kuvasz) and is keyed by the cleaned
-    raw name. Otherwise the last word loses its final "s" unless it is in `keep_words`
-    (e.g. Maltese, Pyrenees), and "Group (Kind)" is turned round to "Kind Group".
-    """
-    name = clean(raw)
-    if name in overrides:
-        return overrides[name]
-    inverted = _INVERTED.fullmatch(name)
-    if inverted:
-        return f"{inverted['kind']} {_singular_last_word(inverted['group'], keep_words)}"
-    return _singular_last_word(name, keep_words)

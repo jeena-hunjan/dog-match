@@ -2,8 +2,7 @@
 
 - Sizes come from TheDogAPI's metric strings ("3.2-4.5", "Male: 23-25; Female: 18-23"),
   overridden by pipeline/manual_sizes.csv where TheDogAPI is missing or wrong.
-- Traits are the 14 numeric AKC ratings (1-5). A score outside 1-5 is a source error
-  (the TidyTuesday Plott Hound row is all zeros) and is dropped, not loaded.
+- Trait ratings come from pipeline/breed_ratings.csv (loaded in a later step).
 """
 
 import csv
@@ -14,27 +13,8 @@ from pathlib import Path
 from typing import Any
 
 from pipeline.breed_mapping import Breed
-from pipeline.breed_names import clean
 
 MANUAL_SIZES_PATH = Path(__file__).with_name("manual_sizes.csv")
-
-# AKC column -> trait key stored in breed_traits.trait.
-TRAIT_COLUMNS: dict[str, str] = {
-    "Affectionate With Family": "affectionate_with_family",
-    "Good With Young Children": "good_with_young_children",
-    "Good With Other Dogs": "good_with_other_dogs",
-    "Shedding Level": "shedding_level",
-    "Coat Grooming Frequency": "coat_grooming_frequency",
-    "Drooling Level": "drooling_level",
-    "Openness To Strangers": "openness_to_strangers",
-    "Playfulness Level": "playfulness_level",
-    "Watchdog/Protective Nature": "watchdog_protective_nature",
-    "Adaptability Level": "adaptability_level",
-    "Trainability Level": "trainability_level",
-    "Energy Level": "energy_level",
-    "Barking Level": "barking_level",
-    "Mental Stimulation Needs": "mental_stimulation_needs",
-}
 
 _NUMBER = re.compile(r"\d+(?:\.\d+)?")
 _SIZE_FIELDS = (
@@ -146,26 +126,3 @@ def size_problems(records: Iterable[BreedRecord]) -> list[str]:
             elif not low <= lo <= hi <= high:
                 problems.append(f"{r.name}: {prefix} {lo}-{hi} out of range")
     return problems
-
-
-def trait_records(
-    akc_rows: Iterable[Mapping[str, Any]], breeds: Sequence[Breed]
-) -> tuple[list[TraitRecord], list[str]]:
-    """Trait rows for every breed with AKC data, plus the (breed, trait) scores dropped
-    because they were outside 1-5. Poodle varieties share the AKC Poodle scores."""
-    by_akc: dict[str, list[str]] = {}
-    for b in breeds:
-        if b.akc_name is not None:
-            by_akc.setdefault(b.akc_name, []).append(b.name)
-
-    records: list[TraitRecord] = []
-    dropped: list[str] = []
-    for row in akc_rows:
-        for name in by_akc.get(clean(str(row["Breed"])), []):
-            for column, trait in TRAIT_COLUMNS.items():
-                score = int(row[column])
-                if 1 <= score <= 5:
-                    records.append(TraitRecord(name, trait, score))
-                else:
-                    dropped.append(f"{name}: {trait}={score}")
-    return records, dropped

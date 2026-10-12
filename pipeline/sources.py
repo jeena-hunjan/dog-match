@@ -2,11 +2,6 @@
 
 from dataclasses import dataclass
 
-# Pinned to the commit that published the data, so a re-run gets byte-identical files.
-_TIDYTUESDAY = (
-    "https://raw.githubusercontent.com/rfordatascience/tidytuesday/"
-    "993a0a85770cb68c443807c6d69a956c89f4b707/data/2022/2022-02-01"
-)
 _STANFORD = "http://vision.stanford.edu/aditya86/ImageNetDogs"
 
 
@@ -19,16 +14,6 @@ class Source:
     extract: bool = False  # unpack the tar archive into a folder next to it
 
 
-AKC_BREED_TRAITS = Source(
-    name="akc_breed_traits",
-    url=f"{_TIDYTUESDAY}/breed_traits.csv",
-    filename="akc/breed_traits.csv",
-)
-AKC_TRAIT_DESCRIPTIONS = Source(
-    name="akc_trait_descriptions",
-    url=f"{_TIDYTUESDAY}/trait_description.csv",
-    filename="akc/trait_description.csv",
-)
 DOG_API_BREEDS = Source(
     name="dog_api_breeds",
     url="https://api.thedogapi.com/v1/breeds",
@@ -44,8 +29,6 @@ STANFORD_LISTS = Source(
 )
 
 BREED_SOURCES: tuple[Source, ...] = (
-    AKC_BREED_TRAITS,
-    AKC_TRAIT_DESCRIPTIONS,
     DOG_API_BREEDS,
     STANFORD_LISTS,
 )

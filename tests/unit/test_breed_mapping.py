@@ -1,4 +1,4 @@
-"""Name matching and the canonical breed mapping. No downloaded data needed."""
+"""Name matching, the breed list and its mapping to TheDogAPI. No downloaded data needed."""
 
 import csv
 from dataclasses import replace
@@ -8,12 +8,12 @@ import pytest
 
 from pipeline.breed_mapping import (
     Aliases,
+    BreedEntry,
     MappingError,
     build_mapping,
-    canonical_breeds,
+    load_breed_list,
     write_outputs,
 )
-from pipeline.breed_names import akc_display_name
 from pipeline.matching import match_names
 
 # --- match_names ---------------------------------------------------------------------
@@ -56,176 +56,164 @@ def test_two_sources_claiming_one_target_raises() -> None:
         match_names(["chow", "Chow Chow"], ["Chow Chow"], aliases={"chow": "Chow Chow"})
 
 
-# --- build_mapping on a small synthetic dataset -----------------------------------------
+# --- breed list ----------------------------------------------------------------------
 
-AKC = ["Retrievers\xa0(Labrador)", "Poodles", "Kuvaszok", "Chow\xa0Chows", "Beagles"]
+
+def test_load_breed_list_short_and_long_forms(tmp_path: Path) -> None:
+    path = tmp_path / "breeds.yaml"
+    path.write_text(
+        "pug: Pug\nboxer: {name: Boxer, wikipedia: Boxer (dog breed)}\n", encoding="utf-8"
+    )
+    assert load_breed_list(path) == {
+        "pug": BreedEntry("Pug", "Pug"),
+        "boxer": BreedEntry("Boxer", "Boxer (dog breed)"),
+    }
+
+
+def test_load_breed_list_rejects_duplicate_names(tmp_path: Path) -> None:
+    path = tmp_path / "breeds.yaml"
+    path.write_text("pug: Pug\nPug_dog: Pug\n", encoding="utf-8")
+    with pytest.raises(MappingError, match="duplicate names"):
+        load_breed_list(path)
+
+
+# --- build_mapping on a small synthetic dataset ---------------------------------------
+
 STANFORD = [
-    "n02099712-Labrador_retriever",
+    "n02110958-pug",
+    "n02107142-Doberman",
     "n02113624-toy_poodle",
     "n02113799-standard_poodle",
-    "n02104029-kuvasz",
-    "n02112137-chow",
     "n02105412-kelpie",
     "n02115641-dingo",
 ]
+BREED_LIST = {
+    "pug": BreedEntry("Pug", "Pug"),
+    "Doberman": BreedEntry("Dobermann", "Dobermann"),
+    "toy_poodle": BreedEntry("Toy Poodle", "Poodle"),
+    "standard_poodle": BreedEntry("Standard Poodle", "Poodle"),
+    "kelpie": BreedEntry("Australian Kelpie", "Australian Kelpie"),
+}
 DOG_API = [
-    {"id": 1, "name": "Labrador Retriever"},
-    {"id": 2, "name": "Poodle (Toy)"},
-    {"id": 3, "name": "Poodle"},
-    {"id": 4, "name": "Kuvasz"},
-    {"id": 5, "name": "Australian Kelpie"},
-    {"id": 6, "name": "Beagle"},
-    {"id": 6, "name": "Beagle"},  # TheDogAPI has a few duplicate records
+    {"id": 1, "name": "Pug"},
+    {"id": 2, "name": "Doberman Pinscher"},
+    {"id": 3, "name": "Poodle (Toy)"},
+    {"id": 4, "name": "Poodle"},
+    {"id": 5, "name": "Beagle"},
+    {"id": 5, "name": "Beagle"},  # TheDogAPI has a few duplicate records
 ]
 ALIASES = Aliases(
-    akc_singular={"Kuvaszok": "Kuvasz"},
-    singular_words=frozenset(),
-    akc_varieties={"Poodle": ["Toy Poodle", "Standard Poodle"]},
     stanford_excluded=frozenset({"dingo"}),
-    stanford_only={"kelpie": "Australian Kelpie"},
-    stanford_to_breed={"chow": "Chow Chow"},
-    breed_to_dog_api={"Toy Poodle": "Poodle (Toy)", "Standard Poodle": "Poodle"},
+    breed_to_dog_api={
+        "Dobermann": "Doberman Pinscher",
+        "Toy Poodle": "Poodle (Toy)",
+        "Standard Poodle": "Poodle",
+    },
 )
 
 
-def test_canonical_breeds_split_varieties_and_add_stanford_only() -> None:
-    assert canonical_breeds(AKC, ALIASES) == [
-        ("Labrador Retriever", "Retrievers (Labrador)"),
-        ("Toy Poodle", "Poodles"),
-        ("Standard Poodle", "Poodles"),
-        ("Kuvasz", "Kuvaszok"),
-        ("Chow Chow", "Chow Chows"),
-        ("Beagle", "Beagles"),
-        ("Australian Kelpie", None),
-    ]
-
-
-def test_build_mapping_links_all_three_sources() -> None:
-    mapping = build_mapping(AKC, STANFORD, DOG_API, ALIASES, expected_photo_breeds=6)
+def test_build_mapping_links_stanford_wikipedia_and_dog_api() -> None:
+    mapping = build_mapping(STANFORD, DOG_API, BREED_LIST, ALIASES, expected_photo_breeds=5)
     by_name = {b.name: b for b in mapping.breeds}
 
-    assert len(mapping.photo_breeds) == 6
+    assert [b.name for b in mapping.breeds] == [
+        "Pug",
+        "Dobermann",
+        "Toy Poodle",
+        "Standard Poodle",
+        "Australian Kelpie",
+    ]
     assert mapping.stanford_excluded == ["n02115641-dingo"]
-    assert by_name["Toy Poodle"].stanford_label == "n02113624-toy_poodle"
-    assert by_name["Toy Poodle"].dog_api_id == 2
+    assert by_name["Dobermann"].stanford_label == "n02107142-Doberman"
+    assert by_name["Dobermann"].dog_api_id == 2
+    assert by_name["Toy Poodle"].wikipedia_title == "Poodle"
     assert by_name["Standard Poodle"].dog_api_name == "Poodle"
-    assert by_name["Chow Chow"].stanford_label == "n02112137-chow"
-    assert by_name["Chow Chow"].dog_api_id is None  # reported for a manual size fill
-    assert by_name["Australian Kelpie"].akc_name is None
-    assert by_name["Beagle"].stanford_label is None
-    assert mapping.dog_api_total == 6
+    assert by_name["Australian Kelpie"].dog_api_id is None  # reported for a manual size fill
+    assert mapping.dog_api_total == 5  # the duplicate Beagle record counts once
 
 
 def test_wrong_photo_breed_count_raises() -> None:
-    with pytest.raises(MappingError, match="expected 117 photo breeds, got 6"):
-        build_mapping(AKC, STANFORD, DOG_API, ALIASES)
+    with pytest.raises(MappingError, match="expected 117 photo breeds, got 5"):
+        build_mapping(STANFORD, DOG_API, BREED_LIST, ALIASES)
 
 
-def test_unmatched_stanford_label_raises() -> None:
-    aliases = replace(ALIASES, stanford_to_breed={})
-    with pytest.raises(MappingError, match=r"no breed.*chow"):
-        build_mapping(AKC, STANFORD, DOG_API, aliases, expected_photo_breeds=6)
+def test_stanford_label_missing_from_breed_list_raises() -> None:
+    breed_list = {k: v for k, v in BREED_LIST.items() if k != "kelpie"}
+    with pytest.raises(MappingError, match=r"missing from breeds.yaml: \['kelpie'\]"):
+        build_mapping(STANFORD, DOG_API, breed_list, ALIASES, expected_photo_breeds=5)
+
+
+def test_breed_list_entry_without_stanford_class_raises() -> None:
+    breed_list = {**BREED_LIST, "shiba_inu": BreedEntry("Shiba Inu", "Shiba Inu")}
+    with pytest.raises(MappingError, match=r"breeds\.yaml has entries not found"):
+        build_mapping(STANFORD, DOG_API, breed_list, ALIASES, expected_photo_breeds=5)
 
 
 @pytest.mark.parametrize(
     "aliases",
     [
-        replace(ALIASES, stanford_to_breed={"chow": "Chow Chow", "chow_typo": "Chow Chow"}),
-        replace(ALIASES, akc_singular={"Kuvaszoks": "Kuvasz"}),
-        replace(ALIASES, breed_to_dog_api={"Toy Poodles": "Poodle (Toy)"}),
+        replace(ALIASES, stanford_excluded=frozenset({"dingo", "dhole_typo"})),
+        replace(ALIASES, breed_to_dog_api={"Doberman": "Doberman Pinscher"}),
     ],
 )
 def test_alias_entries_missing_from_data_raise(aliases: Aliases) -> None:
     with pytest.raises(MappingError, match="not found in the data"):
-        build_mapping(AKC, STANFORD, DOG_API, aliases, expected_photo_breeds=6)
+        build_mapping(STANFORD, DOG_API, BREED_LIST, aliases, expected_photo_breeds=5)
 
 
 def test_write_outputs(tmp_path: Path) -> None:
-    mapping = build_mapping(AKC, STANFORD, DOG_API, ALIASES, expected_photo_breeds=6)
+    mapping = build_mapping(STANFORD, DOG_API, BREED_LIST, ALIASES, expected_photo_breeds=5)
     csv_path, report_path = write_outputs(mapping, tmp_path)
 
     with csv_path.open(encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
     assert len(rows) == len(mapping.breeds)
-    assert rows[0] == {
-        "name": "Labrador Retriever",
-        "akc_name": "Retrievers (Labrador)",
-        "stanford_label": "n02099712-Labrador_retriever",
-        "dog_api_id": "1",
-        "dog_api_name": "Labrador Retriever",
+    assert rows[1] == {
+        "name": "Dobermann",
+        "wikipedia_title": "Dobermann",
+        "stanford_label": "n02107142-Doberman",
+        "dog_api_id": "2",
+        "dog_api_name": "Doberman Pinscher",
     }
     report = report_path.read_text(encoding="utf-8")
-    assert "| Chow Chow |" in report  # listed under "no TheDogAPI match"
+    assert "| Australian Kelpie |" in report  # listed under "no TheDogAPI match"
     assert "n02115641-dingo" in report
 
 
-# --- known breeds, using the real pipeline/aliases.yaml ------------------------------
+# --- the real breeds.yaml and aliases.yaml -------------------------------------------
 
 
-@pytest.fixture(scope="module")
-def real_aliases() -> Aliases:
-    return Aliases.load()
-
-
-@pytest.mark.parametrize(
-    ("akc_raw", "expected"),
-    [
-        ("Retrievers\xa0(Labrador)", "Labrador Retriever"),
-        ("Belgian\xa0Malinois", "Belgian Malinois"),
-        ("Bichons\xa0Frises", "Bichon Frise"),
-        ("Cirnechi\xa0dell\u2019Etna", "Cirneco dell'Etna"),
-        ("Keeshonden", "Keeshond"),
-        ("Siberian\xa0Huskies", "Siberian Husky"),
-        ("Great\xa0Pyrenees", "Great Pyrenees"),
-        ("St.\xa0Bernards", "St. Bernard"),
-    ],
-)
-def test_known_akc_names(real_aliases: Aliases, akc_raw: str, expected: str) -> None:
-    name = akc_display_name(akc_raw, real_aliases.akc_singular, real_aliases.singular_words)
-    assert name == expected
+def test_real_breed_list_has_117_unique_breeds() -> None:
+    breeds = load_breed_list()
+    assert len(breeds) == 117
+    assert len({b.name for b in breeds.values()}) == 117
+    shared = {"Poodle": 3, "Belgian Shepherd": 2}
+    titles = [b.wikipedia_title for b in breeds.values()]
+    assert {t: titles.count(t) for t in shared} == shared
+    assert len(set(titles)) == 117 - 2 - 1
 
 
 @pytest.mark.parametrize(
-    ("stanford_key", "expected"),
+    ("stanford_key", "name", "wikipedia"),
     [
-        ("Blenheim_spaniel", "Cavalier King Charles Spaniel"),
-        ("Japanese_spaniel", "Japanese Chin"),
-        ("groenendael", "Belgian Sheepdog"),
-        ("malinois", "Belgian Malinois"),
-        ("Mexican_hairless", "Xoloitzcuintli"),
-        ("cocker_spaniel", "English Cocker Spaniel"),
-        ("Saint_Bernard", "St. Bernard"),
-        ("Norfolk_terrier", "Norfolk Terrier"),
-        ("Norwich_terrier", "Norwich Terrier"),
-        ("toy_poodle", "Toy Poodle"),
-        ("Eskimo_dog", "Eskimo Dog"),
+        ("Blenheim_spaniel", "Cavalier King Charles Spaniel", "Cavalier King Charles Spaniel"),
+        ("Doberman", "Dobermann", "Dobermann"),
+        ("cocker_spaniel", "English Cocker Spaniel", "English Cocker Spaniel"),
+        ("boxer", "Boxer", "Boxer (dog breed)"),
+        ("malinois", "Belgian Malinois", "Belgian Shepherd"),
+        ("Great_Pyrenees", "Pyrenean Mountain Dog", "Pyrenean Mountain Dog"),
+        ("Eskimo_dog", "Canadian Eskimo Dog", "Canadian Eskimo Dog"),
+        ("toy_poodle", "Toy Poodle", "Poodle"),
     ],
 )
-def test_known_stanford_labels(real_aliases: Aliases, stanford_key: str, expected: str) -> None:
-    targets = [
-        "Cavalier King Charles Spaniel",
-        "Japanese Chin",
-        "Belgian Sheepdog",
-        "Belgian Malinois",
-        "Xoloitzcuintli",
-        "Cocker Spaniel",
-        "English Cocker Spaniel",
-        "St. Bernard",
-        "Norfolk Terrier",
-        "Norwich Terrier",
-        "Toy Poodle",
-        "Miniature Poodle",
-        "American Eskimo Dog",
-        *real_aliases.stanford_only.values(),
-    ]
-    aliases = {**real_aliases.stanford_to_breed, **real_aliases.stanford_only}
-    [result] = match_names([stanford_key], targets, aliases)
-    assert result.target == expected
+def test_known_breeds(stanford_key: str, name: str, wikipedia: str) -> None:
+    assert load_breed_list()[stanford_key] == BreedEntry(name, wikipedia)
 
 
-def test_real_aliases_file_is_consistent(real_aliases: Aliases) -> None:
-    assert real_aliases.stanford_excluded == {"dingo", "dhole", "African_hunting_dog"}
-    overlap = set(real_aliases.stanford_to_breed) & set(real_aliases.stanford_only)
-    assert not overlap
-    assert not set(real_aliases.stanford_to_breed) & real_aliases.stanford_excluded
-    assert len(set(real_aliases.breed_to_dog_api.values())) == len(real_aliases.breed_to_dog_api)
+def test_real_aliases_file_is_consistent() -> None:
+    aliases = Aliases.load()
+    names = {b.name for b in load_breed_list().values()}
+    assert aliases.stanford_excluded == {"dingo", "dhole", "African_hunting_dog"}
+    assert set(aliases.breed_to_dog_api) <= names
+    assert set(aliases.oxford_to_breed.values()) <= names
+    assert not set(aliases.oxford_to_breed) & aliases.oxford_unmapped

@@ -5,14 +5,12 @@ from pathlib import Path
 import pytest
 
 from pipeline.breed_data import (
-    TRAIT_COLUMNS,
     BreedRecord,
     Range,
     breed_records,
     load_manual_sizes,
     parse_range,
     size_problems,
-    trait_records,
 )
 from pipeline.breed_mapping import Breed
 
@@ -35,11 +33,10 @@ def test_parse_range(text: str | None, expected: Range) -> None:
 
 
 BREEDS = [
-    Breed("Toy Poodle", "Poodles", "n02113624-toy_poodle", 197, "Poodle (Toy)"),
-    Breed("Standard Poodle", "Poodles", "n02113799-standard_poodle", 195, "Poodle"),
-    Breed("Plott Hound", "Plott Hounds", None, 7, "Plott"),
-    Breed("Podengo", "Podengos", None, None, None),
-    Breed("Eskimo Dog", None, "n02109961-Eskimo_dog", None, None),
+    Breed("Toy Poodle", "Poodle", "n02113624-toy_poodle", 197, "Poodle (Toy)"),
+    Breed("Standard Poodle", "Poodle", "n02113799-standard_poodle", 195, "Poodle"),
+    Breed("Kelpie", "Australian Kelpie", "n02105412-kelpie", None, None),
+    Breed("Eskimo Dog", "Canadian Eskimo Dog", "n02109961-Eskimo_dog", 7, "Canadian Eskimo Dog"),
 ]
 DOG_API = [
     {
@@ -54,8 +51,8 @@ DOG_API = [
 
 
 def test_breed_records_use_dog_api_then_manual_fills() -> None:
-    manual = {"Podengo": dict.fromkeys(["weight_min_kg", "weight_max_kg"], None)}
-    manual["Podengo"] |= {"weight_min_kg": 4.0, "weight_max_kg": 6.0}
+    manual = {"Kelpie": dict.fromkeys(["weight_min_kg", "weight_max_kg"], None)}
+    manual["Kelpie"] |= {"weight_min_kg": 14.0, "weight_max_kg": 20.0}
     records = {r.name: r for r in breed_records(BREEDS, DOG_API, manual)}
 
     assert records["Toy Poodle"] == BreedRecord(
@@ -63,7 +60,7 @@ def test_breed_records_use_dog_api_then_manual_fills() -> None:
     )
     assert records["Standard Poodle"].weight_min_kg == 18.0
     assert records["Standard Poodle"].lifespan_min_years is None  # TheDogAPI null
-    assert (records["Podengo"].weight_min_kg, records["Podengo"].height_min_cm) == (4.0, None)
+    assert (records["Kelpie"].weight_min_kg, records["Kelpie"].height_min_cm) == (14.0, None)
     assert records["Eskimo Dog"].stanford_label == "n02109961-Eskimo_dog"
 
 
@@ -73,9 +70,8 @@ def test_manual_sizes_for_unknown_breed_raise() -> None:
 
 
 def test_real_manual_sizes_file_loads() -> None:
-    manual = load_manual_sizes()
-    assert manual["Portuguese Podengo Pequeno"]["weight_max_kg"] == 6.0
-    assert manual["Portuguese Podengo Pequeno"]["lifespan_min_years"] is None
+    # Every breed currently has TheDogAPI sizes, so the file only has its header.
+    assert load_manual_sizes() == {}
 
 
 def test_manual_sizes_need_https_source(tmp_path: Path) -> None:
@@ -100,18 +96,3 @@ def test_size_problems_flag_missing_and_implausible() -> None:
         "C: weight 10-5 out of range",
         "D: weight 5-500 out of range",
     ]
-
-
-def _akc_row(name: str, score: int) -> dict[str, object]:
-    return {"Breed": name} | dict.fromkeys(TRAIT_COLUMNS, score)
-
-
-def test_trait_records_share_variety_scores_and_drop_invalid() -> None:
-    rows = [_akc_row("Poodles", 4), _akc_row("Plott\xa0Hounds", 0)]
-    records, dropped = trait_records(rows, BREEDS)
-
-    assert len(records) == 2 * len(TRAIT_COLUMNS)  # Toy and Standard Poodle
-    assert {r.breed for r in records} == {"Toy Poodle", "Standard Poodle"}
-    assert {r.score for r in records} == {4}
-    assert len(dropped) == len(TRAIT_COLUMNS)
-    assert dropped[0] == "Plott Hound: affectionate_with_family=0"

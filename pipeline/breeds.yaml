@@ -1,0 +1,129 @@
+# The Dog Match breed list: the 117 Stanford Dogs photo classes (120 minus the wild canids).
+#
+# Key: Stanford label without the synset id. Value: the display name, or
+# {name, wikipedia} when the English Wikipedia article title differs from the display name
+# (disambiguated titles such as "Boxer (dog)", or one article shared by several breeds).
+# Every article must exist and must not be a redirect or a disambiguation page; the
+# Wikipedia downloader checks this.
+
+Chihuahua: {name: Chihuahua, wikipedia: Chihuahua (dog breed)}
+Japanese_spaniel: Japanese Chin
+Maltese_dog: {name: Maltese, wikipedia: Maltese dog}
+Pekinese: Pekingese
+Shih-Tzu: Shih Tzu
+Blenheim_spaniel: Cavalier King Charles Spaniel
+papillon: {name: Papillon, wikipedia: Continental Toy Spaniel} # the article covers the Papillon
+toy_terrier: English Toy Terrier (Black & Tan) # ImageNet "toy terrier"
+Rhodesian_ridgeback: Rhodesian Ridgeback
+Afghan_hound: Afghan Hound
+basset: Basset Hound
+beagle: Beagle
+bloodhound: Bloodhound
+bluetick: Bluetick Coonhound
+black-and-tan_coonhound: Black and Tan Coonhound
+Walker_hound: Treeing Walker Coonhound
+English_foxhound: English Foxhound
+redbone: Redbone Coonhound
+borzoi: Borzoi
+Irish_wolfhound: Irish Wolfhound
+Italian_greyhound: Italian Greyhound
+whippet: Whippet
+Ibizan_hound: Ibizan Hound
+Norwegian_elkhound: Norwegian Elkhound
+otterhound: Otterhound
+Saluki: Saluki
+Scottish_deerhound: Scottish Deerhound
+Weimaraner: Weimaraner
+Staffordshire_bullterrier: Staffordshire Bull Terrier
+American_Staffordshire_terrier: American Staffordshire Terrier
+Bedlington_terrier: Bedlington Terrier
+Border_terrier: Border Terrier
+Kerry_blue_terrier: Kerry Blue Terrier
+Irish_terrier: Irish Terrier
+Norfolk_terrier: Norfolk Terrier
+Norwich_terrier: Norwich Terrier
+Yorkshire_terrier: Yorkshire Terrier
+wire-haired_fox_terrier: Wire Fox Terrier
+Lakeland_terrier: Lakeland Terrier
+Sealyham_terrier: Sealyham Terrier
+Airedale: Airedale Terrier
+cairn: Cairn Terrier
+Australian_terrier: Australian Terrier
+Dandie_Dinmont: Dandie Dinmont Terrier
+Boston_bull: Boston Terrier
+miniature_schnauzer: Miniature Schnauzer
+giant_schnauzer: Giant Schnauzer
+standard_schnauzer: Standard Schnauzer
+Scotch_terrier: Scottish Terrier
+Tibetan_terrier: Tibetan Terrier
+silky_terrier: Australian Silky Terrier
+soft-coated_wheaten_terrier: Soft-coated Wheaten Terrier
+West_Highland_white_terrier: West Highland White Terrier
+Lhasa: Lhasa Apso
+flat-coated_retriever: Flat-coated Retriever
+curly-coated_retriever: Curly-coated Retriever
+golden_retriever: Golden Retriever
+Labrador_retriever: Labrador Retriever
+Chesapeake_Bay_retriever: Chesapeake Bay Retriever
+German_short-haired_pointer: German Shorthaired Pointer
+vizsla: Vizsla
+English_setter: English Setter
+Irish_setter: Irish Setter
+Gordon_setter: Gordon Setter
+Brittany_spaniel: {name: Brittany, wikipedia: Brittany Spaniel}
+clumber: Clumber Spaniel
+English_springer: English Springer Spaniel
+Welsh_springer_spaniel: Welsh Springer Spaniel
+# WordNet defines this synset as the English cocker spaniel.
+cocker_spaniel: English Cocker Spaniel
+Sussex_spaniel: Sussex Spaniel
+Irish_water_spaniel: Irish Water Spaniel
+kuvasz: Kuvasz
+schipperke: Schipperke
+# One Wikipedia article covers the Belgian Shepherd varieties.
+groenendael: {name: Groenendael, wikipedia: Belgian Shepherd}
+malinois: {name: Belgian Malinois, wikipedia: Belgian Shepherd}
+briard: Briard
+kelpie: Australian Kelpie
+komondor: Komondor
+Old_English_sheepdog: Old English Sheepdog
+Shetland_sheepdog: Shetland Sheepdog
+collie: Rough Collie # ImageNet "collie" photos are rough collies
+Border_collie: Border Collie
+Bouvier_des_Flandres: Bouvier des Flandres
+Rottweiler: Rottweiler
+German_shepherd: German Shepherd
+Doberman: Dobermann
+miniature_pinscher: Miniature Pinscher
+Greater_Swiss_Mountain_dog: Greater Swiss Mountain Dog
+Bernese_mountain_dog: Bernese Mountain Dog
+Appenzeller: Appenzeller Sennenhund
+EntleBucher: Entlebucher Mountain Dog
+boxer: {name: Boxer, wikipedia: Boxer (dog breed)}
+bull_mastiff: Bullmastiff
+Tibetan_mastiff: Tibetan Mastiff
+French_bulldog: French Bulldog
+Great_Dane: Great Dane
+Saint_Bernard: {name: St. Bernard, wikipedia: St. Bernard (dog breed)}
+# ImageNet "Eskimo dog, husky": a sled dog, not the American Eskimo Dog.
+Eskimo_dog: Canadian Eskimo Dog
+malamute: Alaskan Malamute
+Siberian_husky: Siberian Husky
+affenpinscher: Affenpinscher
+basenji: Basenji
+pug: Pug
+Leonberg: Leonberger
+Newfoundland: {name: Newfoundland, wikipedia: Newfoundland dog}
+Great_Pyrenees: Pyrenean Mountain Dog # "Great Pyrenees" in the US
+Samoyed: {name: Samoyed, wikipedia: Samoyed dog}
+Pomeranian: {name: Pomeranian, wikipedia: Pomeranian dog}
+chow: Chow Chow
+keeshond: Keeshond
+Brabancon_griffon: Griffon Bruxellois
+Pembroke: Pembroke Welsh Corgi
+Cardigan: Cardigan Welsh Corgi
+# One Wikipedia article covers all three Poodle sizes; size data differs per variety.
+toy_poodle: {name: Toy Poodle, wikipedia: Poodle}
+miniature_poodle: {name: Miniature Poodle, wikipedia: Poodle}
+standard_poodle: {name: Standard Poodle, wikipedia: Poodle}
+Mexican_hairless: {name: Xoloitzcuintle, wikipedia: Xoloitzcuintle}
