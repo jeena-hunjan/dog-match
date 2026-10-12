@@ -1,0 +1,937 @@
+breed,trait,score,evidence,status,wikipedia_title,wikipedia_revision_id,model,prompt_version
+Chihuahua,energy,,,unknown,Chihuahua (dog breed),1379853560,claude-haiku-5-5,v1a
+Chihuahua,trainability,,,unknown,Chihuahua (dog breed),1379853560,claude-haiku-5-5,v1a
+Chihuahua,good_with_young_children,1,"According to the American Kennel Club, chihuahuas are not recommended for families with young children.",rated,Chihuahua (dog breed),1379853560,claude-haiku-5-5,v1a
+Chihuahua,good_with_other_dogs,2,"However, they tend to be mildly good with other dogs, though varyingly, depending on the breed of the other dog.",rated,Chihuahua (dog breed),1379853560,claude-haiku-5-5,v1a
+Chihuahua,shedding,,,unknown,Chihuahua (dog breed),1379853560,claude-haiku-5-5,v1a
+Chihuahua,copes_alone,,,unknown,Chihuahua (dog breed),1379853560,claude-haiku-5-5,v1a
+Chihuahua,barking,,,unknown,Chihuahua (dog breed),1379853560,claude-haiku-5-5,v1a
+Chihuahua,grooming,,,unknown,Chihuahua (dog breed),1379853560,claude-haiku-5-5,v1a
+Japanese Chin,energy,2,"Japanese Chins enjoy walks and are moderately active dogs, but are also suitable for living in smaller spaces, such as flats.",rated,Japanese Chin,1375297527,claude-haiku-5-5,v1a
+Japanese Chin,trainability,2,"They are also described as stubborn, and are recommended to not be let off leash outdoors.",rated,Japanese Chin,1375297527,claude-haiku-5-5,v1a
+Japanese Chin,good_with_young_children,,,unknown,Japanese Chin,1375297527,claude-haiku-5-5,v1a
+Japanese Chin,good_with_other_dogs,,,unknown,Japanese Chin,1375297527,claude-haiku-5-5,v1a
+Japanese Chin,shedding,,,unknown,Japanese Chin,1375297527,claude-haiku-5-5,v1a
+Japanese Chin,copes_alone,2,Japanese Chins can also present symptoms of separation anxiety.,rated,Japanese Chin,1375297527,claude-haiku-5-5,v1a
+Japanese Chin,barking,,,unknown,Japanese Chin,1375297527,claude-haiku-5-5,v1a
+Japanese Chin,grooming,,,unknown,Japanese Chin,1375297527,claude-haiku-5-5,v1a
+Maltese,energy,,,unknown,Maltese dog,1379245920,claude-haiku-5-5,v1a
+Maltese,trainability,,,unknown,Maltese dog,1379245920,claude-haiku-5-5,v1a
+Maltese,good_with_young_children,,,unknown,Maltese dog,1379245920,claude-haiku-5-5,v1a
+Maltese,good_with_other_dogs,,,unknown,Maltese dog,1379245920,claude-haiku-5-5,v1a
+Maltese,shedding,1,The Maltese does not shed.,rated,Maltese dog,1379245920,claude-haiku-5-5,v1a
+Maltese,copes_alone,,,unknown,Maltese dog,1379245920,claude-haiku-5-5,v1a
+Maltese,barking,,,unknown,Maltese dog,1379245920,claude-haiku-5-5,v1a
+Maltese,grooming,,,unknown,Maltese dog,1379245920,claude-haiku-5-5,v1a
+Pekingese,energy,1,Pekingese exercise needs are minimal.,rated,Pekingese,1376156721,claude-haiku-5-5,v1a
+Pekingese,trainability,,,unknown,Pekingese,1376156721,claude-haiku-5-5,v1a
+Pekingese,good_with_young_children,,,unknown,Pekingese,1376156721,claude-haiku-5-5,v1a
+Pekingese,good_with_other_dogs,,,unknown,Pekingese,1376156721,claude-haiku-5-5,v1a
+Pekingese,shedding,5,"Due to heavy shedding and to prevent mats, this double-coated breed requires frequent extensive grooming.",rated,Pekingese,1376156721,claude-haiku-5-5,v1a
+Pekingese,copes_alone,,,unknown,Pekingese,1376156721,claude-haiku-5-5,v1a
+Pekingese,barking,,,unknown,Pekingese,1376156721,claude-haiku-5-5,v1a
+Pekingese,grooming,5,"The Pekingese is considered ""high maintenance"" in regard to grooming.",rated,Pekingese,1376156721,claude-haiku-5-5,v1a
+Shih Tzu,energy,,,unknown,Shih Tzu,1377316371,claude-haiku-5-5,v1a
+Shih Tzu,trainability,,,unknown,Shih Tzu,1377316371,claude-haiku-5-5,v1a
+Shih Tzu,good_with_young_children,,,unknown,Shih Tzu,1377316371,claude-haiku-5-5,v1a
+Shih Tzu,good_with_other_dogs,,,unknown,Shih Tzu,1377316371,claude-haiku-5-5,v1a
+Shih Tzu,shedding,,,unknown,Shih Tzu,1377316371,claude-haiku-5-5,v1a
+Shih Tzu,copes_alone,,,unknown,Shih Tzu,1377316371,claude-haiku-5-5,v1a
+Shih Tzu,barking,,,unknown,Shih Tzu,1377316371,claude-haiku-5-5,v1a
+Shih Tzu,grooming,5,They have a soft and long double coat that will tangle and mat easily if not brushed at least every 2 or 3 days.,rated,Shih Tzu,1377316371,claude-haiku-5-5,v1a
+Cavalier King Charles Spaniel,energy,,,unknown,Cavalier King Charles Spaniel,1377668712,claude-haiku-5-5,v1a
+Cavalier King Charles Spaniel,trainability,4,"The breed is playful, patient and eager to please.",rated,Cavalier King Charles Spaniel,1377668712,claude-haiku-5-5,v1a
+Cavalier King Charles Spaniel,good_with_young_children,4,"As such, most dogs of the breed are good with children and other dogs; even large dogs.",rated,Cavalier King Charles Spaniel,1377668712,claude-haiku-5-5,v1a
+Cavalier King Charles Spaniel,good_with_other_dogs,4,Their ability to bond with larger and smaller dogs makes them a good choice for households with more than one breed.,rated,Cavalier King Charles Spaniel,1377668712,claude-haiku-5-5,v1a
+Cavalier King Charles Spaniel,shedding,,,unknown,Cavalier King Charles Spaniel,1377668712,claude-haiku-5-5,v1a
+Cavalier King Charles Spaniel,copes_alone,,,unknown,Cavalier King Charles Spaniel,1377668712,claude-haiku-5-5,v1a
+Cavalier King Charles Spaniel,barking,,,unknown,Cavalier King Charles Spaniel,1377668712,claude-haiku-5-5,v1a
+Cavalier King Charles Spaniel,grooming,3,"The Cavalier's coat requires weekly brushing, but no trimming.",rated,Cavalier King Charles Spaniel,1377668712,claude-haiku-5-5,v1a
+Papillon,energy,,,unknown,Continental Toy Spaniel,1377558486,claude-haiku-5-5,v1a
+Papillon,trainability,,,unknown,Continental Toy Spaniel,1377558486,claude-haiku-5-5,v1a
+Papillon,good_with_young_children,,,unknown,Continental Toy Spaniel,1377558486,claude-haiku-5-5,v1a
+Papillon,good_with_other_dogs,,,unknown,Continental Toy Spaniel,1377558486,claude-haiku-5-5,v1a
+Papillon,shedding,,,unknown,Continental Toy Spaniel,1377558486,claude-haiku-5-5,v1a
+Papillon,copes_alone,,,unknown,Continental Toy Spaniel,1377558486,claude-haiku-5-5,v1a
+Papillon,barking,,,unknown,Continental Toy Spaniel,1377558486,claude-haiku-5-5,v1a
+Papillon,grooming,,,unknown,Continental Toy Spaniel,1377558486,claude-haiku-5-5,v1a
+English Toy Terrier (Black & Tan),energy,,,unknown,English Toy Terrier (Black & Tan),1375100449,claude-haiku-5-5,v1a
+English Toy Terrier (Black & Tan),trainability,,,unknown,English Toy Terrier (Black & Tan),1375100449,claude-haiku-5-5,v1a
+English Toy Terrier (Black & Tan),good_with_young_children,,,unknown,English Toy Terrier (Black & Tan),1375100449,claude-haiku-5-5,v1a
+English Toy Terrier (Black & Tan),good_with_other_dogs,,,unknown,English Toy Terrier (Black & Tan),1375100449,claude-haiku-5-5,v1a
+English Toy Terrier (Black & Tan),shedding,,,unknown,English Toy Terrier (Black & Tan),1375100449,claude-haiku-5-5,v1a
+English Toy Terrier (Black & Tan),copes_alone,,,unknown,English Toy Terrier (Black & Tan),1375100449,claude-haiku-5-5,v1a
+English Toy Terrier (Black & Tan),barking,,,unknown,English Toy Terrier (Black & Tan),1375100449,claude-haiku-5-5,v1a
+English Toy Terrier (Black & Tan),grooming,,,unknown,English Toy Terrier (Black & Tan),1375100449,claude-haiku-5-5,v1a
+Rhodesian Ridgeback,energy,,,unknown,Rhodesian Ridgeback,1374405252,claude-haiku-5-5,v1a
+Rhodesian Ridgeback,trainability,2,"Because they require consistent training and correct socialization, they are often not the best choice for inexperienced dog owners or families with young children.",rated,Rhodesian Ridgeback,1374405252,claude-haiku-5-5,v1a
+Rhodesian Ridgeback,good_with_young_children,2,"Because they require consistent training and correct socialization, they are often not the best choice for inexperienced dog owners or families with young children.",rated,Rhodesian Ridgeback,1374405252,claude-haiku-5-5,v1a
+Rhodesian Ridgeback,good_with_other_dogs,,,unknown,Rhodesian Ridgeback,1374405252,claude-haiku-5-5,v1a
+Rhodesian Ridgeback,shedding,,,unknown,Rhodesian Ridgeback,1374405252,claude-haiku-5-5,v1a
+Rhodesian Ridgeback,copes_alone,,,unknown,Rhodesian Ridgeback,1374405252,claude-haiku-5-5,v1a
+Rhodesian Ridgeback,barking,,,unknown,Rhodesian Ridgeback,1374405252,claude-haiku-5-5,v1a
+Rhodesian Ridgeback,grooming,1,"have a light wheaten to red wheaten coat, which should be short, dense, sleek and glossy in appearance, and neither woolly nor silky.",rated,Rhodesian Ridgeback,1374405252,claude-haiku-5-5,v1a
+Afghan Hound,energy,,,unknown,Afghan Hound,1378195150,claude-haiku-5-5,v1a
+Afghan Hound,trainability,1,"The breed has a reputation among dog trainers of having a relatively slow ""obedience intelligence""; Stanley Coren, in his book The Intelligence of Dogs, ranked the breed last among 138 breeds mentioned in ability to understand and obey commands, requiring more than 80 repetitions to understand a new command and obeying on the first command less than 25% of the time.",rated,Afghan Hound,1378195150,claude-haiku-5-5,v1a
+Afghan Hound,good_with_young_children,,,unknown,Afghan Hound,1378195150,claude-haiku-5-5,v1a
+Afghan Hound,good_with_other_dogs,,,unknown,Afghan Hound,1378195150,claude-haiku-5-5,v1a
+Afghan Hound,shedding,,,unknown,Afghan Hound,1378195150,claude-haiku-5-5,v1a
+Afghan Hound,copes_alone,,,unknown,Afghan Hound,1378195150,claude-haiku-5-5,v1a
+Afghan Hound,barking,,,unknown,Afghan Hound,1378195150,claude-haiku-5-5,v1a
+Afghan Hound,grooming,5,"Their long, fine-textured coat requires considerable care and grooming.",rated,Afghan Hound,1378195150,claude-haiku-5-5,v1a
+Basset Hound,energy,,,unknown,Basset Hound,1377320056,claude-haiku-5-5,v1a
+Basset Hound,trainability,,,unknown,Basset Hound,1377320056,claude-haiku-5-5,v1a
+Basset Hound,good_with_young_children,5,"The Basset Hound is a friendly, outgoing, and playful dog, tolerant of children and other pets.",rated,Basset Hound,1377320056,claude-haiku-5-5,v1a
+Basset Hound,good_with_other_dogs,,,unknown,Basset Hound,1377320056,claude-haiku-5-5,v1a
+Basset Hound,shedding,,,unknown,Basset Hound,1377320056,claude-haiku-5-5,v1a
+Basset Hound,copes_alone,,,unknown,Basset Hound,1377320056,claude-haiku-5-5,v1a
+Basset Hound,barking,,,unknown,Basset Hound,1377320056,claude-haiku-5-5,v1a
+Basset Hound,grooming,1,The coat is most-often short with coarse hairs under the tail.,rated,Basset Hound,1377320056,claude-haiku-5-5,v1a
+Beagle,energy,,,unknown,Beagle,1374661093,claude-haiku-5-5,v1a
+Beagle,trainability,1,"Coren's scale, however, does not assess understanding, independence, or creativity.",rated,Beagle,1374661093,claude-haiku-5-5,v1a
+Beagle,good_with_young_children,5,Beagles are excellent with children and this is one of the reasons they have become popular family pets.,rated,Beagle,1374661093,claude-haiku-5-5,v1a
+Beagle,good_with_other_dogs,4,They also generally get along well with cats and other dogs.,rated,Beagle,1374661093,claude-haiku-5-5,v1a
+Beagle,shedding,,,unknown,Beagle,1374661093,claude-haiku-5-5,v1a
+Beagle,copes_alone,1,"Beagles are pack animals; they are prone to separation anxiety, a condition which causes them to destroy things when left unattended.",rated,Beagle,1374661093,claude-haiku-5-5,v1a
+Beagle,barking,4,"Not all Beagles will howl, but most will bark when confronted with strange situations, and some will bay",rated,Beagle,1374661093,claude-haiku-5-5,v1a
+Beagle,grooming,,,unknown,Beagle,1374661093,claude-haiku-5-5,v1a
+Bloodhound,energy,,,unknown,Bloodhound,1376224907,claude-haiku-5-5,v1a
+Bloodhound,trainability,2,"Because of its strong tracking instinct, it can be willful and somewhat difficult to obedience train and handle on a leash.",rated,Bloodhound,1376224907,claude-haiku-5-5,v1a
+Bloodhound,good_with_young_children,,,unknown,Bloodhound,1376224907,claude-haiku-5-5,v1a
+Bloodhound,good_with_other_dogs,,,unknown,Bloodhound,1376224907,claude-haiku-5-5,v1a
+Bloodhound,shedding,,,unknown,Bloodhound,1376224907,claude-haiku-5-5,v1a
+Bloodhound,copes_alone,,,unknown,Bloodhound,1376224907,claude-haiku-5-5,v1a
+Bloodhound,barking,2,"When they are on a trail, they are usually silent and do not give voice as do other scent hounds.",rated,Bloodhound,1376224907,claude-haiku-5-5,v1a
+Bloodhound,grooming,,,unknown,Bloodhound,1376224907,claude-haiku-5-5,v1a
+Bluetick Coonhound,energy,5,"They are athletic, hardy, and need a lot of activity such as hunting, obedience, or agility.",rated,Bluetick Coonhound,1378630210,claude-haiku-5-5,v1a
+Bluetick Coonhound,trainability,2,They can be challenging to train and should be monitored around cats or other small animals.,rated,Bluetick Coonhound,1378630210,claude-haiku-5-5,v1a
+Bluetick Coonhound,good_with_young_children,4,"In normal conditions, the Bluetick Coonhound gets along well with children.",rated,Bluetick Coonhound,1378630210,claude-haiku-5-5,v1a
+Bluetick Coonhound,good_with_other_dogs,,,unknown,Bluetick Coonhound,1378630210,claude-haiku-5-5,v1a
+Bluetick Coonhound,shedding,,,unknown,Bluetick Coonhound,1378630210,claude-haiku-5-5,v1a
+Bluetick Coonhound,copes_alone,,,unknown,Bluetick Coonhound,1378630210,claude-haiku-5-5,v1a
+Bluetick Coonhound,barking,5,"Being bred to bay while hunting, they are highly vocal.",rated,Bluetick Coonhound,1378630210,claude-haiku-5-5,v1a
+Bluetick Coonhound,grooming,,,unknown,Bluetick Coonhound,1378630210,claude-haiku-5-5,v1a
+Black and Tan Coonhound,energy,,,unknown,Black and Tan Coonhound,1312023787,claude-haiku-5-5,v1a
+Black and Tan Coonhound,trainability,2,"As befitting a dog with its heritage, it is strong, independent, and stubborn.",rated,Black and Tan Coonhound,1312023787,claude-haiku-5-5,v1a
+Black and Tan Coonhound,good_with_young_children,4,"The Black and Tan Coonhound is gentle and tolerant with children, but it may be too independent to satisfy a playful child.",rated,Black and Tan Coonhound,1312023787,claude-haiku-5-5,v1a
+Black and Tan Coonhound,good_with_other_dogs,,,unknown,Black and Tan Coonhound,1312023787,claude-haiku-5-5,v1a
+Black and Tan Coonhound,shedding,,,unknown,Black and Tan Coonhound,1312023787,claude-haiku-5-5,v1a
+Black and Tan Coonhound,copes_alone,,,unknown,Black and Tan Coonhound,1312023787,claude-haiku-5-5,v1a
+Black and Tan Coonhound,barking,5,The Black and Tan Coonhound's bark is loud and baying; it has been described as a deep howl.,rated,Black and Tan Coonhound,1312023787,claude-haiku-5-5,v1a
+Black and Tan Coonhound,grooming,1,Its coat needs only occasional brushing.,rated,Black and Tan Coonhound,1312023787,claude-haiku-5-5,v1a
+Treeing Walker Coonhound,energy,,,unknown,Treeing Walker Coonhound,1364426938,claude-haiku-5-5,v1a
+Treeing Walker Coonhound,trainability,,,unknown,Treeing Walker Coonhound,1364426938,claude-haiku-5-5,v1a
+Treeing Walker Coonhound,good_with_young_children,4,"It is described as affectionate and good with children, but its energy requires an outlet and it must be trained.",rated,Treeing Walker Coonhound,1364426938,claude-haiku-5-5,v1a
+Treeing Walker Coonhound,good_with_other_dogs,4,Treeing Walker Coonhounds get along well with other dogs and with children.,rated,Treeing Walker Coonhound,1364426938,claude-haiku-5-5,v1a
+Treeing Walker Coonhound,shedding,,,unknown,Treeing Walker Coonhound,1364426938,claude-haiku-5-5,v1a
+Treeing Walker Coonhound,copes_alone,,,unknown,Treeing Walker Coonhound,1364426938,claude-haiku-5-5,v1a
+Treeing Walker Coonhound,barking,4,"The breed is vocal, with a distinctive bay that allows its owner to identify their hound from great distances.",rated,Treeing Walker Coonhound,1364426938,claude-haiku-5-5,v1a
+Treeing Walker Coonhound,grooming,1,The smooth coat is fine and glossy and comes in a tricolor and a bi-color pattern.,rated,Treeing Walker Coonhound,1364426938,claude-haiku-5-5,v1a
+English Foxhound,energy,,,unknown,English Foxhound,1336871086,claude-haiku-5-5,v1a
+English Foxhound,trainability,,,unknown,English Foxhound,1336871086,claude-haiku-5-5,v1a
+English Foxhound,good_with_young_children,,,unknown,English Foxhound,1336871086,claude-haiku-5-5,v1a
+English Foxhound,good_with_other_dogs,,,unknown,English Foxhound,1336871086,claude-haiku-5-5,v1a
+English Foxhound,shedding,,,unknown,English Foxhound,1336871086,claude-haiku-5-5,v1a
+English Foxhound,copes_alone,,,unknown,English Foxhound,1336871086,claude-haiku-5-5,v1a
+English Foxhound,barking,,,unknown,English Foxhound,1336871086,claude-haiku-5-5,v1a
+English Foxhound,grooming,,,unknown,English Foxhound,1336871086,claude-haiku-5-5,v1a
+Redbone Coonhound,energy,,,unknown,Redbone Coonhound,1379441948,claude-haiku-5-5,v1a
+Redbone Coonhound,trainability,,,unknown,Redbone Coonhound,1379441948,claude-haiku-5-5,v1a
+Redbone Coonhound,good_with_young_children,,,unknown,Redbone Coonhound,1379441948,claude-haiku-5-5,v1a
+Redbone Coonhound,good_with_other_dogs,,,unknown,Redbone Coonhound,1379441948,claude-haiku-5-5,v1a
+Redbone Coonhound,shedding,,,unknown,Redbone Coonhound,1379441948,claude-haiku-5-5,v1a
+Redbone Coonhound,copes_alone,,,unknown,Redbone Coonhound,1379441948,claude-haiku-5-5,v1a
+Redbone Coonhound,barking,4,"As coonhounds that rely on treeing prey, Redbones have a loud bay, or howl, and its voice is described as being ""sweet.""",rated,Redbone Coonhound,1379441948,claude-haiku-5-5,v1a
+Redbone Coonhound,grooming,1,"The coat is short and smooth against the body, but coarse enough to provide protection to the skin while hunting through dense underbrush.",rated,Redbone Coonhound,1379441948,claude-haiku-5-5,v1a
+Borzoi,energy,,,unknown,Borzoi,1377653951,claude-haiku-5-5,v1a
+Borzoi,trainability,2,"Borzois are selective learners who quickly become bored with repetitive activity, and they can be difficult to motivate.",rated,Borzoi,1377653951,claude-haiku-5-5,v1a
+Borzoi,good_with_young_children,,,unknown,Borzoi,1377653951,claude-haiku-5-5,v1a
+Borzoi,good_with_other_dogs,,,unknown,Borzoi,1377653951,claude-haiku-5-5,v1a
+Borzoi,shedding,3,"The soft undercoat thickens during winter or in cold climates, but is shed in hot weather to prevent overheating.",rated,Borzoi,1377653951,claude-haiku-5-5,v1a
+Borzoi,copes_alone,,,unknown,Borzoi,1377653951,claude-haiku-5-5,v1a
+Borzoi,barking,,,unknown,Borzoi,1377653951,claude-haiku-5-5,v1a
+Borzoi,grooming,,,unknown,Borzoi,1377653951,claude-haiku-5-5,v1a
+Irish Wolfhound,energy,,,unknown,Irish Wolfhound,1369882508,claude-haiku-5-5,v1a
+Irish Wolfhound,trainability,,,unknown,Irish Wolfhound,1369882508,claude-haiku-5-5,v1a
+Irish Wolfhound,good_with_young_children,,,unknown,Irish Wolfhound,1369882508,claude-haiku-5-5,v1a
+Irish Wolfhound,good_with_other_dogs,2,The breed becomes attached to both owners and other dogs they are raised with and is therefore not the most adaptable of breeds.,rated,Irish Wolfhound,1369882508,claude-haiku-5-5,v1a
+Irish Wolfhound,shedding,,,unknown,Irish Wolfhound,1369882508,claude-haiku-5-5,v1a
+Irish Wolfhound,copes_alone,1,Wolfhounds often create a strong bond with their family and can become quite destructive or morose if left alone for long periods of time.,rated,Irish Wolfhound,1369882508,claude-haiku-5-5,v1a
+Irish Wolfhound,barking,,,unknown,Irish Wolfhound,1369882508,claude-haiku-5-5,v1a
+Irish Wolfhound,grooming,,,unknown,Irish Wolfhound,1369882508,claude-haiku-5-5,v1a
+Italian Greyhound,energy,,,unknown,Italian Greyhound,1368997476,claude-haiku-5-5,v1a
+Italian Greyhound,trainability,,,unknown,Italian Greyhound,1368997476,claude-haiku-5-5,v1a
+Italian Greyhound,good_with_young_children,,,unknown,Italian Greyhound,1368997476,claude-haiku-5-5,v1a
+Italian Greyhound,good_with_other_dogs,,,unknown,Italian Greyhound,1368997476,claude-haiku-5-5,v1a
+Italian Greyhound,shedding,,,unknown,Italian Greyhound,1368997476,claude-haiku-5-5,v1a
+Italian Greyhound,copes_alone,,,unknown,Italian Greyhound,1368997476,claude-haiku-5-5,v1a
+Italian Greyhound,barking,,,unknown,Italian Greyhound,1368997476,claude-haiku-5-5,v1a
+Italian Greyhound,grooming,,,unknown,Italian Greyhound,1368997476,claude-haiku-5-5,v1a
+Whippet,energy,4,"While typically relaxed and serene at home, they exhibit high energy and excitement when outdoors.",rated,Whippet,1368893394,claude-haiku-5-5,v1a
+Whippet,trainability,,,unknown,Whippet,1368893394,claude-haiku-5-5,v1a
+Whippet,good_with_young_children,4,While their gentle demeanor makes them a good choice for households with children or other pets,rated,Whippet,1368893394,claude-haiku-5-5,v1a
+Whippet,good_with_other_dogs,,,unknown,Whippet,1368893394,claude-haiku-5-5,v1a
+Whippet,shedding,1,"Whippets have a minimal-shedding coat that is easy to manage due to its short, smooth texture and lack of an undercoat.",rated,Whippet,1368893394,claude-haiku-5-5,v1a
+Whippet,copes_alone,2,"The Whippet will form a strong bond and devotion to its owner and, as such, can often suffer from separation anxiety, like many other breeds when left alone.",rated,Whippet,1368893394,claude-haiku-5-5,v1a
+Whippet,barking,2,"Though not prone to excessive barking, Whippets will occasionally vocalize in the presence of intruders",rated,Whippet,1368893394,claude-haiku-5-5,v1a
+Whippet,grooming,1,While they are well-suited for indoor living due to their minimal grooming needs and low shedding,rated,Whippet,1368893394,claude-haiku-5-5,v1a
+Ibizan Hound,energy,4,"They generally make good house dogs but are active and athletic, therefore need a lot of daily exercise.",rated,Ibizan Hound,1337318874,claude-haiku-5-5,v1a
+Ibizan Hound,trainability,3,"Though somewhat independent and stubborn at times, they do take well to training if positive methods are used, but they will balk at punitive training methods.",rated,Ibizan Hound,1337318874,claude-haiku-5-5,v1a
+Ibizan Hound,good_with_young_children,4,"They are sensitive hounds, and very good around children and other dogs alike.",rated,Ibizan Hound,1337318874,claude-haiku-5-5,v1a
+Ibizan Hound,good_with_other_dogs,4,"They are sensitive hounds, and very good around children and other dogs alike.",rated,Ibizan Hound,1337318874,claude-haiku-5-5,v1a
+Ibizan Hound,shedding,,,unknown,Ibizan Hound,1337318874,claude-haiku-5-5,v1a
+Ibizan Hound,copes_alone,,,unknown,Ibizan Hound,1337318874,claude-haiku-5-5,v1a
+Ibizan Hound,barking,2,"They are generally quiet but will alarm bark if necessary, so they make good watch dogs.",rated,Ibizan Hound,1337318874,claude-haiku-5-5,v1a
+Ibizan Hound,grooming,,,unknown,Ibizan Hound,1337318874,claude-haiku-5-5,v1a
+Norwegian Elkhound,energy,,,unknown,Norwegian Elkhound,1368886127,claude-haiku-5-5,v1a
+Norwegian Elkhound,trainability,2,"They are bold, playful, independent, alert, extremely intelligent, and, at times, a bit boisterous.",rated,Norwegian Elkhound,1368886127,claude-haiku-5-5,v1a
+Norwegian Elkhound,good_with_young_children,,,unknown,Norwegian Elkhound,1368886127,claude-haiku-5-5,v1a
+Norwegian Elkhound,good_with_other_dogs,,,unknown,Norwegian Elkhound,1368886127,claude-haiku-5-5,v1a
+Norwegian Elkhound,shedding,,,unknown,Norwegian Elkhound,1368886127,claude-haiku-5-5,v1a
+Norwegian Elkhound,copes_alone,,,unknown,Norwegian Elkhound,1368886127,claude-haiku-5-5,v1a
+Norwegian Elkhound,barking,4,All Elkhounds have a sharp loud bark which makes them suitable as watchdogs.,rated,Norwegian Elkhound,1368886127,claude-haiku-5-5,v1a
+Norwegian Elkhound,grooming,,,unknown,Norwegian Elkhound,1368886127,claude-haiku-5-5,v1a
+Otterhound,energy,,,unknown,Otterhound,1349024545,claude-haiku-5-5,v1a
+Otterhound,trainability,,,unknown,Otterhound,1349024545,claude-haiku-5-5,v1a
+Otterhound,good_with_young_children,,,unknown,Otterhound,1349024545,claude-haiku-5-5,v1a
+Otterhound,good_with_other_dogs,,,unknown,Otterhound,1349024545,claude-haiku-5-5,v1a
+Otterhound,shedding,,,unknown,Otterhound,1349024545,claude-haiku-5-5,v1a
+Otterhound,copes_alone,,,unknown,Otterhound,1349024545,claude-haiku-5-5,v1a
+Otterhound,barking,,,unknown,Otterhound,1349024545,claude-haiku-5-5,v1a
+Otterhound,grooming,,,unknown,Otterhound,1349024545,claude-haiku-5-5,v1a
+Saluki,energy,,,unknown,Saluki,1376692065,claude-haiku-5-5,v1a
+Saluki,trainability,2,"The often independent and aloof breed may be difficult to train, and they generally cannot be trusted to return to their owner when off-leash.",rated,Saluki,1376692065,claude-haiku-5-5,v1a
+Saluki,good_with_young_children,,,unknown,Saluki,1376692065,claude-haiku-5-5,v1a
+Saluki,good_with_other_dogs,,,unknown,Saluki,1376692065,claude-haiku-5-5,v1a
+Saluki,shedding,1,The fur on both types is silky and is low-shedding when compared to other breeds.,rated,Saluki,1376692065,claude-haiku-5-5,v1a
+Saluki,copes_alone,2,"Salukis may bore easily and are not an ideal breed to leave unattended for long periods; however, they are well-suited to life in apartments, since they are generally quiet and calm as adults.",rated,Saluki,1376692065,claude-haiku-5-5,v1a
+Saluki,barking,1,"Salukis may bore easily and are not an ideal breed to leave unattended for long periods; however, they are well-suited to life in apartments, since they are generally quiet and calm as adults.",rated,Saluki,1376692065,claude-haiku-5-5,v1a
+Saluki,grooming,,,unknown,Saluki,1376692065,claude-haiku-5-5,v1a
+Scottish Deerhound,energy,,,unknown,Scottish Deerhound,1368889670,claude-haiku-5-5,v1a
+Scottish Deerhound,trainability,,,unknown,Scottish Deerhound,1368889670,claude-haiku-5-5,v1a
+Scottish Deerhound,good_with_young_children,,,unknown,Scottish Deerhound,1368889670,claude-haiku-5-5,v1a
+Scottish Deerhound,good_with_other_dogs,,,unknown,Scottish Deerhound,1368889670,claude-haiku-5-5,v1a
+Scottish Deerhound,shedding,,,unknown,Scottish Deerhound,1368889670,claude-haiku-5-5,v1a
+Scottish Deerhound,copes_alone,,,unknown,Scottish Deerhound,1368889670,claude-haiku-5-5,v1a
+Scottish Deerhound,barking,,,unknown,Scottish Deerhound,1368889670,claude-haiku-5-5,v1a
+Scottish Deerhound,grooming,,,unknown,Scottish Deerhound,1368889670,claude-haiku-5-5,v1a
+Weimaraner,energy,,,unknown,Weimaraner,1369336648,claude-haiku-5-5,v1a
+Weimaraner,trainability,,,unknown,Weimaraner,1369336648,claude-haiku-5-5,v1a
+Weimaraner,good_with_young_children,1,In Germany it is not considered to be suitable for keeping as a companion dog.,rated,Weimaraner,1369336648,claude-haiku-5-5,v1a
+Weimaraner,good_with_other_dogs,,,unknown,Weimaraner,1369336648,claude-haiku-5-5,v1a
+Weimaraner,shedding,,,unknown,Weimaraner,1369336648,claude-haiku-5-5,v1a
+Weimaraner,copes_alone,,,unknown,Weimaraner,1369336648,claude-haiku-5-5,v1a
+Weimaraner,barking,,,unknown,Weimaraner,1369336648,claude-haiku-5-5,v1a
+Weimaraner,grooming,,,unknown,Weimaraner,1369336648,claude-haiku-5-5,v1a
+Staffordshire Bull Terrier,energy,,,unknown,Staffordshire Bull Terrier,1373582302,claude-haiku-5-5,v1a
+Staffordshire Bull Terrier,trainability,,,unknown,Staffordshire Bull Terrier,1373582302,claude-haiku-5-5,v1a
+Staffordshire Bull Terrier,good_with_young_children,5,"The Kennel Club notes that the breed is “bold, fearless and totally reliable” and well suited to families, with the breed standard noting its particular affinity with children.",rated,Staffordshire Bull Terrier,1373582302,claude-haiku-5-5,v1a
+Staffordshire Bull Terrier,good_with_other_dogs,1,The Stafford has a reputation for pugnacity; when challenged by another dog it is known to not back away.,rated,Staffordshire Bull Terrier,1373582302,claude-haiku-5-5,v1a
+Staffordshire Bull Terrier,shedding,,,unknown,Staffordshire Bull Terrier,1373582302,claude-haiku-5-5,v1a
+Staffordshire Bull Terrier,copes_alone,,,unknown,Staffordshire Bull Terrier,1373582302,claude-haiku-5-5,v1a
+Staffordshire Bull Terrier,barking,,,unknown,Staffordshire Bull Terrier,1373582302,claude-haiku-5-5,v1a
+Staffordshire Bull Terrier,grooming,1,"The coat is short, stiff and close.",rated,Staffordshire Bull Terrier,1373582302,claude-haiku-5-5,v1a
+American Staffordshire Terrier,energy,,,unknown,American Staffordshire Terrier,1368872399,claude-haiku-5-5,v1a
+American Staffordshire Terrier,trainability,,,unknown,American Staffordshire Terrier,1368872399,claude-haiku-5-5,v1a
+American Staffordshire Terrier,good_with_young_children,,,unknown,American Staffordshire Terrier,1368872399,claude-haiku-5-5,v1a
+American Staffordshire Terrier,good_with_other_dogs,2,The official breed club of America points out that dog aggression can occur even if the dogs have been well-socialized and that therefore they should not be left alone with other dogs.,rated,American Staffordshire Terrier,1368872399,claude-haiku-5-5,v1a
+American Staffordshire Terrier,shedding,,,unknown,American Staffordshire Terrier,1368872399,claude-haiku-5-5,v1a
+American Staffordshire Terrier,copes_alone,,,unknown,American Staffordshire Terrier,1368872399,claude-haiku-5-5,v1a
+American Staffordshire Terrier,barking,,,unknown,American Staffordshire Terrier,1368872399,claude-haiku-5-5,v1a
+American Staffordshire Terrier,grooming,,,unknown,American Staffordshire Terrier,1368872399,claude-haiku-5-5,v1a
+Bedlington Terrier,energy,4,"A fast dog with high endurance, the Bedlington Terrier is just as quick in water as it is on land, and their swimming speed rivals that of the Newfoundland.",rated,Bedlington Terrier,1370655990,claude-haiku-5-5,v1a
+Bedlington Terrier,trainability,,,unknown,Bedlington Terrier,1370655990,claude-haiku-5-5,v1a
+Bedlington Terrier,good_with_young_children,4,"However, both the AKC and the ASPCA call the breed ""mild"" and ""gentle"" and recommends it as being good with children.",rated,Bedlington Terrier,1370655990,claude-haiku-5-5,v1a
+Bedlington Terrier,good_with_other_dogs,2,"Bedlingtons are quite fond of fighting, and are prone to jealousy when around other dogs.",rated,Bedlington Terrier,1370655990,claude-haiku-5-5,v1a
+Bedlington Terrier,shedding,1,It is nonshedding and with minimal odor but needs weekly grooming to remove dead hair.,rated,Bedlington Terrier,1370655990,claude-haiku-5-5,v1a
+Bedlington Terrier,copes_alone,,,unknown,Bedlington Terrier,1370655990,claude-haiku-5-5,v1a
+Bedlington Terrier,barking,,,unknown,Bedlington Terrier,1370655990,claude-haiku-5-5,v1a
+Bedlington Terrier,grooming,4,"It is extremely difficult to maintain a ""show clip"", even for professionals, and grooming can be quite expensive.",rated,Bedlington Terrier,1370655990,claude-haiku-5-5,v1a
+Border Terrier,energy,,,unknown,Border Terrier,1378184069,claude-haiku-5-5,v1a
+Border Terrier,trainability,,,unknown,Border Terrier,1378184069,claude-haiku-5-5,v1a
+Border Terrier,good_with_young_children,,,unknown,Border Terrier,1378184069,claude-haiku-5-5,v1a
+Border Terrier,good_with_other_dogs,,,unknown,Border Terrier,1378184069,claude-haiku-5-5,v1a
+Border Terrier,shedding,,,unknown,Border Terrier,1378184069,claude-haiku-5-5,v1a
+Border Terrier,copes_alone,,,unknown,Border Terrier,1378184069,claude-haiku-5-5,v1a
+Border Terrier,barking,,,unknown,Border Terrier,1378184069,claude-haiku-5-5,v1a
+Border Terrier,grooming,,,unknown,Border Terrier,1378184069,claude-haiku-5-5,v1a
+Kerry Blue Terrier,energy,,,unknown,Kerry Blue Terrier,1369441372,claude-haiku-5-5,v1a
+Kerry Blue Terrier,trainability,,,unknown,Kerry Blue Terrier,1369441372,claude-haiku-5-5,v1a
+Kerry Blue Terrier,good_with_young_children,,,unknown,Kerry Blue Terrier,1369441372,claude-haiku-5-5,v1a
+Kerry Blue Terrier,good_with_other_dogs,,,unknown,Kerry Blue Terrier,1369441372,claude-haiku-5-5,v1a
+Kerry Blue Terrier,shedding,,,unknown,Kerry Blue Terrier,1369441372,claude-haiku-5-5,v1a
+Kerry Blue Terrier,copes_alone,,,unknown,Kerry Blue Terrier,1369441372,claude-haiku-5-5,v1a
+Kerry Blue Terrier,barking,,,unknown,Kerry Blue Terrier,1369441372,claude-haiku-5-5,v1a
+Kerry Blue Terrier,grooming,,,unknown,Kerry Blue Terrier,1369441372,claude-haiku-5-5,v1a
+Irish Terrier,energy,4,"Irish Terriers are active dogs and need and enjoy consistent mental and physical challenges; well-trained Irish Terriers may do well at a variety of dog sports, such as dog agility.",rated,Irish Terrier,1368882175,claude-haiku-5-5,v1a
+Irish Terrier,trainability,3,Irish terriers have less of an eagerness to please people than some other breeds but have mental ability and enjoy puzzle solving.,rated,Irish Terrier,1368882175,claude-haiku-5-5,v1a
+Irish Terrier,good_with_young_children,4,Most Irish Terriers love children and tolerate rough-housing to a certain extent.,rated,Irish Terrier,1368882175,claude-haiku-5-5,v1a
+Irish Terrier,good_with_other_dogs,2,Irish Terriers are often dominant with other dogs.,rated,Irish Terrier,1368882175,claude-haiku-5-5,v1a
+Irish Terrier,shedding,1,A properly cared-for Irish Terrier does not shed either.,rated,Irish Terrier,1368882175,claude-haiku-5-5,v1a
+Irish Terrier,copes_alone,,,unknown,Irish Terrier,1368882175,claude-haiku-5-5,v1a
+Irish Terrier,barking,,,unknown,Irish Terrier,1368882175,claude-haiku-5-5,v1a
+Irish Terrier,grooming,4,The coat must be stripped by hand or a non-cutting knife to retain its weather-resistant qualities.,rated,Irish Terrier,1368882175,claude-haiku-5-5,v1a
+Norfolk Terrier,energy,,,unknown,Norfolk Terrier,1368886076,claude-haiku-5-5,v1a
+Norfolk Terrier,trainability,,,unknown,Norfolk Terrier,1368886076,claude-haiku-5-5,v1a
+Norfolk Terrier,good_with_young_children,5,"As companions, they love people and children and do make good pets.",rated,Norfolk Terrier,1368886076,claude-haiku-5-5,v1a
+Norfolk Terrier,good_with_other_dogs,,,unknown,Norfolk Terrier,1368886076,claude-haiku-5-5,v1a
+Norfolk Terrier,shedding,2,"The breed is considered largely hypoallergenic, although they do shed minimally year-round.",rated,Norfolk Terrier,1368886076,claude-haiku-5-5,v1a
+Norfolk Terrier,copes_alone,,,unknown,Norfolk Terrier,1368886076,claude-haiku-5-5,v1a
+Norfolk Terrier,barking,2,"Norfolks are not yappers and are not particularly vocal; however, they will bark when appropriate given their watch-dog tendencies.",rated,Norfolk Terrier,1368886076,claude-haiku-5-5,v1a
+Norfolk Terrier,grooming,3,"Ideally, the coat is combed daily with a steel ""greyhound"" comb, but all that is really necessary for grooming a companion dog is a good combing once a week to remove the loose, dead hairs and prevent matting.",rated,Norfolk Terrier,1368886076,claude-haiku-5-5,v1a
+Norwich Terrier,energy,,,unknown,Norwich Terrier,1368886131,claude-haiku-5-5,v1a
+Norwich Terrier,trainability,,,unknown,Norwich Terrier,1368886131,claude-haiku-5-5,v1a
+Norwich Terrier,good_with_young_children,,,unknown,Norwich Terrier,1368886131,claude-haiku-5-5,v1a
+Norwich Terrier,good_with_other_dogs,,,unknown,Norwich Terrier,1368886131,claude-haiku-5-5,v1a
+Norwich Terrier,shedding,,,unknown,Norwich Terrier,1368886131,claude-haiku-5-5,v1a
+Norwich Terrier,copes_alone,,,unknown,Norwich Terrier,1368886131,claude-haiku-5-5,v1a
+Norwich Terrier,barking,2,"Occasionally, this breed will display barking and digging behaviours, which are reflective of their terrier heritage.",rated,Norwich Terrier,1368886131,claude-haiku-5-5,v1a
+Norwich Terrier,grooming,,,unknown,Norwich Terrier,1368886131,claude-haiku-5-5,v1a
+Yorkshire Terrier,energy,3,"It is playful and energetic, usually kept as a companion dog.",rated,Yorkshire Terrier,1378695816,claude-haiku-5-5,v1a
+Yorkshire Terrier,trainability,,,unknown,Yorkshire Terrier,1378695816,claude-haiku-5-5,v1a
+Yorkshire Terrier,good_with_young_children,,,unknown,Yorkshire Terrier,1378695816,claude-haiku-5-5,v1a
+Yorkshire Terrier,good_with_other_dogs,,,unknown,Yorkshire Terrier,1378695816,claude-haiku-5-5,v1a
+Yorkshire Terrier,shedding,2,"In comparison with many other breeds, Yorkies do not shed to the same degree, losing small amounts when bathed or brushed.",rated,Yorkshire Terrier,1378695816,claude-haiku-5-5,v1a
+Yorkshire Terrier,copes_alone,,,unknown,Yorkshire Terrier,1378695816,claude-haiku-5-5,v1a
+Yorkshire Terrier,barking,,,unknown,Yorkshire Terrier,1378695816,claude-haiku-5-5,v1a
+Yorkshire Terrier,grooming,5,The traditional long coat is extremely high maintenance. The coat might get knotted if not brushed daily (a bristle brush for short and shaved coat and a pin brush for long coat).,rated,Yorkshire Terrier,1378695816,claude-haiku-5-5,v1a
+Wire Fox Terrier,energy,5,"Two of the Wire Fox Terrier's most distinctive traits are its energy and intelligence. It has a low threshold for boredom and requires stimulation, exercise and attention.",rated,Wire Fox Terrier,1368893552,claude-haiku-5-5,v1a
+Wire Fox Terrier,trainability,2,"Bred to be independent thinkers, they are capable of tactical maneuvering for vermin and other sport.",rated,Wire Fox Terrier,1368893552,claude-haiku-5-5,v1a
+Wire Fox Terrier,good_with_young_children,,,unknown,Wire Fox Terrier,1368893552,claude-haiku-5-5,v1a
+Wire Fox Terrier,good_with_other_dogs,2,"Often, Wire Fox Terriers are abandoned or surrendered for reasons including running away contrary to owner command, chasing objects or other animals, and taunting or attacking other animals with the ability to cause serious damage or harm.",rated,Wire Fox Terrier,1368893552,claude-haiku-5-5,v1a
+Wire Fox Terrier,shedding,,,unknown,Wire Fox Terrier,1368893552,claude-haiku-5-5,v1a
+Wire Fox Terrier,copes_alone,1,The Wire Fox Terrier is a companion animal that requires near-constant attention.,rated,Wire Fox Terrier,1368893552,claude-haiku-5-5,v1a
+Wire Fox Terrier,barking,,,unknown,Wire Fox Terrier,1368893552,claude-haiku-5-5,v1a
+Wire Fox Terrier,grooming,4,Many kept as pets are clipped monthly by a groomer.,rated,Wire Fox Terrier,1368893552,claude-haiku-5-5,v1a
+Lakeland Terrier,energy,4,"As with most terriers, the Lakeland is energetic, and daily exercise is a must.",rated,Lakeland Terrier,1377817628,claude-haiku-5-5,v1a
+Lakeland Terrier,trainability,4,"Very intelligent and independent minded, they are quick to learn and easy to train, though terriers often exhibit ""selective deafness"" when their interest level is aroused.",rated,Lakeland Terrier,1377817628,claude-haiku-5-5,v1a
+Lakeland Terrier,good_with_young_children,,,unknown,Lakeland Terrier,1377817628,claude-haiku-5-5,v1a
+Lakeland Terrier,good_with_other_dogs,,,unknown,Lakeland Terrier,1377817628,claude-haiku-5-5,v1a
+Lakeland Terrier,shedding,1,The dog will not shed if properly groomed.,rated,Lakeland Terrier,1377817628,claude-haiku-5-5,v1a
+Lakeland Terrier,copes_alone,,,unknown,Lakeland Terrier,1377817628,claude-haiku-5-5,v1a
+Lakeland Terrier,barking,,,unknown,Lakeland Terrier,1377817628,claude-haiku-5-5,v1a
+Lakeland Terrier,grooming,5,"It is suggested that ""[r]egular stripping and trimming improves the texture and quality of the coat"" and is ""necessary to enhance the dog's utilitarian purposes"" as well as ""enhancing him for the show ring"".",rated,Lakeland Terrier,1377817628,claude-haiku-5-5,v1a
+Sealyham Terrier,energy,,,unknown,Sealyham Terrier,1368889747,claude-haiku-5-5,v1a
+Sealyham Terrier,trainability,4,"If you train them, they'll retrieve. They'll do anything to please you.",rated,Sealyham Terrier,1368889747,claude-haiku-5-5,v1a
+Sealyham Terrier,good_with_young_children,,,unknown,Sealyham Terrier,1368889747,claude-haiku-5-5,v1a
+Sealyham Terrier,good_with_other_dogs,,,unknown,Sealyham Terrier,1368889747,claude-haiku-5-5,v1a
+Sealyham Terrier,shedding,1,"As with many terriers, Sealyhams have essentially non-shedding coats.",rated,Sealyham Terrier,1368889747,claude-haiku-5-5,v1a
+Sealyham Terrier,copes_alone,4,"Although happy in the company of others, they are fine if left alone.",rated,Sealyham Terrier,1368889747,claude-haiku-5-5,v1a
+Sealyham Terrier,barking,4,"They can be strong willed, and in some cases, immensely vocal, and boisterous but also full of personality and affectionate.",rated,Sealyham Terrier,1368889747,claude-haiku-5-5,v1a
+Sealyham Terrier,grooming,4,They have a white double coat which requires regular brushing with a wire comb in order to prevent matting.,rated,Sealyham Terrier,1368889747,claude-haiku-5-5,v1a
+Airedale Terrier,energy,4,"They are an alert and energetic breed, ""not aggressive but fearless.""",rated,Airedale Terrier,1368872145,claude-haiku-5-5,v1a
+Airedale Terrier,trainability,2,"As a result, the dog is very intelligent, independent, strong-minded, stoic, and sometimes stubborn.",rated,Airedale Terrier,1368872145,claude-haiku-5-5,v1a
+Airedale Terrier,good_with_young_children,,,unknown,Airedale Terrier,1368872145,claude-haiku-5-5,v1a
+Airedale Terrier,good_with_other_dogs,,,unknown,Airedale Terrier,1368872145,claude-haiku-5-5,v1a
+Airedale Terrier,shedding,1,Most Airedales require frequent (6 to 8 weeks) clipping or stripping as they do not shed.,rated,Airedale Terrier,1368872145,claude-haiku-5-5,v1a
+Airedale Terrier,copes_alone,,,unknown,Airedale Terrier,1368872145,claude-haiku-5-5,v1a
+Airedale Terrier,barking,,,unknown,Airedale Terrier,1368872145,claude-haiku-5-5,v1a
+Airedale Terrier,grooming,5,Most Airedales require frequent (6 to 8 weeks) clipping or stripping as they do not shed.,rated,Airedale Terrier,1368872145,claude-haiku-5-5,v1a
+Cairn Terrier,energy,,,unknown,Cairn Terrier,1369847868,claude-haiku-5-5,v1a
+Cairn Terrier,trainability,,,unknown,Cairn Terrier,1369847868,claude-haiku-5-5,v1a
+Cairn Terrier,good_with_young_children,,,unknown,Cairn Terrier,1369847868,claude-haiku-5-5,v1a
+Cairn Terrier,good_with_other_dogs,,,unknown,Cairn Terrier,1369847868,claude-haiku-5-5,v1a
+Cairn Terrier,shedding,,,unknown,Cairn Terrier,1369847868,claude-haiku-5-5,v1a
+Cairn Terrier,copes_alone,,,unknown,Cairn Terrier,1369847868,claude-haiku-5-5,v1a
+Cairn Terrier,barking,,,unknown,Cairn Terrier,1369847868,claude-haiku-5-5,v1a
+Cairn Terrier,grooming,,,unknown,Cairn Terrier,1369847868,claude-haiku-5-5,v1a
+Australian Terrier,energy,,,unknown,Australian Terrier,1370265693,claude-haiku-5-5,v1a
+Australian Terrier,trainability,4,"The Australian Terrier ranks 34th in Stanley Coren's The Intelligence of Dogs, being of above average ""Working and Obedience"" intelligence, indicating good trainability.",rated,Australian Terrier,1370265693,claude-haiku-5-5,v1a
+Australian Terrier,good_with_young_children,,,unknown,Australian Terrier,1370265693,claude-haiku-5-5,v1a
+Australian Terrier,good_with_other_dogs,,,unknown,Australian Terrier,1370265693,claude-haiku-5-5,v1a
+Australian Terrier,shedding,,,unknown,Australian Terrier,1370265693,claude-haiku-5-5,v1a
+Australian Terrier,copes_alone,,,unknown,Australian Terrier,1370265693,claude-haiku-5-5,v1a
+Australian Terrier,barking,,,unknown,Australian Terrier,1370265693,claude-haiku-5-5,v1a
+Australian Terrier,grooming,,,unknown,Australian Terrier,1370265693,claude-haiku-5-5,v1a
+Dandie Dinmont Terrier,energy,,,unknown,Dandie Dinmont Terrier,1368876314,claude-haiku-5-5,v1a
+Dandie Dinmont Terrier,trainability,,,unknown,Dandie Dinmont Terrier,1368876314,claude-haiku-5-5,v1a
+Dandie Dinmont Terrier,good_with_young_children,2,The breed is tough but usually friendly and is suitable for older children.,rated,Dandie Dinmont Terrier,1368876314,claude-haiku-5-5,v1a
+Dandie Dinmont Terrier,good_with_other_dogs,2,"They are described as being ""very game"", in that they are prone to challenging other animals, including foxes, and in some cases other dogs.",rated,Dandie Dinmont Terrier,1368876314,claude-haiku-5-5,v1a
+Dandie Dinmont Terrier,shedding,,,unknown,Dandie Dinmont Terrier,1368876314,claude-haiku-5-5,v1a
+Dandie Dinmont Terrier,copes_alone,,,unknown,Dandie Dinmont Terrier,1368876314,claude-haiku-5-5,v1a
+Dandie Dinmont Terrier,barking,,,unknown,Dandie Dinmont Terrier,1368876314,claude-haiku-5-5,v1a
+Dandie Dinmont Terrier,grooming,,,unknown,Dandie Dinmont Terrier,1368876314,claude-haiku-5-5,v1a
+Boston Terrier,energy,,,unknown,Boston Terrier,1368874069,claude-haiku-5-5,v1a
+Boston Terrier,trainability,5,Boston Terriers are generally eager to please their owner and can be easily trained.,rated,Boston Terrier,1368874069,claude-haiku-5-5,v1a
+Boston Terrier,good_with_young_children,4,"They enjoy being around people, get along well with children, the elderly, other canines, and non-canine pets, if properly socialized.",rated,Boston Terrier,1368874069,claude-haiku-5-5,v1a
+Boston Terrier,good_with_other_dogs,3,"They can be very protective of their owners, which may result in aggressive and territorial behavior toward other pets and strangers.",rated,Boston Terrier,1368874069,claude-haiku-5-5,v1a
+Boston Terrier,shedding,,,unknown,Boston Terrier,1368874069,claude-haiku-5-5,v1a
+Boston Terrier,copes_alone,,,unknown,Boston Terrier,1368874069,claude-haiku-5-5,v1a
+Boston Terrier,barking,1,Both females and males are generally quiet and bark only when necessary.,rated,Boston Terrier,1368874069,claude-haiku-5-5,v1a
+Boston Terrier,grooming,,,unknown,Boston Terrier,1368874069,claude-haiku-5-5,v1a
+Miniature Schnauzer,energy,,,unknown,Miniature Schnauzer,1369301805,claude-haiku-5-5,v1a
+Miniature Schnauzer,trainability,4,"Usually easy to train, they tend to be excellent watchdogs with a good territorial instinct, but more inclined toward barking than biting.",rated,Miniature Schnauzer,1369301805,claude-haiku-5-5,v1a
+Miniature Schnauzer,good_with_young_children,,,unknown,Miniature Schnauzer,1369301805,claude-haiku-5-5,v1a
+Miniature Schnauzer,good_with_other_dogs,4,"While the Miniature Schnauzer is included in the Terrier Group in North America (due to rat-catching background), it does not have common ancestry with Terriers from Great Britain, and compared to them has a different personality, being more laid back, obedient, friendly, and less aggressive to other dogs.",rated,Miniature Schnauzer,1369301805,claude-haiku-5-5,v1a
+Miniature Schnauzer,shedding,,,unknown,Miniature Schnauzer,1369301805,claude-haiku-5-5,v1a
+Miniature Schnauzer,copes_alone,,,unknown,Miniature Schnauzer,1369301805,claude-haiku-5-5,v1a
+Miniature Schnauzer,barking,4,"Usually easy to train, they tend to be excellent watchdogs with a good territorial instinct, but more inclined toward barking than biting.",rated,Miniature Schnauzer,1369301805,claude-haiku-5-5,v1a
+Miniature Schnauzer,grooming,,,unknown,Miniature Schnauzer,1369301805,claude-haiku-5-5,v1a
+Giant Schnauzer,energy,,,unknown,Giant Schnauzer,1368879686,claude-haiku-5-5,v1a
+Giant Schnauzer,trainability,,,unknown,Giant Schnauzer,1368879686,claude-haiku-5-5,v1a
+Giant Schnauzer,good_with_young_children,,,unknown,Giant Schnauzer,1368879686,claude-haiku-5-5,v1a
+Giant Schnauzer,good_with_other_dogs,,,unknown,Giant Schnauzer,1368879686,claude-haiku-5-5,v1a
+Giant Schnauzer,shedding,,,unknown,Giant Schnauzer,1368879686,claude-haiku-5-5,v1a
+Giant Schnauzer,copes_alone,,,unknown,Giant Schnauzer,1368879686,claude-haiku-5-5,v1a
+Giant Schnauzer,barking,,,unknown,Giant Schnauzer,1368879686,claude-haiku-5-5,v1a
+Giant Schnauzer,grooming,,,unknown,Giant Schnauzer,1368879686,claude-haiku-5-5,v1a
+Standard Schnauzer,energy,,,unknown,Standard Schnauzer,1369301607,claude-haiku-5-5,v1a
+Standard Schnauzer,trainability,,,unknown,Standard Schnauzer,1369301607,claude-haiku-5-5,v1a
+Standard Schnauzer,good_with_young_children,,,unknown,Standard Schnauzer,1369301607,claude-haiku-5-5,v1a
+Standard Schnauzer,good_with_other_dogs,,,unknown,Standard Schnauzer,1369301607,claude-haiku-5-5,v1a
+Standard Schnauzer,shedding,,,unknown,Standard Schnauzer,1369301607,claude-haiku-5-5,v1a
+Standard Schnauzer,copes_alone,,,unknown,Standard Schnauzer,1369301607,claude-haiku-5-5,v1a
+Standard Schnauzer,barking,,,unknown,Standard Schnauzer,1369301607,claude-haiku-5-5,v1a
+Standard Schnauzer,grooming,,,unknown,Standard Schnauzer,1369301607,claude-haiku-5-5,v1a
+Scottish Terrier,energy,,,unknown,Scottish Terrier,1376203085,claude-haiku-5-5,v1a
+Scottish Terrier,trainability,2,"The breed is known to be independent and self-assured, playful, intelligent, and has been nicknamed the 'Diehard' because of its rugged nature and endless determination.",rated,Scottish Terrier,1376203085,claude-haiku-5-5,v1a
+Scottish Terrier,good_with_young_children,2,Scottish Terriers are not recommended to cohabitate with small children or children who are inexperienced with dogs.,rated,Scottish Terrier,1376203085,claude-haiku-5-5,v1a
+Scottish Terrier,good_with_other_dogs,2,They have been described as a fearless breed that may be aggressive around other dogs unless introduced at an early age.,rated,Scottish Terrier,1376203085,claude-haiku-5-5,v1a
+Scottish Terrier,shedding,,,unknown,Scottish Terrier,1376203085,claude-haiku-5-5,v1a
+Scottish Terrier,copes_alone,,,unknown,Scottish Terrier,1376203085,claude-haiku-5-5,v1a
+Scottish Terrier,barking,2,"It has been suggested that the Scottish Terrier can make a good watchdog due to its tendency to bark only when necessary and because it is typically reserved with strangers, although this is not always the case.",rated,Scottish Terrier,1376203085,claude-haiku-5-5,v1a
+Scottish Terrier,grooming,4,This longer coat on the legs is often referred to as the skirt of the Scottie and should be brushed daily to avoid knotted or matted fur.,rated,Scottish Terrier,1376203085,claude-haiku-5-5,v1a
+Tibetan Terrier,energy,4,"While suitable for apartment living, the Tibetan is an energetic dog that requires regular exercise.",rated,Tibetan Terrier,1373286533,claude-haiku-5-5,v1a
+Tibetan Terrier,trainability,,,unknown,Tibetan Terrier,1373286533,claude-haiku-5-5,v1a
+Tibetan Terrier,good_with_young_children,4,"They are amiable and affectionate family dogs, sensitive to their owners, and gentle with older children if properly introduced.",rated,Tibetan Terrier,1373286533,claude-haiku-5-5,v1a
+Tibetan Terrier,good_with_other_dogs,,,unknown,Tibetan Terrier,1373286533,claude-haiku-5-5,v1a
+Tibetan Terrier,shedding,1,"They do not shed like dogs with shorter hair growth cycles, but rather slough hair at a rate similar to that of most humans.",rated,Tibetan Terrier,1373286533,claude-haiku-5-5,v1a
+Tibetan Terrier,copes_alone,,,unknown,Tibetan Terrier,1373286533,claude-haiku-5-5,v1a
+Tibetan Terrier,barking,4,The Tibetan Terrier has a deep bark and is prone to excessive barking.,rated,Tibetan Terrier,1373286533,claude-haiku-5-5,v1a
+Tibetan Terrier,grooming,4,"As a result, their coat grows quite long and pet animals will require occasional trimming.",rated,Tibetan Terrier,1373286533,claude-haiku-5-5,v1a
+Australian Silky Terrier,energy,3,"While still an energetic breed, they are somewhat less active than other terriers.",rated,Australian Silky Terrier,1368873102,claude-haiku-5-5,v1a
+Australian Silky Terrier,trainability,2,"However, training one can be difficult, as this breed is often stubborn and deliberately willful.",rated,Australian Silky Terrier,1368873102,claude-haiku-5-5,v1a
+Australian Silky Terrier,good_with_young_children,,,unknown,Australian Silky Terrier,1368873102,claude-haiku-5-5,v1a
+Australian Silky Terrier,good_with_other_dogs,,,unknown,Australian Silky Terrier,1368873102,claude-haiku-5-5,v1a
+Australian Silky Terrier,shedding,,,unknown,Australian Silky Terrier,1368873102,claude-haiku-5-5,v1a
+Australian Silky Terrier,copes_alone,,,unknown,Australian Silky Terrier,1368873102,claude-haiku-5-5,v1a
+Australian Silky Terrier,barking,4,"They bark readily, especially when greeting strangers.",rated,Australian Silky Terrier,1368873102,claude-haiku-5-5,v1a
+Australian Silky Terrier,grooming,4,The coat requires regular grooming to avoid tangled and retain its silkiness.,rated,Australian Silky Terrier,1368873102,claude-haiku-5-5,v1a
+Soft-coated Wheaten Terrier,energy,4,The Soft-coated Wheaten Terrier is an energetic and playful dog. It requires patience and consistent positive training.,rated,Soft-coated Wheaten Terrier,1368890492,claude-haiku-5-5,v1a
+Soft-coated Wheaten Terrier,trainability,4,"They are very smart dogs, and are easy to train. They respond the best to praise and learning tricks can come very easily to them.",rated,Soft-coated Wheaten Terrier,1368890492,claude-haiku-5-5,v1a
+Soft-coated Wheaten Terrier,good_with_young_children,4,Wheatens are a great dog for children and are generally friendly towards them.,rated,Soft-coated Wheaten Terrier,1368890492,claude-haiku-5-5,v1a
+Soft-coated Wheaten Terrier,good_with_other_dogs,4,"Wheatens are friendly and loving pets, and get along well with other dogs if properly socialised.",rated,Soft-coated Wheaten Terrier,1368890492,claude-haiku-5-5,v1a
+Soft-coated Wheaten Terrier,shedding,1,"Their soft, silky hair does not shed like most dogs; like human hair and Poodle hair, it keeps growing; they do need trimming and should be brushed and combed once a day to avoid mats.",rated,Soft-coated Wheaten Terrier,1368890492,claude-haiku-5-5,v1a
+Soft-coated Wheaten Terrier,copes_alone,2,Wheatens are very curious and will most likely try to wander if left outside alone.,rated,Soft-coated Wheaten Terrier,1368890492,claude-haiku-5-5,v1a
+Soft-coated Wheaten Terrier,barking,3,If not properly trained they can bark excessively.,rated,Soft-coated Wheaten Terrier,1368890492,claude-haiku-5-5,v1a
+Soft-coated Wheaten Terrier,grooming,5,they do need trimming and should be brushed and combed once a day to avoid mats.,rated,Soft-coated Wheaten Terrier,1368890492,claude-haiku-5-5,v1a
+West Highland White Terrier,energy,4,it is an energetic and boisterous breed with a high prey drive and thus needs regular exercise of around one hour per day,rated,West Highland White Terrier,1368893358,claude-haiku-5-5,v1a
+West Highland White Terrier,trainability,3,"A hardy breed, Westies can be stubborn and cause issues with training, potentially requiring their training to be refreshed on occasion during their lifetime.",rated,West Highland White Terrier,1368893358,claude-haiku-5-5,v1a
+West Highland White Terrier,good_with_young_children,2,"It is social and can be good with children, but rarely tolerates rough handling and sometimes prefers solitude.",rated,West Highland White Terrier,1368893358,claude-haiku-5-5,v1a
+West Highland White Terrier,good_with_other_dogs,4,Westies are highly social and are the most friendly of all the Scottish terriers.,rated,West Highland White Terrier,1368893358,claude-haiku-5-5,v1a
+West Highland White Terrier,shedding,,,unknown,West Highland White Terrier,1368893358,claude-haiku-5-5,v1a
+West Highland White Terrier,copes_alone,2,"Westies can make good watchdogs and are normally independent, self-assured, and confident.",rated,West Highland White Terrier,1368893358,claude-haiku-5-5,v1a
+West Highland White Terrier,barking,4,"they tend to be highly interested in toys, especially chasing balls. They retain the instincts of an ""earthdog"" such as being inquisitive and investigative, as well as natural instincts to bark and dig holes.",rated,West Highland White Terrier,1368893358,claude-haiku-5-5,v1a
+West Highland White Terrier,grooming,4,"As puppies develop into adults, their coarse outer coat is normally removed by either ""hand-stripping"" (especially for dog-showing) or otherwise clipping.",rated,West Highland White Terrier,1368893358,claude-haiku-5-5,v1a
+Lhasa Apso,energy,,,unknown,Lhasa Apso,1368883133,claude-haiku-5-5,v1a
+Lhasa Apso,trainability,2,"It is ranked in the 68th group (out of 79) in Stanley Coren's The Intelligence of Dogs, having fair working-obedience intelligence.",rated,Lhasa Apso,1368883133,claude-haiku-5-5,v1a
+Lhasa Apso,good_with_young_children,,,unknown,Lhasa Apso,1368883133,claude-haiku-5-5,v1a
+Lhasa Apso,good_with_other_dogs,,,unknown,Lhasa Apso,1368883133,claude-haiku-5-5,v1a
+Lhasa Apso,shedding,,,unknown,Lhasa Apso,1368883133,claude-haiku-5-5,v1a
+Lhasa Apso,copes_alone,,,unknown,Lhasa Apso,1368883133,claude-haiku-5-5,v1a
+Lhasa Apso,barking,,,unknown,Lhasa Apso,1368883133,claude-haiku-5-5,v1a
+Lhasa Apso,grooming,,,unknown,Lhasa Apso,1368883133,claude-haiku-5-5,v1a
+Flat-coated Retriever,energy,,,unknown,Flat-coated Retriever,1368878996,claude-haiku-5-5,v1a
+Flat-coated Retriever,trainability,,,unknown,Flat-coated Retriever,1368878996,claude-haiku-5-5,v1a
+Flat-coated Retriever,good_with_young_children,,,unknown,Flat-coated Retriever,1368878996,claude-haiku-5-5,v1a
+Flat-coated Retriever,good_with_other_dogs,,,unknown,Flat-coated Retriever,1368878996,claude-haiku-5-5,v1a
+Flat-coated Retriever,shedding,,,unknown,Flat-coated Retriever,1368878996,claude-haiku-5-5,v1a
+Flat-coated Retriever,copes_alone,,,unknown,Flat-coated Retriever,1368878996,claude-haiku-5-5,v1a
+Flat-coated Retriever,barking,2,"While they will protect their owners and property with an assertive bark, they are unlikely to back up such noise with actual aggression.",rated,Flat-coated Retriever,1368878996,claude-haiku-5-5,v1a
+Flat-coated Retriever,grooming,,,unknown,Flat-coated Retriever,1368878996,claude-haiku-5-5,v1a
+Curly-coated Retriever,energy,,,unknown,Curly-coated Retriever,1368876158,claude-haiku-5-5,v1a
+Curly-coated Retriever,trainability,,,unknown,Curly-coated Retriever,1368876158,claude-haiku-5-5,v1a
+Curly-coated Retriever,good_with_young_children,,,unknown,Curly-coated Retriever,1368876158,claude-haiku-5-5,v1a
+Curly-coated Retriever,good_with_other_dogs,,,unknown,Curly-coated Retriever,1368876158,claude-haiku-5-5,v1a
+Curly-coated Retriever,shedding,,,unknown,Curly-coated Retriever,1368876158,claude-haiku-5-5,v1a
+Curly-coated Retriever,copes_alone,,,unknown,Curly-coated Retriever,1368876158,claude-haiku-5-5,v1a
+Curly-coated Retriever,barking,,,unknown,Curly-coated Retriever,1368876158,claude-haiku-5-5,v1a
+Curly-coated Retriever,grooming,,,unknown,Curly-coated Retriever,1368876158,claude-haiku-5-5,v1a
+Golden Retriever,energy,,,unknown,Golden Retriever,1373589572,claude-haiku-5-5,v1a
+Golden Retriever,trainability,5,"As is typical with retriever breeds, the breed is generally calm and biddable, being very easy to train and extremely keen to please their humans.",rated,Golden Retriever,1373589572,claude-haiku-5-5,v1a
+Golden Retriever,good_with_young_children,5,"The breed is known to make excellent pets and family dogs, being generally extremely tolerant of children and keen to accompany any family member in a range of activities.",rated,Golden Retriever,1373589572,claude-haiku-5-5,v1a
+Golden Retriever,good_with_other_dogs,,,unknown,Golden Retriever,1373589572,claude-haiku-5-5,v1a
+Golden Retriever,shedding,,,unknown,Golden Retriever,1373589572,claude-haiku-5-5,v1a
+Golden Retriever,copes_alone,,,unknown,Golden Retriever,1373589572,claude-haiku-5-5,v1a
+Golden Retriever,barking,,,unknown,Golden Retriever,1373589572,claude-haiku-5-5,v1a
+Golden Retriever,grooming,5,"Another is its long coat, which requires more maintenance and grooming than that of the Labrador, particularly after working in muddy conditions or close cover, as their long hair is more prone to picking up dirt and burrs.",rated,Golden Retriever,1373589572,claude-haiku-5-5,v1a
+Labrador Retriever,energy,4,"Labradors are often friendly, energetic and playful.",rated,Labrador Retriever,1376768803,claude-haiku-5-5,v1a
+Labrador Retriever,trainability,,,unknown,Labrador Retriever,1376768803,claude-haiku-5-5,v1a
+Labrador Retriever,good_with_young_children,,,unknown,Labrador Retriever,1376768803,claude-haiku-5-5,v1a
+Labrador Retriever,good_with_other_dogs,,,unknown,Labrador Retriever,1376768803,claude-haiku-5-5,v1a
+Labrador Retriever,shedding,,,unknown,Labrador Retriever,1376768803,claude-haiku-5-5,v1a
+Labrador Retriever,copes_alone,,,unknown,Labrador Retriever,1376768803,claude-haiku-5-5,v1a
+Labrador Retriever,barking,,,unknown,Labrador Retriever,1376768803,claude-haiku-5-5,v1a
+Labrador Retriever,grooming,2,"The Labrador Retriever's coat should be short and dense, but not wiry.",rated,Labrador Retriever,1376768803,claude-haiku-5-5,v1a
+Chesapeake Bay Retriever,energy,,,unknown,Chesapeake Bay Retriever,1312023909,claude-haiku-5-5,v1a
+Chesapeake Bay Retriever,trainability,2,"Historically considered stubborn and difficult to train, many trainers thought this breed required more physical discipline than other retriever breeds.",rated,Chesapeake Bay Retriever,1312023909,claude-haiku-5-5,v1a
+Chesapeake Bay Retriever,good_with_young_children,,,unknown,Chesapeake Bay Retriever,1312023909,claude-haiku-5-5,v1a
+Chesapeake Bay Retriever,good_with_other_dogs,,,unknown,Chesapeake Bay Retriever,1312023909,claude-haiku-5-5,v1a
+Chesapeake Bay Retriever,shedding,,,unknown,Chesapeake Bay Retriever,1312023909,claude-haiku-5-5,v1a
+Chesapeake Bay Retriever,copes_alone,,,unknown,Chesapeake Bay Retriever,1312023909,claude-haiku-5-5,v1a
+Chesapeake Bay Retriever,barking,2,"Some can be quite vocal when happy, and some will ""smile"" by baring their front teeth in a peculiar grin; this is not a threat, but a sign of joy or submissiveness.",rated,Chesapeake Bay Retriever,1312023909,claude-haiku-5-5,v1a
+Chesapeake Bay Retriever,grooming,1,Maintenance of the coat is minimal and mainly consists of brushing with a short-tooth brush once a week.,rated,Chesapeake Bay Retriever,1312023909,claude-haiku-5-5,v1a
+German Shorthaired Pointer,energy,,,unknown,German Shorthaired Pointer,1377205096,claude-haiku-5-5,v1a
+German Shorthaired Pointer,trainability,,,unknown,German Shorthaired Pointer,1377205096,claude-haiku-5-5,v1a
+German Shorthaired Pointer,good_with_young_children,,,unknown,German Shorthaired Pointer,1377205096,claude-haiku-5-5,v1a
+German Shorthaired Pointer,good_with_other_dogs,,,unknown,German Shorthaired Pointer,1377205096,claude-haiku-5-5,v1a
+German Shorthaired Pointer,shedding,,,unknown,German Shorthaired Pointer,1377205096,claude-haiku-5-5,v1a
+German Shorthaired Pointer,copes_alone,,,unknown,German Shorthaired Pointer,1377205096,claude-haiku-5-5,v1a
+German Shorthaired Pointer,barking,,,unknown,German Shorthaired Pointer,1377205096,claude-haiku-5-5,v1a
+German Shorthaired Pointer,grooming,1,"The coat is dense, short and rough-textured.",rated,German Shorthaired Pointer,1377205096,claude-haiku-5-5,v1a
+Vizsla,energy,,,unknown,Vizsla,1378434702,claude-haiku-5-5,v1a
+Vizsla,trainability,4,They are bred to be hunters and known to be trainable.,rated,Vizsla,1378434702,claude-haiku-5-5,v1a
+Vizsla,good_with_young_children,4,"With proper socialization and training, Vizslas can be great around children.",rated,Vizsla,1378434702,claude-haiku-5-5,v1a
+Vizsla,good_with_other_dogs,,,unknown,Vizsla,1378434702,claude-haiku-5-5,v1a
+Vizsla,shedding,4,"Unlike most dogs, vizslas shed during all seasons, so it is important to keep up with brushing.",rated,Vizsla,1378434702,claude-haiku-5-5,v1a
+Vizsla,copes_alone,2,"If left alone for long hours, they can be bored and become destructive.",rated,Vizsla,1378434702,claude-haiku-5-5,v1a
+Vizsla,barking,,,unknown,Vizsla,1378434702,claude-haiku-5-5,v1a
+Vizsla,grooming,2,Maintaining a Vizsla's coat is relatively simple because of its short hair.,rated,Vizsla,1378434702,claude-haiku-5-5,v1a
+English Setter,energy,4,They are active dogs that need plenty of exercise and up to two hours a day of exercise is recommended.,rated,English Setter,1368878187,claude-haiku-5-5,v1a
+English Setter,trainability,3,"However, they are not always easy to train, as their natural bird instinct tends to distract them in outdoor environments.",rated,English Setter,1368878187,claude-haiku-5-5,v1a
+English Setter,good_with_young_children,4,"""adores visitors and is particularly happy with children.""",rated,English Setter,1368878187,claude-haiku-5-5,v1a
+English Setter,good_with_other_dogs,,,unknown,English Setter,1368878187,claude-haiku-5-5,v1a
+English Setter,shedding,,,unknown,English Setter,1368878187,claude-haiku-5-5,v1a
+English Setter,copes_alone,,,unknown,English Setter,1368878187,claude-haiku-5-5,v1a
+English Setter,barking,,,unknown,English Setter,1368878187,claude-haiku-5-5,v1a
+English Setter,grooming,3,"The bench or show type has a long, flowing coat that requires regular grooming. The field or hunting type has a shorter coat that requires less grooming.",rated,English Setter,1368878187,claude-haiku-5-5,v1a
+Irish Setter,energy,,,unknown,Irish Setter,1379908122,claude-haiku-5-5,v1a
+Irish Setter,trainability,,,unknown,Irish Setter,1379908122,claude-haiku-5-5,v1a
+Irish Setter,good_with_young_children,,,unknown,Irish Setter,1379908122,claude-haiku-5-5,v1a
+Irish Setter,good_with_other_dogs,,,unknown,Irish Setter,1379908122,claude-haiku-5-5,v1a
+Irish Setter,shedding,,,unknown,Irish Setter,1379908122,claude-haiku-5-5,v1a
+Irish Setter,copes_alone,,,unknown,Irish Setter,1379908122,claude-haiku-5-5,v1a
+Irish Setter,barking,,,unknown,Irish Setter,1379908122,claude-haiku-5-5,v1a
+Irish Setter,grooming,4,It requires frequent brushing to maintain its condition and keep it mat-free.,rated,Irish Setter,1379908122,claude-haiku-5-5,v1a
+Gordon Setter,energy,5,"Gordons were bred to run, and require 60 to 80 minutes of vigorous exercise daily.",rated,Gordon Setter,1368879978,claude-haiku-5-5,v1a
+Gordon Setter,trainability,,,unknown,Gordon Setter,1368879978,claude-haiku-5-5,v1a
+Gordon Setter,good_with_young_children,2,"Puppies and adult dogs can be quite boisterous, and although they are patient by nature, may not be suitable for households with very young children.",rated,Gordon Setter,1368879978,claude-haiku-5-5,v1a
+Gordon Setter,good_with_other_dogs,,,unknown,Gordon Setter,1368879978,claude-haiku-5-5,v1a
+Gordon Setter,shedding,,,unknown,Gordon Setter,1368879978,claude-haiku-5-5,v1a
+Gordon Setter,copes_alone,,,unknown,Gordon Setter,1368879978,claude-haiku-5-5,v1a
+Gordon Setter,barking,,,unknown,Gordon Setter,1368879978,claude-haiku-5-5,v1a
+Gordon Setter,grooming,,,unknown,Gordon Setter,1368879978,claude-haiku-5-5,v1a
+Brittany,energy,,,unknown,Brittany Spaniel,1375126678,claude-haiku-5-5,v1a
+Brittany,trainability,,,unknown,Brittany Spaniel,1375126678,claude-haiku-5-5,v1a
+Brittany,good_with_young_children,,,unknown,Brittany Spaniel,1375126678,claude-haiku-5-5,v1a
+Brittany,good_with_other_dogs,,,unknown,Brittany Spaniel,1375126678,claude-haiku-5-5,v1a
+Brittany,shedding,,,unknown,Brittany Spaniel,1375126678,claude-haiku-5-5,v1a
+Brittany,copes_alone,,,unknown,Brittany Spaniel,1375126678,claude-haiku-5-5,v1a
+Brittany,barking,,,unknown,Brittany Spaniel,1375126678,claude-haiku-5-5,v1a
+Brittany,grooming,,,unknown,Brittany Spaniel,1375126678,claude-haiku-5-5,v1a
+Clumber Spaniel,energy,,,unknown,Clumber Spaniel,1368875605,claude-haiku-5-5,v1a
+Clumber Spaniel,trainability,,,unknown,Clumber Spaniel,1368875605,claude-haiku-5-5,v1a
+Clumber Spaniel,good_with_young_children,,,unknown,Clumber Spaniel,1368875605,claude-haiku-5-5,v1a
+Clumber Spaniel,good_with_other_dogs,2,Clumber Spaniels have a tendency to be more reserved with other dogs until they have warmed up to them.,rated,Clumber Spaniel,1368875605,claude-haiku-5-5,v1a
+Clumber Spaniel,shedding,3,Clumber Spaniels shed at a medium pace and need to be brushed and groomed frequently.,rated,Clumber Spaniel,1368875605,claude-haiku-5-5,v1a
+Clumber Spaniel,copes_alone,,,unknown,Clumber Spaniel,1368875605,claude-haiku-5-5,v1a
+Clumber Spaniel,barking,1,Clumber Spaniels do not have a tendency to bark frequently and are considered more as companions in the home than as a watch dog.,rated,Clumber Spaniel,1368875605,claude-haiku-5-5,v1a
+Clumber Spaniel,grooming,4,Clumber Spaniels shed at a medium pace and need to be brushed and groomed frequently.,rated,Clumber Spaniel,1368875605,claude-haiku-5-5,v1a
+English Springer Spaniel,energy,,,unknown,English Springer Spaniel,1368878190,claude-haiku-5-5,v1a
+English Springer Spaniel,trainability,5,"Field-bred dogs are selected for their sense of smell, hunting ability, and response to training rather than appearance.",rated,English Springer Spaniel,1368878190,claude-haiku-5-5,v1a
+English Springer Spaniel,good_with_young_children,,,unknown,English Springer Spaniel,1368878190,claude-haiku-5-5,v1a
+English Springer Spaniel,good_with_other_dogs,,,unknown,English Springer Spaniel,1368878190,claude-haiku-5-5,v1a
+English Springer Spaniel,shedding,,,unknown,English Springer Spaniel,1368878190,claude-haiku-5-5,v1a
+English Springer Spaniel,copes_alone,,,unknown,English Springer Spaniel,1368878190,claude-haiku-5-5,v1a
+English Springer Spaniel,barking,,,unknown,English Springer Spaniel,1368878190,claude-haiku-5-5,v1a
+English Springer Spaniel,grooming,,,unknown,English Springer Spaniel,1368878190,claude-haiku-5-5,v1a
+Welsh Springer Spaniel,energy,4,"The Welsh Springer was bred for work and endurance, and as with many breeds of hunting dogs requires a regular exercise routine to keep them healthy and content.",rated,Welsh Springer Spaniel,1368893344,claude-haiku-5-5,v1a
+Welsh Springer Spaniel,trainability,4,"The breed is quick to learn but can be headstrong, though with correct training can become very obedient.",rated,Welsh Springer Spaniel,1368893344,claude-haiku-5-5,v1a
+Welsh Springer Spaniel,good_with_young_children,5,"The breed is well known for being friendly and demonstrative to all members of the family, especially children, and accepting other pets of the household with a friendly, playful attitude.",rated,Welsh Springer Spaniel,1368893344,claude-haiku-5-5,v1a
+Welsh Springer Spaniel,good_with_other_dogs,4,"The breed is well known for being friendly and demonstrative to all members of the family, especially children, and accepting other pets of the household with a friendly, playful attitude.",rated,Welsh Springer Spaniel,1368893344,claude-haiku-5-5,v1a
+Welsh Springer Spaniel,shedding,,,unknown,Welsh Springer Spaniel,1368893344,claude-haiku-5-5,v1a
+Welsh Springer Spaniel,copes_alone,2,Some Welsh Springers can become clingy towards their owners and suffer separation anxiety when alone.,rated,Welsh Springer Spaniel,1368893344,claude-haiku-5-5,v1a
+Welsh Springer Spaniel,barking,3,"They may meet strangers barking when in their territory, or act aloof, cautious or wary.",rated,Welsh Springer Spaniel,1368893344,claude-haiku-5-5,v1a
+Welsh Springer Spaniel,grooming,,,unknown,Welsh Springer Spaniel,1368893344,claude-haiku-5-5,v1a
+English Cocker Spaniel,energy,,,unknown,English Cocker Spaniel,1371811273,claude-haiku-5-5,v1a
+English Cocker Spaniel,trainability,,,unknown,English Cocker Spaniel,1371811273,claude-haiku-5-5,v1a
+English Cocker Spaniel,good_with_young_children,4,"With a good level of socialisation at an early age, Cocker Spaniels can get along well with people, children, other dogs and other pets.",rated,English Cocker Spaniel,1371811273,claude-haiku-5-5,v1a
+English Cocker Spaniel,good_with_other_dogs,4,"With a good level of socialisation at an early age, Cocker Spaniels can get along well with people, children, other dogs and other pets.",rated,English Cocker Spaniel,1371811273,claude-haiku-5-5,v1a
+English Cocker Spaniel,shedding,,,unknown,English Cocker Spaniel,1371811273,claude-haiku-5-5,v1a
+English Cocker Spaniel,copes_alone,2,This breed is friendly and prefers to be around people; it is not best suited to the backyard alone.,rated,English Cocker Spaniel,1371811273,claude-haiku-5-5,v1a
+English Cocker Spaniel,barking,,,unknown,English Cocker Spaniel,1371811273,claude-haiku-5-5,v1a
+English Cocker Spaniel,grooming,,,unknown,English Cocker Spaniel,1371811273,claude-haiku-5-5,v1a
+Sussex Spaniel,energy,2,"The Sussex Spaniel is a slow-paced, calm breed with somewhat clownish behaviour that normally keeps its energy and enthusiasm in check.",rated,Sussex Spaniel,1356460091,claude-haiku-5-5,v1a
+Sussex Spaniel,trainability,2,"Most Sussex Spaniels are primarily family pets, but they are competent enough to aid a hunter, though quite stubborn to train.",rated,Sussex Spaniel,1356460091,claude-haiku-5-5,v1a
+Sussex Spaniel,good_with_young_children,5,"They are eager to be around people, excellent around children, and can be quite protective of the family.",rated,Sussex Spaniel,1356460091,claude-haiku-5-5,v1a
+Sussex Spaniel,good_with_other_dogs,,,unknown,Sussex Spaniel,1356460091,claude-haiku-5-5,v1a
+Sussex Spaniel,shedding,,,unknown,Sussex Spaniel,1356460091,claude-haiku-5-5,v1a
+Sussex Spaniel,copes_alone,,,unknown,Sussex Spaniel,1356460091,claude-haiku-5-5,v1a
+Sussex Spaniel,barking,4,The breed is the only spaniel to howl once a game's scent is picked up.,rated,Sussex Spaniel,1356460091,claude-haiku-5-5,v1a
+Sussex Spaniel,grooming,,,unknown,Sussex Spaniel,1356460091,claude-haiku-5-5,v1a
+Irish Water Spaniel,energy,5,"regular (possibly 2-3 times, daily) walks and exercise excursions are essential for a healthy, content Water Spaniel.",rated,Irish Water Spaniel,1368882181,claude-haiku-5-5,v1a
+Irish Water Spaniel,trainability,4,"The Water Spaniel has a keen sense of being a ""team-player"", which makes it a relatively easy breed to train and discipline from a young age.",rated,Irish Water Spaniel,1368882181,claude-haiku-5-5,v1a
+Irish Water Spaniel,good_with_young_children,4,"Irish Water Spaniels may make good family dogs, as they are usually excellent with respectful children and with other pets.",rated,Irish Water Spaniel,1368882181,claude-haiku-5-5,v1a
+Irish Water Spaniel,good_with_other_dogs,3,"not every Irish Water Spaniel can be trusted to get along with cats or small pets, including smaller dogs.",rated,Irish Water Spaniel,1368882181,claude-haiku-5-5,v1a
+Irish Water Spaniel,shedding,1,"The coat, consisting of dense curls, sheds very little.",rated,Irish Water Spaniel,1368882181,claude-haiku-5-5,v1a
+Irish Water Spaniel,copes_alone,,,unknown,Irish Water Spaniel,1368882181,claude-haiku-5-5,v1a
+Irish Water Spaniel,barking,,,unknown,Irish Water Spaniel,1368882181,claude-haiku-5-5,v1a
+Irish Water Spaniel,grooming,4,A thorough combing to the skin should take place every 1–2 weeks to promote healthy skin and to remove any objects from the coat. Scissoring will be required every 6–8 weeks to neaten and shape the coat,rated,Irish Water Spaniel,1368882181,claude-haiku-5-5,v1a
+Kuvasz,energy,,,unknown,Kuvasz,1312963977,claude-haiku-5-5,v1a
+Kuvasz,trainability,,,unknown,Kuvasz,1312963977,claude-haiku-5-5,v1a
+Kuvasz,good_with_young_children,,,unknown,Kuvasz,1312963977,claude-haiku-5-5,v1a
+Kuvasz,good_with_other_dogs,,,unknown,Kuvasz,1312963977,claude-haiku-5-5,v1a
+Kuvasz,shedding,,,unknown,Kuvasz,1312963977,claude-haiku-5-5,v1a
+Kuvasz,copes_alone,,,unknown,Kuvasz,1312963977,claude-haiku-5-5,v1a
+Kuvasz,barking,,,unknown,Kuvasz,1312963977,claude-haiku-5-5,v1a
+Kuvasz,grooming,,,unknown,Kuvasz,1312963977,claude-haiku-5-5,v1a
+Schipperke,energy,,,unknown,Schipperke,1379435905,claude-haiku-5-5,v1a
+Schipperke,trainability,,,unknown,Schipperke,1379435905,claude-haiku-5-5,v1a
+Schipperke,good_with_young_children,,,unknown,Schipperke,1379435905,claude-haiku-5-5,v1a
+Schipperke,good_with_other_dogs,,,unknown,Schipperke,1379435905,claude-haiku-5-5,v1a
+Schipperke,shedding,,,unknown,Schipperke,1379435905,claude-haiku-5-5,v1a
+Schipperke,copes_alone,,,unknown,Schipperke,1379435905,claude-haiku-5-5,v1a
+Schipperke,barking,,,unknown,Schipperke,1379435905,claude-haiku-5-5,v1a
+Schipperke,grooming,,,unknown,Schipperke,1379435905,claude-haiku-5-5,v1a
+Groenendael,energy,4,"While Belgian Shepherds of all coat types require ample exercise, the breed adapts well to living indoors.",rated,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Groenendael,trainability,5,"They are typically highly trainable, vigilant and hard-working with a strong guarding instinct making them protective of property and family, and very well suited for service with security services.",rated,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Groenendael,good_with_young_children,2,"The Groenendael and Tervueren varieties have a reputation for occasionally being snappy, making them less suitable as companion dogs for children",rated,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Groenendael,good_with_other_dogs,,,unknown,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Groenendael,shedding,,,unknown,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Groenendael,copes_alone,,,unknown,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Groenendael,barking,,,unknown,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Groenendael,grooming,,,unknown,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Belgian Malinois,energy,5,"The breed is very active – particularly the Malinois, which may reflect its continued breeding for security roles.",rated,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Belgian Malinois,trainability,5,"They are typically highly trainable, vigilant and hard-working with a strong guarding instinct making them protective of property and family, and very well suited for service with security services.",rated,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Belgian Malinois,good_with_young_children,2,"The Groenendael and Tervueren varieties have a reputation for occasionally being snappy, making them less suitable as companion dogs for children; the Laekenois, whilst considered very good with children, can occasionally be troublesome with other dogs.",rated,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Belgian Malinois,good_with_other_dogs,,,unknown,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Belgian Malinois,shedding,,,unknown,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Belgian Malinois,copes_alone,,,unknown,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Belgian Malinois,barking,,,unknown,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Belgian Malinois,grooming,2,"Short-haired dogs have particularly short hair on the faces, ears and lower portion of their legs, short over the rest of the body and slightly longer on the neck and tail.",rated,Belgian Shepherd,1379570349,claude-haiku-5-5,v1a
+Briard,energy,,,unknown,Briard,1369336388,claude-haiku-5-5,v1a
+Briard,trainability,,,unknown,Briard,1369336388,claude-haiku-5-5,v1a
+Briard,good_with_young_children,,,unknown,Briard,1369336388,claude-haiku-5-5,v1a
+Briard,good_with_other_dogs,,,unknown,Briard,1369336388,claude-haiku-5-5,v1a
+Briard,shedding,,,unknown,Briard,1369336388,claude-haiku-5-5,v1a
+Briard,copes_alone,,,unknown,Briard,1369336388,claude-haiku-5-5,v1a
+Briard,barking,,,unknown,Briard,1369336388,claude-haiku-5-5,v1a
+Briard,grooming,,,unknown,Briard,1369336388,claude-haiku-5-5,v1a
+Australian Kelpie,energy,5,"However they require a lot of physical exercise and mental stimulation, otherwise they can become bored and hence be disruptive by constantly barking or digging, or by chewing on objects.",rated,Australian Kelpie,1368873092,claude-haiku-5-5,v1a
+Australian Kelpie,trainability,5,"Kelpies are intelligent and easy to train dogs making them good-tempered and good pets, especially with children.",rated,Australian Kelpie,1368873092,claude-haiku-5-5,v1a
+Australian Kelpie,good_with_young_children,4,"Kelpies are intelligent and easy to train dogs making them good-tempered and good pets, especially with children.",rated,Australian Kelpie,1368873092,claude-haiku-5-5,v1a
+Australian Kelpie,good_with_other_dogs,,,unknown,Australian Kelpie,1368873092,claude-haiku-5-5,v1a
+Australian Kelpie,shedding,3,"Kelpies sometimes have a double coat, which sheds out in spring in temperate climates.",rated,Australian Kelpie,1368873092,claude-haiku-5-5,v1a
+Australian Kelpie,copes_alone,,,unknown,Australian Kelpie,1368873092,claude-haiku-5-5,v1a
+Australian Kelpie,barking,3,"otherwise they can become bored and hence be disruptive by constantly barking or digging, or by chewing on objects.",rated,Australian Kelpie,1368873092,claude-haiku-5-5,v1a
+Australian Kelpie,grooming,1,"ANKC ""Show"" Kelpies are now becoming very popular both nationally and internationally as family pets, companion dogs, running mates and sport dogs due to their trainability, good nature and low maintenance of care and can be found all over the world.",rated,Australian Kelpie,1368873092,claude-haiku-5-5,v1a
+Komondor,energy,,,unknown,Komondor,1373262277,claude-haiku-5-5,v1a
+Komondor,trainability,2,It was bred to think and act independently and make decisions on its own.,rated,Komondor,1373262277,claude-haiku-5-5,v1a
+Komondor,good_with_young_children,5,"The Komondor is affectionate with its family, and gentle with the children and friends of the family.",rated,Komondor,1373262277,claude-haiku-5-5,v1a
+Komondor,good_with_other_dogs,,,unknown,Komondor,1373262277,claude-haiku-5-5,v1a
+Komondor,shedding,1,"Moulting is minimal with this breed, contrary to what one might think (once cords are fully formed).",rated,Komondor,1373262277,claude-haiku-5-5,v1a
+Komondor,copes_alone,,,unknown,Komondor,1373262277,claude-haiku-5-5,v1a
+Komondor,barking,,,unknown,Komondor,1373262277,claude-haiku-5-5,v1a
+Komondor,grooming,,,unknown,Komondor,1373262277,claude-haiku-5-5,v1a
+Old English Sheepdog,energy,,,unknown,Old English Sheepdog,1378831360,claude-haiku-5-5,v1a
+Old English Sheepdog,trainability,,,unknown,Old English Sheepdog,1378831360,claude-haiku-5-5,v1a
+Old English Sheepdog,good_with_young_children,,,unknown,Old English Sheepdog,1378831360,claude-haiku-5-5,v1a
+Old English Sheepdog,good_with_other_dogs,,,unknown,Old English Sheepdog,1378831360,claude-haiku-5-5,v1a
+Old English Sheepdog,shedding,1,Old English Sheepdogs only shed when they are brushed.,rated,Old English Sheepdog,1378831360,claude-haiku-5-5,v1a
+Old English Sheepdog,copes_alone,,,unknown,Old English Sheepdog,1378831360,claude-haiku-5-5,v1a
+Old English Sheepdog,barking,,,unknown,Old English Sheepdog,1378831360,claude-haiku-5-5,v1a
+Old English Sheepdog,grooming,5,Old English Sheepdogs can grow very long coats with fur covering the face and eyes and do not shed unless brushed.,rated,Old English Sheepdog,1378831360,claude-haiku-5-5,v1a
+Shetland Sheepdog,energy,,,unknown,Shetland Sheepdog,1368890036,claude-haiku-5-5,v1a
+Shetland Sheepdog,trainability,5,"It is a small dog, clever, vocal, willing to please, and trustworthy.",rated,Shetland Sheepdog,1368890036,claude-haiku-5-5,v1a
+Shetland Sheepdog,good_with_young_children,,,unknown,Shetland Sheepdog,1368890036,claude-haiku-5-5,v1a
+Shetland Sheepdog,good_with_other_dogs,,,unknown,Shetland Sheepdog,1368890036,claude-haiku-5-5,v1a
+Shetland Sheepdog,shedding,,,unknown,Shetland Sheepdog,1368890036,claude-haiku-5-5,v1a
+Shetland Sheepdog,copes_alone,,,unknown,Shetland Sheepdog,1368890036,claude-haiku-5-5,v1a
+Shetland Sheepdog,barking,5,"It is a small dog, clever, vocal, willing to please, and trustworthy.",rated,Shetland Sheepdog,1368890036,claude-haiku-5-5,v1a
+Shetland Sheepdog,grooming,,,unknown,Shetland Sheepdog,1368890036,claude-haiku-5-5,v1a
+Rough Collie,energy,,,unknown,Rough Collie,1372543314,claude-haiku-5-5,v1a
+Rough Collie,trainability,,,unknown,Rough Collie,1372543314,claude-haiku-5-5,v1a
+Rough Collie,good_with_young_children,,,unknown,Rough Collie,1372543314,claude-haiku-5-5,v1a
+Rough Collie,good_with_other_dogs,,,unknown,Rough Collie,1372543314,claude-haiku-5-5,v1a
+Rough Collie,shedding,,,unknown,Rough Collie,1372543314,claude-haiku-5-5,v1a
+Rough Collie,copes_alone,,,unknown,Rough Collie,1372543314,claude-haiku-5-5,v1a
+Rough Collie,barking,,,unknown,Rough Collie,1372543314,claude-haiku-5-5,v1a
+Rough Collie,grooming,5,"The downy undercoat is covered by a long, dense, coarse outer coat with a notable ruff around the neck, feathers about the legs, a petticoat on the abdomen, and a frill on the hindquarters.",rated,Rough Collie,1372543314,claude-haiku-5-5,v1a
+Border Collie,energy,,,unknown,Border Collie,1376306822,claude-haiku-5-5,v1a
+Border Collie,trainability,5,Their trainability has also given them a berth in dog dancing competitions.,rated,Border Collie,1376306822,claude-haiku-5-5,v1a
+Border Collie,good_with_young_children,,,unknown,Border Collie,1376306822,claude-haiku-5-5,v1a
+Border Collie,good_with_other_dogs,,,unknown,Border Collie,1376306822,claude-haiku-5-5,v1a
+Border Collie,shedding,3,"Border Collies are, on average, medium-sized dogs with a moderate amount of coat, which is often thick and prone to shedding.",rated,Border Collie,1376306822,claude-haiku-5-5,v1a
+Border Collie,copes_alone,,,unknown,Border Collie,1376306822,claude-haiku-5-5,v1a
+Border Collie,barking,,,unknown,Border Collie,1376306822,claude-haiku-5-5,v1a
+Border Collie,grooming,,,unknown,Border Collie,1376306822,claude-haiku-5-5,v1a
+Bouvier des Flandres,energy,,,unknown,Bouvier des Flandres,1376091768,claude-haiku-5-5,v1a
+Bouvier des Flandres,trainability,4,Bouviers are considered easily trainable watch dogs that learn commands relatively quickly.,rated,Bouvier des Flandres,1376091768,claude-haiku-5-5,v1a
+Bouvier des Flandres,good_with_young_children,4,They can coexist well with children.,rated,Bouvier des Flandres,1376091768,claude-haiku-5-5,v1a
+Bouvier des Flandres,good_with_other_dogs,3,They are usually good with other dogs if they are raised with them from puppyhood.,rated,Bouvier des Flandres,1376091768,claude-haiku-5-5,v1a
+Bouvier des Flandres,shedding,,,unknown,Bouvier des Flandres,1376091768,claude-haiku-5-5,v1a
+Bouvier des Flandres,copes_alone,,,unknown,Bouvier des Flandres,1376091768,claude-haiku-5-5,v1a
+Bouvier des Flandres,barking,,,unknown,Bouvier des Flandres,1376091768,claude-haiku-5-5,v1a
+Bouvier des Flandres,grooming,4,They require weekly brushing and combing to maintain their coat.,rated,Bouvier des Flandres,1376091768,claude-haiku-5-5,v1a
+Rottweiler,energy,,,unknown,Rottweiler,1368889170,claude-haiku-5-5,v1a
+Rottweiler,trainability,,,unknown,Rottweiler,1368889170,claude-haiku-5-5,v1a
+Rottweiler,good_with_young_children,,,unknown,Rottweiler,1368889170,claude-haiku-5-5,v1a
+Rottweiler,good_with_other_dogs,,,unknown,Rottweiler,1368889170,claude-haiku-5-5,v1a
+Rottweiler,shedding,3,"Rottweiler coats tend to be low maintenance, although they experience heavy shedding before their seasons (females) or seasonally (males).",rated,Rottweiler,1368889170,claude-haiku-5-5,v1a
+Rottweiler,copes_alone,,,unknown,Rottweiler,1368889170,claude-haiku-5-5,v1a
+Rottweiler,barking,,,unknown,Rottweiler,1368889170,claude-haiku-5-5,v1a
+Rottweiler,grooming,2,"Rottweiler coats tend to be low maintenance, although they experience heavy shedding before their seasons (females) or seasonally (males).",rated,Rottweiler,1368889170,claude-haiku-5-5,v1a
+German Shepherd,energy,4,German Shepherds are moderately active dogs and are described in breed standards as self assured.,rated,German Shepherd,1379687324,claude-haiku-5-5,v1a
+German Shepherd,trainability,5,They are known for being easy to train and good for performing tasks and following instructions.,rated,German Shepherd,1379687324,claude-haiku-5-5,v1a
+German Shepherd,good_with_young_children,,,unknown,German Shepherd,1379687324,claude-haiku-5-5,v1a
+German Shepherd,good_with_other_dogs,,,unknown,German Shepherd,1379687324,claude-haiku-5-5,v1a
+German Shepherd,shedding,,,unknown,German Shepherd,1379687324,claude-haiku-5-5,v1a
+German Shepherd,copes_alone,,,unknown,German Shepherd,1379687324,claude-haiku-5-5,v1a
+German Shepherd,barking,,,unknown,German Shepherd,1379687324,claude-haiku-5-5,v1a
+German Shepherd,grooming,,,unknown,German Shepherd,1379687324,claude-haiku-5-5,v1a
+Dobermann,energy,,,unknown,Dobermann,1373595751,claude-haiku-5-5,v1a
+Dobermann,trainability,5,Tortora (1980) gave the Dobermann the highest rank in general trainability.,rated,Dobermann,1373595751,claude-haiku-5-5,v1a
+Dobermann,good_with_young_children,,,unknown,Dobermann,1373595751,claude-haiku-5-5,v1a
+Dobermann,good_with_other_dogs,,,unknown,Dobermann,1373595751,claude-haiku-5-5,v1a
+Dobermann,shedding,,,unknown,Dobermann,1373595751,claude-haiku-5-5,v1a
+Dobermann,copes_alone,,,unknown,Dobermann,1373595751,claude-haiku-5-5,v1a
+Dobermann,barking,,,unknown,Dobermann,1373595751,claude-haiku-5-5,v1a
+Dobermann,grooming,,,unknown,Dobermann,1373595751,claude-haiku-5-5,v1a
+Miniature Pinscher,energy,,,unknown,Miniature Pinscher,1373321870,claude-haiku-5-5,v1a
+Miniature Pinscher,trainability,,,unknown,Miniature Pinscher,1373321870,claude-haiku-5-5,v1a
+Miniature Pinscher,good_with_young_children,,,unknown,Miniature Pinscher,1373321870,claude-haiku-5-5,v1a
+Miniature Pinscher,good_with_other_dogs,,,unknown,Miniature Pinscher,1373321870,claude-haiku-5-5,v1a
+Miniature Pinscher,shedding,1,"The coat is short and smooth, with no undercoat.",rated,Miniature Pinscher,1373321870,claude-haiku-5-5,v1a
+Miniature Pinscher,copes_alone,2,The breed is also known to be prone to separation anxiety.,rated,Miniature Pinscher,1373321870,claude-haiku-5-5,v1a
+Miniature Pinscher,barking,,,unknown,Miniature Pinscher,1373321870,claude-haiku-5-5,v1a
+Miniature Pinscher,grooming,1,"It is naturally well groomed, vigorous, and alert.",rated,Miniature Pinscher,1373321870,claude-haiku-5-5,v1a
+Greater Swiss Mountain Dog,energy,,,unknown,Greater Swiss Mountain Dog,1376800374,claude-haiku-5-5,v1a
+Greater Swiss Mountain Dog,trainability,,,unknown,Greater Swiss Mountain Dog,1376800374,claude-haiku-5-5,v1a
+Greater Swiss Mountain Dog,good_with_young_children,5,The Greater Swiss Mountain Dog has an enthusiastic nature and strong affinity to people and children.,rated,Greater Swiss Mountain Dog,1376800374,claude-haiku-5-5,v1a
+Greater Swiss Mountain Dog,good_with_other_dogs,,,unknown,Greater Swiss Mountain Dog,1376800374,claude-haiku-5-5,v1a
+Greater Swiss Mountain Dog,shedding,5,"with such a thick coat, Sennenhunde shed throughout the year and they have a major shedding once or twice a year.",rated,Greater Swiss Mountain Dog,1376800374,claude-haiku-5-5,v1a
+Greater Swiss Mountain Dog,copes_alone,,,unknown,Greater Swiss Mountain Dog,1376800374,claude-haiku-5-5,v1a
+Greater Swiss Mountain Dog,barking,,,unknown,Greater Swiss Mountain Dog,1376800374,claude-haiku-5-5,v1a
+Greater Swiss Mountain Dog,grooming,,,unknown,Greater Swiss Mountain Dog,1376800374,claude-haiku-5-5,v1a
+Bernese Mountain Dog,energy,,,unknown,Bernese Mountain Dog,1368873554,claude-haiku-5-5,v1a
+Bernese Mountain Dog,trainability,,,unknown,Bernese Mountain Dog,1368873554,claude-haiku-5-5,v1a
+Bernese Mountain Dog,good_with_young_children,4,"With proper training they enjoy giving children rides in a cart or participating in a parade, such as the Conway, New Hampshire holiday parade.",rated,Bernese Mountain Dog,1368873554,claude-haiku-5-5,v1a
+Bernese Mountain Dog,good_with_other_dogs,,,unknown,Bernese Mountain Dog,1368873554,claude-haiku-5-5,v1a
+Bernese Mountain Dog,shedding,,,unknown,Bernese Mountain Dog,1368873554,claude-haiku-5-5,v1a
+Bernese Mountain Dog,copes_alone,,,unknown,Bernese Mountain Dog,1368873554,claude-haiku-5-5,v1a
+Bernese Mountain Dog,barking,,,unknown,Bernese Mountain Dog,1368873554,claude-haiku-5-5,v1a
+Bernese Mountain Dog,grooming,,,unknown,Bernese Mountain Dog,1368873554,claude-haiku-5-5,v1a
+Appenzeller Sennenhund,energy,,,unknown,Appenzeller Sennenhund,1273058399,claude-haiku-5-5,v1a
+Appenzeller Sennenhund,trainability,,,unknown,Appenzeller Sennenhund,1273058399,claude-haiku-5-5,v1a
+Appenzeller Sennenhund,good_with_young_children,,,unknown,Appenzeller Sennenhund,1273058399,claude-haiku-5-5,v1a
+Appenzeller Sennenhund,good_with_other_dogs,,,unknown,Appenzeller Sennenhund,1273058399,claude-haiku-5-5,v1a
+Appenzeller Sennenhund,shedding,,,unknown,Appenzeller Sennenhund,1273058399,claude-haiku-5-5,v1a
+Appenzeller Sennenhund,copes_alone,,,unknown,Appenzeller Sennenhund,1273058399,claude-haiku-5-5,v1a
+Appenzeller Sennenhund,barking,,,unknown,Appenzeller Sennenhund,1273058399,claude-haiku-5-5,v1a
+Appenzeller Sennenhund,grooming,,,unknown,Appenzeller Sennenhund,1273058399,claude-haiku-5-5,v1a
+Entlebucher Mountain Dog,energy,,,unknown,Entlebucher Mountain Dog,1272493469,claude-haiku-5-5,v1a
+Entlebucher Mountain Dog,trainability,,,unknown,Entlebucher Mountain Dog,1272493469,claude-haiku-5-5,v1a
+Entlebucher Mountain Dog,good_with_young_children,,,unknown,Entlebucher Mountain Dog,1272493469,claude-haiku-5-5,v1a
+Entlebucher Mountain Dog,good_with_other_dogs,,,unknown,Entlebucher Mountain Dog,1272493469,claude-haiku-5-5,v1a
+Entlebucher Mountain Dog,shedding,,,unknown,Entlebucher Mountain Dog,1272493469,claude-haiku-5-5,v1a
+Entlebucher Mountain Dog,copes_alone,,,unknown,Entlebucher Mountain Dog,1272493469,claude-haiku-5-5,v1a
+Entlebucher Mountain Dog,barking,,,unknown,Entlebucher Mountain Dog,1272493469,claude-haiku-5-5,v1a
+Entlebucher Mountain Dog,grooming,1,"The smooth coat is close and smooth with symmetrical markings of black, tan, and white.",rated,Entlebucher Mountain Dog,1272493469,claude-haiku-5-5,v1a
+Boxer,energy,4,"Boxers need plenty of exercise, which means their diet should be high in quality calories.",rated,Boxer (dog breed),1379043567,claude-haiku-5-5,v1a
+Boxer,trainability,3,"Boxers have earned a slight reputation of being ""headstrong,"" which can be related to inappropriate obedience training.",rated,Boxer (dog breed),1379043567,claude-haiku-5-5,v1a
+Boxer,good_with_young_children,5,"Boxers are a bright, energetic, and playful breed and tend to be very good with children. They are patient and spirited with children, but also protective, making them a popular choice for families.",rated,Boxer (dog breed),1379043567,claude-haiku-5-5,v1a
+Boxer,good_with_other_dogs,,,unknown,Boxer (dog breed),1379043567,claude-haiku-5-5,v1a
+Boxer,shedding,,,unknown,Boxer (dog breed),1379043567,claude-haiku-5-5,v1a
+Boxer,copes_alone,,,unknown,Boxer (dog breed),1379043567,claude-haiku-5-5,v1a
+Boxer,barking,,,unknown,Boxer (dog breed),1379043567,claude-haiku-5-5,v1a
+Boxer,grooming,1,"The Boxer is a short-haired breed, with a smooth coat that lies tight to the body.",rated,Boxer (dog breed),1379043567,claude-haiku-5-5,v1a
+Bullmastiff,energy,,,unknown,Bullmastiff,1368874266,claude-haiku-5-5,v1a
+Bullmastiff,trainability,,,unknown,Bullmastiff,1368874266,claude-haiku-5-5,v1a
+Bullmastiff,good_with_young_children,,,unknown,Bullmastiff,1368874266,claude-haiku-5-5,v1a
+Bullmastiff,good_with_other_dogs,,,unknown,Bullmastiff,1368874266,claude-haiku-5-5,v1a
+Bullmastiff,shedding,,,unknown,Bullmastiff,1368874266,claude-haiku-5-5,v1a
+Bullmastiff,copes_alone,,,unknown,Bullmastiff,1368874266,claude-haiku-5-5,v1a
+Bullmastiff,barking,,,unknown,Bullmastiff,1368874266,claude-haiku-5-5,v1a
+Bullmastiff,grooming,,,unknown,Bullmastiff,1368874266,claude-haiku-5-5,v1a
+Tibetan Mastiff,energy,,,unknown,Tibetan Mastiff,1375663371,claude-haiku-5-5,v1a
+Tibetan Mastiff,trainability,1,"Like all flock guardian breeds, they are intelligent and stubborn to a fault, so obedience training is recommended (although it is only mildly successful with some individuals) since this is a strong-willed, powerful-bodied breed.",rated,Tibetan Mastiff,1375663371,claude-haiku-5-5,v1a
+Tibetan Mastiff,good_with_young_children,,,unknown,Tibetan Mastiff,1375663371,claude-haiku-5-5,v1a
+Tibetan Mastiff,good_with_other_dogs,,,unknown,Tibetan Mastiff,1375663371,claude-haiku-5-5,v1a
+Tibetan Mastiff,shedding,3,"Although the dogs shed somewhat throughout the year, there is generally one great molt in late winter or early spring and sometimes another, lesser molt in the late summer or early autumn.",rated,Tibetan Mastiff,1375663371,claude-haiku-5-5,v1a
+Tibetan Mastiff,copes_alone,,,unknown,Tibetan Mastiff,1375663371,claude-haiku-5-5,v1a
+Tibetan Mastiff,barking,5,"Through hundreds of years of selective breeding, the breed is known for being a nocturnal sentry, keeping potential predators and intruders at bay and barking at unidentified sounds throughout the night.",rated,Tibetan Mastiff,1375663371,claude-haiku-5-5,v1a
+Tibetan Mastiff,grooming,3,"Its double coat is medium to long, subject to climate, and found in a wide variety of colors, including solid black, black and tan, various shades of red (from pale gold to deep red) and bluish-gray (dilute black), and sometimes with white markings around its neck, chest and legs.",rated,Tibetan Mastiff,1375663371,claude-haiku-5-5,v1a
+French Bulldog,energy,,,unknown,French Bulldog,1376451424,claude-haiku-5-5,v1a
+French Bulldog,trainability,,,unknown,French Bulldog,1376451424,claude-haiku-5-5,v1a
+French Bulldog,good_with_young_children,,,unknown,French Bulldog,1376451424,claude-haiku-5-5,v1a
+French Bulldog,good_with_other_dogs,,,unknown,French Bulldog,1376451424,claude-haiku-5-5,v1a
+French Bulldog,shedding,,,unknown,French Bulldog,1376451424,claude-haiku-5-5,v1a
+French Bulldog,copes_alone,,,unknown,French Bulldog,1376451424,claude-haiku-5-5,v1a
+French Bulldog,barking,,,unknown,French Bulldog,1376451424,claude-haiku-5-5,v1a
+French Bulldog,grooming,1,The coat of a French bulldog should be short haired and fine and silky.,rated,French Bulldog,1376451424,claude-haiku-5-5,v1a
+Great Dane,energy,,,unknown,Great Dane,1379824089,claude-haiku-5-5,v1a
+Great Dane,trainability,,,unknown,Great Dane,1379824089,claude-haiku-5-5,v1a
+Great Dane,good_with_young_children,,,unknown,Great Dane,1379824089,claude-haiku-5-5,v1a
+Great Dane,good_with_other_dogs,3,The dogs are generally not unduly aggressive towards people and other animals.,rated,Great Dane,1379824089,claude-haiku-5-5,v1a
+Great Dane,shedding,,,unknown,Great Dane,1379824089,claude-haiku-5-5,v1a
+Great Dane,copes_alone,,,unknown,Great Dane,1379824089,claude-haiku-5-5,v1a
+Great Dane,barking,,,unknown,Great Dane,1379824089,claude-haiku-5-5,v1a
+Great Dane,grooming,2,"The Great Dane is a short-haired breed with a strong, galloping figure.",rated,Great Dane,1379824089,claude-haiku-5-5,v1a
+St. Bernard,energy,,,unknown,St. Bernard (dog breed),1374483475,claude-haiku-5-5,v1a
+St. Bernard,trainability,,,unknown,St. Bernard (dog breed),1374483475,claude-haiku-5-5,v1a
+St. Bernard,good_with_young_children,5,"Known as a classic example of a gentle giant, the Saint Bernard is calm, patient, and sweet with adults, and especially children.",rated,St. Bernard (dog breed),1374483475,claude-haiku-5-5,v1a
+St. Bernard,good_with_other_dogs,,,unknown,St. Bernard (dog breed),1374483475,claude-haiku-5-5,v1a
+St. Bernard,shedding,,,unknown,St. Bernard (dog breed),1374483475,claude-haiku-5-5,v1a
+St. Bernard,copes_alone,,,unknown,St. Bernard (dog breed),1374483475,claude-haiku-5-5,v1a
+St. Bernard,barking,,,unknown,St. Bernard (dog breed),1374483475,claude-haiku-5-5,v1a
+St. Bernard,grooming,,,unknown,St. Bernard (dog breed),1374483475,claude-haiku-5-5,v1a
+Canadian Eskimo Dog,energy,,,unknown,Canadian Eskimo Dog,1374032872,claude-haiku-5-5,v1a
+Canadian Eskimo Dog,trainability,,,unknown,Canadian Eskimo Dog,1374032872,claude-haiku-5-5,v1a
+Canadian Eskimo Dog,good_with_young_children,,,unknown,Canadian Eskimo Dog,1374032872,claude-haiku-5-5,v1a
+Canadian Eskimo Dog,good_with_other_dogs,,,unknown,Canadian Eskimo Dog,1374032872,claude-haiku-5-5,v1a
+Canadian Eskimo Dog,shedding,,,unknown,Canadian Eskimo Dog,1374032872,claude-haiku-5-5,v1a
+Canadian Eskimo Dog,copes_alone,,,unknown,Canadian Eskimo Dog,1374032872,claude-haiku-5-5,v1a
+Canadian Eskimo Dog,barking,3,Like most spitz breeds they can be very vocal.,rated,Canadian Eskimo Dog,1374032872,claude-haiku-5-5,v1a
+Canadian Eskimo Dog,grooming,,,unknown,Canadian Eskimo Dog,1374032872,claude-haiku-5-5,v1a
+Alaskan Malamute,energy,,,unknown,Alaskan Malamute,1369441444,claude-haiku-5-5,v1a
+Alaskan Malamute,trainability,,,unknown,Alaskan Malamute,1369441444,claude-haiku-5-5,v1a
+Alaskan Malamute,good_with_young_children,,,unknown,Alaskan Malamute,1369441444,claude-haiku-5-5,v1a
+Alaskan Malamute,good_with_other_dogs,,,unknown,Alaskan Malamute,1369441444,claude-haiku-5-5,v1a
+Alaskan Malamute,shedding,,,unknown,Alaskan Malamute,1369441444,claude-haiku-5-5,v1a
+Alaskan Malamute,copes_alone,,,unknown,Alaskan Malamute,1369441444,claude-haiku-5-5,v1a
+Alaskan Malamute,barking,,,unknown,Alaskan Malamute,1369441444,claude-haiku-5-5,v1a
+Alaskan Malamute,grooming,,,unknown,Alaskan Malamute,1369441444,claude-haiku-5-5,v1a
+Siberian Husky,energy,5,"It is an active, energetic, resilient breed, whose ancestors lived in the extremely cold and harsh environment of the Siberian Arctic.",rated,Siberian Husky,1370485057,claude-haiku-5-5,v1a
+Siberian Husky,trainability,,,unknown,Siberian Husky,1370485057,claude-haiku-5-5,v1a
+Siberian Husky,good_with_young_children,,,unknown,Siberian Husky,1370485057,claude-haiku-5-5,v1a
+Siberian Husky,good_with_other_dogs,,,unknown,Siberian Husky,1370485057,claude-haiku-5-5,v1a
+Siberian Husky,shedding,,,unknown,Siberian Husky,1370485057,claude-haiku-5-5,v1a
+Siberian Husky,copes_alone,,,unknown,Siberian Husky,1370485057,claude-haiku-5-5,v1a
+Siberian Husky,barking,2,The Husky usually howls instead of barking.,rated,Siberian Husky,1370485057,claude-haiku-5-5,v1a
+Siberian Husky,grooming,4,Their thick coats require weekly grooming.,rated,Siberian Husky,1370485057,claude-haiku-5-5,v1a
+Affenpinscher,energy,,,unknown,Affenpinscher,1363223172,claude-haiku-5-5,v1a
+Affenpinscher,trainability,,,unknown,Affenpinscher,1363223172,claude-haiku-5-5,v1a
+Affenpinscher,good_with_young_children,,,unknown,Affenpinscher,1363223172,claude-haiku-5-5,v1a
+Affenpinscher,good_with_other_dogs,,,unknown,Affenpinscher,1363223172,claude-haiku-5-5,v1a
+Affenpinscher,shedding,,,unknown,Affenpinscher,1363223172,claude-haiku-5-5,v1a
+Affenpinscher,copes_alone,,,unknown,Affenpinscher,1363223172,claude-haiku-5-5,v1a
+Affenpinscher,barking,,,unknown,Affenpinscher,1363223172,claude-haiku-5-5,v1a
+Affenpinscher,grooming,3,"It has a harsh rough coat when it is not clipped, but if clipped it can be softer and fluffier.",rated,Affenpinscher,1363223172,claude-haiku-5-5,v1a
+Basenji,energy,,,unknown,Basenji,1377426438,claude-haiku-5-5,v1a
+Basenji,trainability,1,"According to the book The Intelligence of Dogs, they are the second least trainable dog, when required to do human commands (behind only the Afghan Hound).",rated,Basenji,1377426438,claude-haiku-5-5,v1a
+Basenji,good_with_young_children,,,unknown,Basenji,1377426438,claude-haiku-5-5,v1a
+Basenji,good_with_other_dogs,,,unknown,Basenji,1377426438,claude-haiku-5-5,v1a
+Basenji,shedding,,,unknown,Basenji,1377426438,claude-haiku-5-5,v1a
+Basenji,copes_alone,,,unknown,Basenji,1377426438,claude-haiku-5-5,v1a
+Basenji,barking,1,"The breed does not bark in the traditional manner of most dogs, rather vocalising in an unusual, yodel-like ""talking"" sound, due to its unusually-shaped larynx.",rated,Basenji,1377426438,claude-haiku-5-5,v1a
+Basenji,grooming,,,unknown,Basenji,1377426438,claude-haiku-5-5,v1a
+Pug,energy,,,unknown,Pug,1376659382,claude-haiku-5-5,v1a
+Pug,trainability,4,Pugs tend to be intuitive and sensitive to the moods of their owners and are usually eager to please them.,rated,Pug,1376659382,claude-haiku-5-5,v1a
+Pug,good_with_young_children,,,unknown,Pug,1376659382,claude-haiku-5-5,v1a
+Pug,good_with_other_dogs,,,unknown,Pug,1376659382,claude-haiku-5-5,v1a
+Pug,shedding,,,unknown,Pug,1376659382,claude-haiku-5-5,v1a
+Pug,copes_alone,,,unknown,Pug,1376659382,claude-haiku-5-5,v1a
+Pug,barking,,,unknown,Pug,1376659382,claude-haiku-5-5,v1a
+Pug,grooming,1,"Pugs have a coat that is fine, smooth, soft, short, and glossy, coming in a variety of colors, most often fawn (light brown) or black, and a compact, square body with well developed and thick muscles all over the body.",rated,Pug,1376659382,claude-haiku-5-5,v1a
+Leonberger,energy,,,unknown,Leonberger,1368883093,claude-haiku-5-5,v1a
+Leonberger,trainability,,,unknown,Leonberger,1368883093,claude-haiku-5-5,v1a
+Leonberger,good_with_young_children,4,friendly toward children,rated,Leonberger,1368883093,claude-haiku-5-5,v1a
+Leonberger,good_with_other_dogs,4,"adjust easily to a variety of circumstances, including the introduction of other dogs",rated,Leonberger,1368883093,claude-haiku-5-5,v1a
+Leonberger,shedding,,,unknown,Leonberger,1368883093,claude-haiku-5-5,v1a
+Leonberger,copes_alone,,,unknown,Leonberger,1368883093,claude-haiku-5-5,v1a
+Leonberger,barking,,,unknown,Leonberger,1368883093,claude-haiku-5-5,v1a
+Leonberger,grooming,5,"Apart from a neatening of the feet, the Leonberger is presented untrimmed.",rated,Leonberger,1368883093,claude-haiku-5-5,v1a
+Newfoundland,energy,,,unknown,Newfoundland dog,1376056312,claude-haiku-5-5,v1a
+Newfoundland,trainability,,,unknown,Newfoundland dog,1376056312,claude-haiku-5-5,v1a
+Newfoundland,good_with_young_children,,,unknown,Newfoundland dog,1376056312,claude-haiku-5-5,v1a
+Newfoundland,good_with_other_dogs,,,unknown,Newfoundland dog,1376056312,claude-haiku-5-5,v1a
+Newfoundland,shedding,,,unknown,Newfoundland dog,1376056312,claude-haiku-5-5,v1a
+Newfoundland,copes_alone,,,unknown,Newfoundland dog,1376056312,claude-haiku-5-5,v1a
+Newfoundland,barking,,,unknown,Newfoundland dog,1376056312,claude-haiku-5-5,v1a
+Newfoundland,grooming,,,unknown,Newfoundland dog,1376056312,claude-haiku-5-5,v1a
+Pyrenean Mountain Dog,energy,,,unknown,Pyrenean Mountain Dog,1376224847,claude-haiku-5-5,v1a
+Pyrenean Mountain Dog,trainability,,,unknown,Pyrenean Mountain Dog,1376224847,claude-haiku-5-5,v1a
+Pyrenean Mountain Dog,good_with_young_children,,,unknown,Pyrenean Mountain Dog,1376224847,claude-haiku-5-5,v1a
+Pyrenean Mountain Dog,good_with_other_dogs,,,unknown,Pyrenean Mountain Dog,1376224847,claude-haiku-5-5,v1a
+Pyrenean Mountain Dog,shedding,,,unknown,Pyrenean Mountain Dog,1376224847,claude-haiku-5-5,v1a
+Pyrenean Mountain Dog,copes_alone,,,unknown,Pyrenean Mountain Dog,1376224847,claude-haiku-5-5,v1a
+Pyrenean Mountain Dog,barking,,,unknown,Pyrenean Mountain Dog,1376224847,claude-haiku-5-5,v1a
+Pyrenean Mountain Dog,grooming,,,unknown,Pyrenean Mountain Dog,1376224847,claude-haiku-5-5,v1a
+Samoyed,energy,,,unknown,Samoyed dog,1374367633,claude-haiku-5-5,v1a
+Samoyed,trainability,,,unknown,Samoyed dog,1374367633,claude-haiku-5-5,v1a
+Samoyed,good_with_young_children,5,"Samoyeds are excellent companions, especially for small children or even other dogs, and they remain playful into old age.",rated,Samoyed dog,1374367633,claude-haiku-5-5,v1a
+Samoyed,good_with_other_dogs,5,"Samoyeds are excellent companions, especially for small children or even other dogs, and they remain playful into old age.",rated,Samoyed dog,1374367633,claude-haiku-5-5,v1a
+Samoyed,shedding,4,"The undercoat typically sheds heavily once or twice a year, and this seasonal process is sometimes referred to as ""blowing coat"".",rated,Samoyed dog,1374367633,claude-haiku-5-5,v1a
+Samoyed,copes_alone,,,unknown,Samoyed dog,1374367633,claude-haiku-5-5,v1a
+Samoyed,barking,3,"With their tendency to bark, however, they can  be diligent watch dogs, barking whenever something approaches their territory.",rated,Samoyed dog,1374367633,claude-haiku-5-5,v1a
+Samoyed,grooming,4,"While this breed is touted as ""hypoallergenic"", it does shed a fair amount and needs frequent grooming.",rated,Samoyed dog,1374367633,claude-haiku-5-5,v1a
+Pomeranian,energy,,,unknown,Pomeranian dog,1376385166,claude-haiku-5-5,v1a
+Pomeranian,trainability,,,unknown,Pomeranian dog,1376385166,claude-haiku-5-5,v1a
+Pomeranian,good_with_young_children,,,unknown,Pomeranian dog,1376385166,claude-haiku-5-5,v1a
+Pomeranian,good_with_other_dogs,,,unknown,Pomeranian dog,1376385166,claude-haiku-5-5,v1a
+Pomeranian,shedding,,,unknown,Pomeranian dog,1376385166,claude-haiku-5-5,v1a
+Pomeranian,copes_alone,,,unknown,Pomeranian dog,1376385166,claude-haiku-5-5,v1a
+Pomeranian,barking,4,"Pomeranians are alert and aware of changes in their environment, and barking at new stimuli can develop into a habit of barking excessively in any situation.",rated,Pomeranian dog,1376385166,claude-haiku-5-5,v1a
+Pomeranian,grooming,,,unknown,Pomeranian dog,1376385166,claude-haiku-5-5,v1a
+Chow Chow,energy,,,unknown,Chow Chow,1368875405,claude-haiku-5-5,v1a
+Chow Chow,trainability,,,unknown,Chow Chow,1368875405,claude-haiku-5-5,v1a
+Chow Chow,good_with_young_children,,,unknown,Chow Chow,1368875405,claude-haiku-5-5,v1a
+Chow Chow,good_with_other_dogs,,,unknown,Chow Chow,1368875405,claude-haiku-5-5,v1a
+Chow Chow,shedding,,,unknown,Chow Chow,1368875405,claude-haiku-5-5,v1a
+Chow Chow,copes_alone,,,unknown,Chow Chow,1368875405,claude-haiku-5-5,v1a
+Chow Chow,barking,,,unknown,Chow Chow,1368875405,claude-haiku-5-5,v1a
+Chow Chow,grooming,,,unknown,Chow Chow,1368875405,claude-haiku-5-5,v1a
+Keeshond,energy,,,unknown,Keeshond,1368882544,claude-haiku-5-5,v1a
+Keeshond,trainability,5,"They are thoughtful, eager to please and very quick learners, which means they are also quick to learn things their humans did not intend to teach them.",rated,Keeshond,1368882544,claude-haiku-5-5,v1a
+Keeshond,good_with_young_children,5,"They love children and are excellent family dogs, preferring to be close to their humans whenever possible.",rated,Keeshond,1368882544,claude-haiku-5-5,v1a
+Keeshond,good_with_other_dogs,4,They generally get along with other dogs as well and will enjoy a good chase around the yard.,rated,Keeshond,1368882544,claude-haiku-5-5,v1a
+Keeshond,shedding,4,"The Keeshond typically 'blows' its undercoat once a year for males, twice a year for females.",rated,Keeshond,1368882544,claude-haiku-5-5,v1a
+Keeshond,copes_alone,1,"The breed has a tendency to become especially clingy towards their owners, more so than most other breeds.",rated,Keeshond,1368882544,claude-haiku-5-5,v1a
+Keeshond,barking,5,"They are known by their loud, distinctive bark.",rated,Keeshond,1368882544,claude-haiku-5-5,v1a
+Keeshond,grooming,4,Coat care requires line brushing on a fairly regular basis.,rated,Keeshond,1368882544,claude-haiku-5-5,v1a
+Griffon Bruxellois,energy,,,unknown,Griffon Bruxellois,1374589771,claude-haiku-5-5,v1a
+Griffon Bruxellois,trainability,,,unknown,Griffon Bruxellois,1374589771,claude-haiku-5-5,v1a
+Griffon Bruxellois,good_with_young_children,3,"Griffons tend to bond with one human more than others, and are very good with children provided they are not teased. They are not very patient but love to play.",rated,Griffon Bruxellois,1374589771,claude-haiku-5-5,v1a
+Griffon Bruxellois,good_with_other_dogs,3,"Griffons tend to get along well with other animals in the house, including cats, ferrets, and other dogs. However, they have no concept of their own relative size and may attempt to dominate dogs much larger than themselves.",rated,Griffon Bruxellois,1374589771,claude-haiku-5-5,v1a
+Griffon Bruxellois,shedding,,,unknown,Griffon Bruxellois,1374589771,claude-haiku-5-5,v1a
+Griffon Bruxellois,copes_alone,2,"The AKC also states that they have a low threshold for loneliness, and a very sensitive nature that leads them to reply poorly to harsh corrections or training methods.",rated,Griffon Bruxellois,1374589771,claude-haiku-5-5,v1a
+Griffon Bruxellois,barking,,,unknown,Griffon Bruxellois,1374589771,claude-haiku-5-5,v1a
+Griffon Bruxellois,grooming,3,The short hair Griffon requires little grooming while the wiry/rough coat Griffon requires weekly grooming attention.,rated,Griffon Bruxellois,1374589771,claude-haiku-5-5,v1a
+Pembroke Welsh Corgi,energy,4,"they also have a need for exercise, as they can easily become overweight.",rated,Pembroke Welsh Corgi,1368887191,claude-haiku-5-5,v1a
+Pembroke Welsh Corgi,trainability,3,"The dogs can also be challenging to train due to their working background, stubbornness and intelligence",rated,Pembroke Welsh Corgi,1368887191,claude-haiku-5-5,v1a
+Pembroke Welsh Corgi,good_with_young_children,4,Most Pembrokes will seek the attention of everyone they meet and behave well around children and other pets.,rated,Pembroke Welsh Corgi,1368887191,claude-haiku-5-5,v1a
+Pembroke Welsh Corgi,good_with_other_dogs,,,unknown,Pembroke Welsh Corgi,1368887191,claude-haiku-5-5,v1a
+Pembroke Welsh Corgi,shedding,5,"they shed heavily all year round, with peaks in the spring and autumn.",rated,Pembroke Welsh Corgi,1368887191,claude-haiku-5-5,v1a
+Pembroke Welsh Corgi,copes_alone,,,unknown,Pembroke Welsh Corgi,1368887191,claude-haiku-5-5,v1a
+Pembroke Welsh Corgi,barking,4,"they also function as watchdogs due to their alertness and tendency to bark, which can be aggravated if they are not stimulated adequately.",rated,Pembroke Welsh Corgi,1368887191,claude-haiku-5-5,v1a
+Pembroke Welsh Corgi,grooming,2,"With regular brushing, their coat is fairly easy to maintain",rated,Pembroke Welsh Corgi,1368887191,claude-haiku-5-5,v1a
+Cardigan Welsh Corgi,energy,,,unknown,Cardigan Welsh Corgi,1372002270,claude-haiku-5-5,v1a
+Cardigan Welsh Corgi,trainability,5,"Cardigan Welsh corgis are known to be an extremely loyal and trainable dog breed, naturally attuned to herding many different animals, from poultry and waterfowl to large livestock such as sheep and cattle.",rated,Cardigan Welsh Corgi,1372002270,claude-haiku-5-5,v1a
+Cardigan Welsh Corgi,good_with_young_children,,,unknown,Cardigan Welsh Corgi,1372002270,claude-haiku-5-5,v1a
+Cardigan Welsh Corgi,good_with_other_dogs,,,unknown,Cardigan Welsh Corgi,1372002270,claude-haiku-5-5,v1a
+Cardigan Welsh Corgi,shedding,,,unknown,Cardigan Welsh Corgi,1372002270,claude-haiku-5-5,v1a
+Cardigan Welsh Corgi,copes_alone,,,unknown,Cardigan Welsh Corgi,1372002270,claude-haiku-5-5,v1a
+Cardigan Welsh Corgi,barking,,,unknown,Cardigan Welsh Corgi,1372002270,claude-haiku-5-5,v1a
+Cardigan Welsh Corgi,grooming,,,unknown,Cardigan Welsh Corgi,1372002270,claude-haiku-5-5,v1a
+Toy Poodle,energy,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Toy Poodle,trainability,4,Poodles are highly trainable dogs that typically excel in obedience training.,rated,Poodle,1374503793,claude-haiku-5-5,v1a
+Toy Poodle,good_with_young_children,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Toy Poodle,good_with_other_dogs,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Toy Poodle,shedding,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Toy Poodle,copes_alone,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Toy Poodle,barking,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Toy Poodle,grooming,4,A pet owner can anticipate grooming a Poodle every four to eight weeks.,rated,Poodle,1374503793,claude-haiku-5-5,v1a
+Miniature Poodle,energy,,,quote_not_found,Poodle,1374503793,claude-haiku-5-5,v1a
+Miniature Poodle,trainability,5,Poodles are highly trainable dogs that typically excel in obedience training.,rated,Poodle,1374503793,claude-haiku-5-5,v1a
+Miniature Poodle,good_with_young_children,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Miniature Poodle,good_with_other_dogs,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Miniature Poodle,shedding,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Miniature Poodle,copes_alone,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Miniature Poodle,barking,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Miniature Poodle,grooming,4,A pet owner can anticipate grooming a Poodle every four to eight weeks.,rated,Poodle,1374503793,claude-haiku-5-5,v1a
+Standard Poodle,energy,,,quote_not_found,Poodle,1374503793,claude-haiku-5-5,v1a
+Standard Poodle,trainability,5,Poodles are highly trainable dogs that typically excel in obedience training.,rated,Poodle,1374503793,claude-haiku-5-5,v1a
+Standard Poodle,good_with_young_children,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Standard Poodle,good_with_other_dogs,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Standard Poodle,shedding,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Standard Poodle,copes_alone,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Standard Poodle,barking,,,unknown,Poodle,1374503793,claude-haiku-5-5,v1a
+Standard Poodle,grooming,4,A pet owner can anticipate grooming a Poodle every four to eight weeks.,rated,Poodle,1374503793,claude-haiku-5-5,v1a
+Xoloitzcuintle,energy,,,unknown,Xoloitzcuintle,1364911074,claude-haiku-5-5,v1a
+Xoloitzcuintle,trainability,,,unknown,Xoloitzcuintle,1364911074,claude-haiku-5-5,v1a
+Xoloitzcuintle,good_with_young_children,,,unknown,Xoloitzcuintle,1364911074,claude-haiku-5-5,v1a
+Xoloitzcuintle,good_with_other_dogs,,,unknown,Xoloitzcuintle,1364911074,claude-haiku-5-5,v1a
+Xoloitzcuintle,shedding,,,unknown,Xoloitzcuintle,1364911074,claude-haiku-5-5,v1a
+Xoloitzcuintle,copes_alone,,,unknown,Xoloitzcuintle,1364911074,claude-haiku-5-5,v1a
+Xoloitzcuintle,barking,,,unknown,Xoloitzcuintle,1364911074,claude-haiku-5-5,v1a
+Xoloitzcuintle,grooming,3,"Regular bathing, light grooming, and basic skin care are necessary, as neglect can lead to acne or other skin problems.",rated,Xoloitzcuintle,1364911074,claude-haiku-5-5,v1a
