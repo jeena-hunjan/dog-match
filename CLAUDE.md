@@ -222,7 +222,7 @@ score = 100 × Σ wᵢ (1 − |tᵢ − bᵢ| / 4) / Σ wᵢ
 | GET | `/metrics` | Prometheus-format counters |
 
 ### Tables
-- `breeds`: id, name, stanford_label, weight_min_kg, weight_max_kg, height_cm, lifespan_years
+- `breeds`: id, name, stanford_label, weight_min_kg, weight_max_kg, height_min_cm, height_max_cm, lifespan_min_years, lifespan_max_years (TheDogAPI gives ranges, so size and lifespan are stored as min/max pairs)
 - `breed_traits`: breed_id, trait, score
 - `country_restrictions`: country, breed_id, status, source_url, last_checked
 - `requests`: id, created_at, profile (jsonb), has_photo, predicted_breed_id, confidence, abstained, latency_ms, model_version
