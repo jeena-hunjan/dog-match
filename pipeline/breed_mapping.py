@@ -9,7 +9,7 @@ import csv
 import json
 from collections import Counter
 from collections.abc import Sequence
-from dataclasses import asdict, dataclass, fields
+from dataclasses import asdict, dataclass, field, fields
 from pathlib import Path
 from typing import Any, Self
 
@@ -38,6 +38,8 @@ class Aliases:
     stanford_only: dict[str, str]
     stanford_to_breed: dict[str, str]
     breed_to_dog_api: dict[str, str]
+    oxford_to_breed: dict[str, str] = field(default_factory=dict)
+    oxford_unmapped: frozenset[str] = frozenset()
 
     @classmethod
     def load(cls, path: Path = ALIASES_PATH) -> Self:
@@ -50,6 +52,8 @@ class Aliases:
             stanford_only=dict(data.get("stanford_only") or {}),
             stanford_to_breed=dict(data.get("stanford_to_breed") or {}),
             breed_to_dog_api=dict(data.get("breed_to_dog_api") or {}),
+            oxford_to_breed=dict(data.get("oxford_to_breed") or {}),
+            oxford_unmapped=frozenset(data.get("oxford_unmapped") or ()),
         )
 
 

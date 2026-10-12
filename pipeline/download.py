@@ -6,7 +6,9 @@ URL, size and SHA-256 go into `data/raw/manifest.json`, which the data card read
 
 import hashlib
 import json
+import shutil
 import tarfile
+import time
 from collections.abc import Iterable, Iterator, Mapping
 from dataclasses import dataclass
 from datetime import UTC, datetime
@@ -54,9 +56,16 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
+_ARCHIVE_SUFFIXES = (".tar.gz", ".tgz", ".tar")
+
+
 def extract_dir(archive: Path) -> Path:
-    """`stanford/lists.tar` unpacks into `stanford/lists/`."""
-    return archive.with_suffix("")
+    """`stanford/lists.tar` unpacks into `stanford/lists/`, `oxford/images.tar.gz` into
+    `oxford/images/`."""
+    for suffix in _ARCHIVE_SUFFIXES:
+        if archive.name.endswith(suffix):
+            return archive.with_name(archive.name[: -len(suffix)])
+    raise ValueError(f"not a tar archive: {archive}")
 
 
 def _headers(source: Source, env: Mapping[str, str]) -> dict[str, str]:
@@ -69,11 +78,33 @@ def _headers(source: Source, env: Mapping[str, str]) -> dict[str, str]:
 
 
 def _extract(archive: Path) -> None:
+    """Unpack into a temporary folder and rename it at the end, so an interrupted
+    extraction never leaves a half-filled folder that looks finished."""
     target = extract_dir(archive)
-    target.mkdir(parents=True, exist_ok=True)
-    with tarfile.open(archive) as tar:
-        # filter="data" rejects absolute paths, links outside the target and device files.
-        tar.extractall(target, filter="data")
+    partial = target.with_name(target.name + ".partial")
+    shutil.rmtree(partial, ignore_errors=True)
+    try:
+        with tarfile.open(archive) as tar:
+            # filter="data" rejects absolute paths, links outside the target and device files.
+            tar.extractall(partial, filter="data")
+    except BaseException:
+        shutil.rmtree(partial, ignore_errors=True)
+        raise
+    shutil.rmtree(target, ignore_errors=True)
+    _rename_with_retry(partial, target)
+
+
+def _rename_with_retry(source: Path, target: Path, attempts: int = 10) -> None:
+    """On Windows, antivirus scanners briefly lock freshly extracted files, which makes the
+    rename fail with PermissionError. Waiting a moment and retrying is enough."""
+    for attempt in range(1, attempts + 1):
+        try:
+            source.rename(target)
+            return
+        except PermissionError:
+            if attempt == attempts:
+                raise
+            time.sleep(0.5 * attempt)
 
 
 def download(

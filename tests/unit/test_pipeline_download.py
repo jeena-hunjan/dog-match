@@ -9,7 +9,7 @@ from pathlib import Path
 
 import pytest
 
-from pipeline.download import MissingApiKeyError, download, write_manifest
+from pipeline.download import MissingApiKeyError, download, extract_dir, write_manifest
 from pipeline.sources import BREED_SOURCES, Source
 
 CSV = Source(name="csv", url="https://example.test/a.csv", filename="akc/a.csv")
@@ -118,6 +118,30 @@ def test_tar_with_path_traversal_is_rejected(tmp_path: Path) -> None:
     with pytest.raises(tarfile.TarError):
         download(TAR, tmp_path, FakeSession(body=body), env={})
     assert not (tmp_path / "s" / "escape.txt").exists()
+    # The failed extraction leaves neither a finished-looking folder nor a temporary one.
+    assert not (tmp_path / "s" / "c").exists()
+    assert not (tmp_path / "s" / "c.partial").exists()
+
+
+@pytest.mark.parametrize(
+    ("archive", "folder"),
+    [("a/lists.tar", "a/lists"), ("a/images.tar.gz", "a/images"), ("a/x.tgz", "a/x")],
+)
+def test_extract_dir_strips_archive_suffix(archive: str, folder: str) -> None:
+    assert extract_dir(Path(archive)) == Path(folder)
+
+
+def test_extract_dir_rejects_non_archives() -> None:
+    with pytest.raises(ValueError, match="not a tar archive"):
+        extract_dir(Path("a/b.zip"))
+
+
+def test_forced_download_replaces_stale_extraction(tmp_path: Path) -> None:
+    download(TAR, tmp_path, FakeSession(body=_tar_bytes({"old.txt": b"x"})), env={})
+    new = _tar_bytes({"new.txt": b"y"})
+    download(TAR, tmp_path, FakeSession(body=new), env={}, force=True)
+
+    assert sorted(p.name for p in (tmp_path / "s" / "c").iterdir()) == ["new.txt"]
 
 
 def test_manifest_keeps_first_download_time_for_cached_files(tmp_path: Path) -> None:

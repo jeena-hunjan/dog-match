@@ -79,6 +79,16 @@ stanford_to_breed:
   Walker_hound: Treeing Walker Coonhound
   wire-haired_fox_terrier: Wire Fox Terrier
 
+# Oxford-IIIT Pet dog breed (image-name prefix, e.g. "german_shorthaired_12") ->
+# canonical breed name. Oxford is only used as an external test set.
+oxford_to_breed:
+  german_shorthaired: German Shorthaired Pointer
+  wheaten_terrier: Soft Coated Wheaten Terrier
+
+# Oxford dog breeds with no canonical breed (not AKC breeds). Their images are kept as
+# "dog, but not one of our classes" for abstention checks.
+oxford_unmapped: [american_bulldog, american_pit_bull_terrier]
+
 # Canonical breed name -> TheDogAPI name (TheDogAPI mostly uses FCI/UK names).
 # Portuguese Podengo Pequeno is left out on purpose: TheDogAPI's "Portuguese Podengo"
 # record has medium-size measurements (16-20 kg), so its size is filled by hand instead.

@@ -2,8 +2,10 @@
 
 Re-runnable: downloads are cached in data/raw/ and only fetched again with --force.
 Steps so far: download sources, map breed names across sources (data/interim/),
-validate the curated country restrictions.
-Later steps (splits, Postgres load, data card) are added here in order.
+validate the curated country restrictions, write image split manifests (data/splits/).
+Later steps (Postgres load, data card) are added here in order.
+
+--skip-images skips the ~1.6 GB image downloads and the split manifests.
 """
 
 import argparse
@@ -16,12 +18,14 @@ import requests
 from pipeline.breed_mapping import Aliases, load_and_build, write_outputs
 from pipeline.download import download, write_manifest
 from pipeline.restrictions import check_breeds, load_restrictions
-from pipeline.sources import BREED_SOURCES
+from pipeline.sources import BREED_SOURCES, IMAGE_SOURCES
+from pipeline.splits import build_splits, missing_images, write_splits
 
 log = logging.getLogger("pipeline")
 
 DEFAULT_RAW_DIR = Path("data/raw")
 DEFAULT_INTERIM_DIR = Path("data/interim")
+DEFAULT_SPLITS_DIR = Path("data/splits")
 
 
 def _use_system_certificates() -> None:
@@ -49,7 +53,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--raw-dir", type=Path, default=DEFAULT_RAW_DIR)
     parser.add_argument("--interim-dir", type=Path, default=DEFAULT_INTERIM_DIR)
+    parser.add_argument("--splits-dir", type=Path, default=DEFAULT_SPLITS_DIR)
     parser.add_argument("--force", action="store_true", help="re-download cached files")
+    parser.add_argument("--skip-images", action="store_true", help="no image downloads or splits")
     return parser.parse_args(argv)
 
 
@@ -59,10 +65,11 @@ def main(argv: list[str] | None = None) -> None:
     _use_system_certificates()
     _load_dotenv()
 
+    sources = BREED_SOURCES if args.skip_images else BREED_SOURCES + IMAGE_SOURCES
     with requests.Session() as session:
         results = [
             download(source, args.raw_dir, session, os.environ, force=args.force)
-            for source in BREED_SOURCES
+            for source in sources
         ]
     for r in results:
         status = "cached" if r.cached else "downloaded"
@@ -84,6 +91,27 @@ def main(argv: list[str] | None = None) -> None:
     check_breeds(restrictions, [b.name for b in mapping.breeds])
     countries = sorted({r.country for r in restrictions})
     log.info("%d country restrictions valid (%s)", len(restrictions), ", ".join(countries))
+
+    if args.skip_images:
+        log.info("--skip-images: image splits not rebuilt")
+        return
+    splits = build_splits(args.raw_dir, mapping.breeds, Aliases.load())
+    missing = missing_images(args.raw_dir, splits)
+    if missing:
+        raise SystemExit(f"{len(missing)} images in the manifests are missing, e.g. {missing[0]}")
+    write_splits(splits, args.splits_dir)
+    sizes = {name: len(rows) for name, rows in splits.stanford.items()}
+    oxford_in_class = sum(r.class_index is not None for r in splits.oxford)
+    log.info(
+        "%d classes; Stanford train/val/test %d/%d/%d; Oxford %d images (%d of our classes) -> %s",
+        len(splits.classes),
+        sizes["train"],
+        sizes["val"],
+        sizes["test"],
+        len(splits.oxford),
+        oxford_in_class,
+        args.splits_dir,
+    )
 
 
 if __name__ == "__main__":

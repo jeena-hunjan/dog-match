@@ -49,3 +49,28 @@ BREED_SOURCES: tuple[Source, ...] = (
     DOG_API_BREEDS,
     STANFORD_LISTS,
 )
+
+_OXFORD = "https://www.robots.ox.ac.uk/~vgg/data/pets/data"
+
+# Large image archives (~1.6 GB together). Never committed: the licences forbid it.
+STANFORD_IMAGES = Source(
+    name="stanford_images",
+    url=f"{_STANFORD}/images.tar",
+    filename="stanford/images.tar",
+    extract=True,
+)
+# Oxford-IIIT Pet: external test set (dogs) and not-a-dog checks (cats) only.
+OXFORD_IMAGES = Source(
+    name="oxford_images",
+    url=f"{_OXFORD}/images.tar.gz",
+    filename="oxford/images.tar.gz",
+    extract=True,
+)
+OXFORD_ANNOTATIONS = Source(
+    name="oxford_annotations",
+    url=f"{_OXFORD}/annotations.tar.gz",
+    filename="oxford/annotations.tar.gz",
+    extract=True,
+)
+
+IMAGE_SOURCES: tuple[Source, ...] = (STANFORD_IMAGES, OXFORD_IMAGES, OXFORD_ANNOTATIONS)

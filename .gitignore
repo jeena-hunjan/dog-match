@@ -19,8 +19,10 @@ htmlcov/
 build/
 dist/
 
-# Data and experiment tracking (re-created by `make data` / training)
-data/
+# Data and experiment tracking (re-created by `make data` / training).
+# data/splits/ is the exception: small, deterministic manifests (file names and labels only).
+data/*
+!data/splits/
 mlruns/
 mlartifacts/
 
