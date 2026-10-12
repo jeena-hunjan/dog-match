@@ -1,0 +1,20 @@
+# Local Postgres for development. The API service is added later.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: dogmatch
+      POSTGRES_PASSWORD: dogmatch  # pragma: allowlist secret (local dev only)
+      POSTGRES_DB: dogmatch
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dogmatch -d dogmatch"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  pgdata:

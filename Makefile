@@ -3,10 +3,10 @@
 
 CONFIG ?= training/configs/baseline.yaml
 
-.PHONY: help setup data train evaluate calibrate lint test test-all eval-llm up migrate mlflow
+.PHONY: help setup data train evaluate calibrate lint test test-all eval-llm up db-up db-down migrate mlflow
 
 help:
-	@echo "Targets: setup data train evaluate calibrate lint test test-all eval-llm up migrate mlflow"
+	@echo "Targets: setup data train evaluate calibrate lint test test-all eval-llm up db-up db-down migrate mlflow"
 
 setup:
 	uv sync
@@ -41,8 +41,14 @@ eval-llm:
 up:
 	@echo "up: not implemented yet (needs Dockerfile and docker-compose.yml)"
 
+db-up:
+	docker compose up -d db
+
+db-down:
+	docker compose down
+
 migrate:
-	@echo "migrate: not implemented yet (needs Alembic setup)"
+	uv run alembic upgrade head
 
 mlflow:
 	@echo "mlflow: not implemented yet (install the ml group first: uv sync --group ml)"

@@ -1,0 +1,8 @@
+Alembic migrations for Dog Match.
+
+    make migrate                                   # alembic upgrade head
+    uv run alembic revision -m "add x"             # hand-written migration
+    uv run alembic revision --autogenerate -m "x"  # needs a running database
+
+The URL comes from DATABASE_URL (see app/db/session.py). For Neon, use the direct
+(non-pooled) connection string when running migrations.
