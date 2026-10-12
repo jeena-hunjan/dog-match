@@ -1,23 +1,36 @@
 """Build the Dog Match dataset end to end: `make data` (python -m pipeline.build_dataset).
 
 Re-runnable: downloads are cached in data/raw/ and only fetched again with --force.
-Steps so far: download sources, map breed names across sources (data/interim/),
-validate the curated country restrictions, write image split manifests (data/splits/).
-Later steps (Postgres load, data card) are added here in order.
+Steps: download sources, map breed names across sources (data/interim/), validate the
+curated country restrictions, write image split manifests (data/splits/), load breeds,
+traits, sizes and restrictions into Postgres (DATABASE_URL).
+The data card step is added next.
 
 --skip-images skips the ~1.6 GB image downloads and the split manifests.
+--no-db skips the Postgres load.
 """
 
 import argparse
+import csv
+import json
 import logging
 import os
+from collections.abc import Sequence
 from pathlib import Path
 
 import requests
 
-from pipeline.breed_mapping import Aliases, load_and_build, write_outputs
+from pipeline.breed_data import (
+    BreedRecord,
+    TraitRecord,
+    breed_records,
+    load_manual_sizes,
+    size_problems,
+    trait_records,
+)
+from pipeline.breed_mapping import Aliases, Breed, load_and_build, write_outputs
 from pipeline.download import download, write_manifest
-from pipeline.restrictions import check_breeds, load_restrictions
+from pipeline.restrictions import Restriction, check_breeds, load_restrictions
 from pipeline.sources import BREED_SOURCES, IMAGE_SOURCES
 from pipeline.splits import build_splits, missing_images, write_splits
 
@@ -56,6 +69,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--splits-dir", type=Path, default=DEFAULT_SPLITS_DIR)
     parser.add_argument("--force", action="store_true", help="re-download cached files")
     parser.add_argument("--skip-images", action="store_true", help="no image downloads or splits")
+    parser.add_argument("--no-db", action="store_true", help="do not load Postgres")
     return parser.parse_args(argv)
 
 
@@ -94,8 +108,27 @@ def main(argv: list[str] | None = None) -> None:
 
     if args.skip_images:
         log.info("--skip-images: image splits not rebuilt")
-        return
-    splits = build_splits(args.raw_dir, mapping.breeds, Aliases.load())
+    else:
+        _build_splits(args, mapping.breeds)
+
+    with (args.raw_dir / "akc" / "breed_traits.csv").open(newline="", encoding="utf-8") as f:
+        akc_rows = list(csv.DictReader(f))
+    dog_api = json.loads((args.raw_dir / "dog_api" / "breeds.json").read_text(encoding="utf-8"))
+    records = breed_records(mapping.breeds, dog_api, load_manual_sizes())
+    traits, dropped = trait_records(akc_rows, mapping.breeds)
+    gaps = size_problems(records)
+    log.info("%d size gaps (listed in the data card), e.g. %s", len(gaps), gaps[:1])
+    if dropped:
+        log.warning("dropped %d trait scores outside 1-5: %s ...", len(dropped), dropped[0])
+
+    if args.no_db:
+        log.info("--no-db: Postgres not loaded")
+    else:
+        _load_postgres(records, traits, restrictions)
+
+
+def _build_splits(args: argparse.Namespace, breeds: Sequence[Breed]) -> None:
+    splits = build_splits(args.raw_dir, breeds, Aliases.load())
     missing = missing_images(args.raw_dir, splits)
     if missing:
         raise SystemExit(f"{len(missing)} images in the manifests are missing, e.g. {missing[0]}")
@@ -112,6 +145,31 @@ def main(argv: list[str] | None = None) -> None:
         oxford_in_class,
         args.splits_dir,
     )
+
+
+def _load_postgres(
+    records: Sequence[BreedRecord],
+    traits: Sequence[TraitRecord],
+    restrictions: Sequence[Restriction],
+) -> None:
+    from sqlalchemy.engine import make_url
+    from sqlalchemy.orm import Session
+
+    from app.db.session import get_engine
+    from pipeline.load_db import load
+
+    engine = get_engine()
+    with Session(engine) as session, session.begin():
+        summary = load(session, records, traits, restrictions)
+    log.info(
+        "Postgres (%s): %d breeds, %d traits, %d restrictions loaded",
+        make_url(engine.url).host,
+        summary.breeds,
+        summary.traits,
+        summary.restrictions,
+    )
+    if summary.stale_breeds:
+        log.warning("breeds in Postgres but not in the sources: %s", summary.stale_breeds)
 
 
 if __name__ == "__main__":
