@@ -1,7 +1,8 @@
 """Build the Dog Match dataset end to end: `make data` (python -m pipeline.build_dataset).
 
 Re-runnable: downloads are cached in data/raw/ and only fetched again with --force.
-Steps so far: download sources, map breed names across sources (data/interim/).
+Steps so far: download sources, map breed names across sources (data/interim/),
+validate the curated country restrictions.
 Later steps (splits, Postgres load, data card) are added here in order.
 """
 
@@ -14,6 +15,7 @@ import requests
 
 from pipeline.breed_mapping import Aliases, load_and_build, write_outputs
 from pipeline.download import download, write_manifest
+from pipeline.restrictions import check_breeds, load_restrictions
 from pipeline.sources import BREED_SOURCES
 
 log = logging.getLogger("pipeline")
@@ -77,6 +79,11 @@ def main(argv: list[str] | None = None) -> None:
         breeds_csv,
         report,
     )
+
+    restrictions = load_restrictions()
+    check_breeds(restrictions, [b.name for b in mapping.breeds])
+    countries = sorted({r.country for r in restrictions})
+    log.info("%d country restrictions valid (%s)", len(restrictions), ", ".join(countries))
 
 
 if __name__ == "__main__":
