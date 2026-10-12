@@ -1,0 +1,2 @@
+breed,weight_min_kg,weight_max_kg,height_min_cm,height_max_cm,lifespan_min_years,lifespan_max_years,source_url,notes
+Portuguese Podengo Pequeno,4,6,20,30,,,https://www.fci.be/Nomenclature/Standards/094g05-en.pdf,"FCI standard no. 94, Small variety. TheDogAPI only has the Medium variety (16-20 kg). Life span not in the standard."
