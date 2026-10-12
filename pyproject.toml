@@ -46,10 +46,13 @@ dev = [
     "pandas-stubs",
     "kaggle>=1.6",
 ]
+pipeline = [
+    "scipy>=1.13",
+]
 
 [tool.uv]
 package = false
-default-groups = ["dev"]
+default-groups = ["dev", "pipeline"]
 
 # CPU-only PyTorch wheels (keeps the Docker image small; Cloud Run has no GPU).
 [[tool.uv.index]]
@@ -76,7 +79,7 @@ plugins = ["pydantic.mypy"]
 exclude = ["^migrations/"]
 
 [[tool.mypy.overrides]]
-module = ["timm.*", "open_clip.*", "mlflow.*", "kaggle.*"]
+module = ["timm.*", "open_clip.*", "mlflow.*", "kaggle.*", "scipy.*"]
 ignore_missing_imports = true
 
 [tool.pydantic-mypy]

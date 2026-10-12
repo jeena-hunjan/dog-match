@@ -1,7 +1,8 @@
 """Build the Dog Match dataset end to end: `make data` (python -m pipeline.build_dataset).
 
 Re-runnable: downloads are cached in data/raw/ and only fetched again with --force.
-Later steps (name mapping, splits, Postgres load, data card) are added here in order.
+Steps so far: download sources, map breed names across sources (data/interim/).
+Later steps (splits, Postgres load, data card) are added here in order.
 """
 
 import argparse
@@ -11,12 +12,14 @@ from pathlib import Path
 
 import requests
 
+from pipeline.breed_mapping import Aliases, load_and_build, write_outputs
 from pipeline.download import download, write_manifest
 from pipeline.sources import BREED_SOURCES
 
 log = logging.getLogger("pipeline")
 
 DEFAULT_RAW_DIR = Path("data/raw")
+DEFAULT_INTERIM_DIR = Path("data/interim")
 
 
 def _use_system_certificates() -> None:
@@ -43,6 +46,7 @@ def _load_dotenv() -> None:
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--raw-dir", type=Path, default=DEFAULT_RAW_DIR)
+    parser.add_argument("--interim-dir", type=Path, default=DEFAULT_INTERIM_DIR)
     parser.add_argument("--force", action="store_true", help="re-download cached files")
     return parser.parse_args(argv)
 
@@ -62,6 +66,17 @@ def main(argv: list[str] | None = None) -> None:
         status = "cached" if r.cached else "downloaded"
         log.info("%-24s %-10s %9d bytes  %s", r.source.name, status, r.size_bytes, r.path)
     log.info("manifest written to %s", write_manifest(args.raw_dir, results))
+
+    mapping = load_and_build(args.raw_dir, Aliases.load())
+    breeds_csv, report = write_outputs(mapping, args.interim_dir)
+    log.info(
+        "%d breeds (%d with a photo class, %d with TheDogAPI sizes) -> %s; report: %s",
+        len(mapping.breeds),
+        len(mapping.photo_breeds),
+        sum(b.dog_api_id is not None for b in mapping.breeds),
+        breeds_csv,
+        report,
+    )
 
 
 if __name__ == "__main__":

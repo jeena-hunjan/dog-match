@@ -1,0 +1,103 @@
+# Breed-name knowledge used by pipeline/breed_mapping.py.
+#
+# Names are compared after normalisation (lowercase, no accents or punctuation, "_" and "-"
+# as spaces, "St." as "Saint"), then fuzzy-matched. Only list what that cannot resolve.
+# The canonical breed list is the AKC list (singular names), plus the Stanford breeds below
+# that AKC does not recognise.
+
+# AKC plural names whose singular is not "drop the final s" (keyed by AKC name).
+akc_singular:
+  Bichons Frises: Bichon Frise
+  Bouviers des Flandres: Bouvier des Flandres
+  Cirnechi dell'Etna: Cirneco dell'Etna
+  Dogues de Bordeaux: Dogue de Bordeaux
+  Keeshonden: Keeshond
+  Komondorok: Komondor
+  Kuvaszok: Kuvasz
+  Lagotti Romagnoli: Lagotto Romagnolo
+  Petits Bassets Griffons Vendeens: Petit Basset Griffon Vendeen
+  Pulik: Puli
+  Pumik: Pumi
+  Siberian Huskies: Siberian Husky
+  Spinoni Italiani: Spinone Italiano
+
+# Last words that end in "s" but are already singular.
+singular_words_ending_in_s: [Havanese, Malinois, Maltese, Pekingese, Pyrenees]
+
+# AKC rates Poodles as one breed, but Stanford Dogs and TheDogAPI split them by size.
+# Each variety becomes its own breed and inherits the AKC traits.
+akc_varieties:
+  Poodle: [Toy Poodle, Miniature Poodle, Standard Poodle]
+
+# Wild canids: not pets, never recommended (CLAUDE.md section 6).
+stanford_excluded: [dingo, dhole, African_hunting_dog]
+
+# Stanford Dogs breeds that AKC does not recognise. They become breeds with a photo
+# class but no AKC trait ratings.
+stanford_only:
+  Appenzeller: Appenzeller Sennenhund
+  Eskimo_dog: Eskimo Dog # ImageNet "Eskimo dog, husky": a sled dog, not the American Eskimo Dog
+  kelpie: Australian Kelpie
+  toy_terrier: Toy Terrier # ImageNet "toy terrier"; no single AKC breed
+
+# Stanford Dogs label (without the synset id) -> canonical breed name.
+stanford_to_breed:
+  Airedale: Airedale Terrier
+  basset: Basset Hound
+  Blenheim_spaniel: Cavalier King Charles Spaniel # Blenheim is a Cavalier colour
+  bluetick: Bluetick Coonhound
+  Boston_bull: Boston Terrier
+  Brabancon_griffon: Brussels Griffon
+  Brittany_spaniel: Brittany
+  bull_mastiff: Bullmastiff
+  cairn: Cairn Terrier
+  Cardigan: Cardigan Welsh Corgi
+  chow: Chow Chow
+  clumber: Clumber Spaniel
+  # WordNet defines this synset as the English cocker spaniel; AKC's "Cocker Spaniel" is
+  # the American breed.
+  cocker_spaniel: English Cocker Spaniel
+  Dandie_Dinmont: Dandie Dinmont Terrier
+  Doberman: Doberman Pinscher
+  English_springer: English Springer Spaniel
+  EntleBucher: Entlebucher Mountain Dog
+  German_shepherd: German Shepherd Dog
+  German_short-haired_pointer: German Shorthaired Pointer
+  groenendael: Belgian Sheepdog
+  Japanese_spaniel: Japanese Chin
+  Leonberg: Leonberger
+  Lhasa: Lhasa Apso
+  malamute: Alaskan Malamute
+  malinois: Belgian Malinois
+  Maltese_dog: Maltese
+  Mexican_hairless: Xoloitzcuintli
+  Pekinese: Pekingese
+  Pembroke: Pembroke Welsh Corgi
+  redbone: Redbone Coonhound
+  Scotch_terrier: Scottish Terrier
+  Staffordshire_bullterrier: Staffordshire Bull Terrier
+  Walker_hound: Treeing Walker Coonhound
+  wire-haired_fox_terrier: Wire Fox Terrier
+
+# Canonical breed name -> TheDogAPI name (TheDogAPI mostly uses FCI/UK names).
+# Portuguese Podengo Pequeno is left out on purpose: TheDogAPI's "Portuguese Podengo"
+# record has medium-size measurements (16-20 kg), so its size is filled by hand instead.
+breed_to_dog_api:
+  Anatolian Shepherd Dog: Kangal Shepherd Dog # FCI merged the two standards in 2018
+  Belgian Sheepdog: Belgian Shepherd
+  Brussels Griffon: Griffon Bruxellois
+  Cocker Spaniel: American Cocker Spaniel # AKC's Cocker Spaniel is the American breed
+  Collie: Rough Collie # AKC's Collie covers rough and smooth; same size standard
+  English Toy Spaniel: King Charles Spaniel
+  Eskimo Dog: Canadian Eskimo Dog
+  German Shepherd Dog: German Shepherd
+  Great Pyrenees: Pyrenean Mountain Dog
+  Mastiff: English Mastiff
+  Miniature Poodle: Poodle (Miniature)
+  Nederlandse Kooikerhondje: Kooikerhondje
+  Pyrenean Shepherd: Pyrenean Sheepdog
+  Russell Terrier: Jack Russell Terrier
+  Silky Terrier: Australian Silky Terrier
+  Standard Poodle: Poodle
+  Toy Poodle: Poodle (Toy)
+  Toy Terrier: English Toy Terrier (Black & Tan)
